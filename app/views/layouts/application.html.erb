@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OchaApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+  <body>
+       <header>
+           <div class="container">
+              <div class="header-left">
+                <a href="/" >さくら倶楽部</a>
+              </div>
+              <div class="header-right">
+                <a href="/appearance">お稽古の様子</a>
+                <a href="/class">クラス</a>
+                <a href="#">お月謝</a>
+                <a href="/acsess">アクセス</a>
+              </div>
+           </div>
+       </header>
+    <%= yield %>
+       <footer>
+          <div class="container">
+            <div class="footer-left">
+              <p class="title">＞さくら倶楽部</p>
+            </div>
+          </div>
+       </footer>
+  <body>
+</html>
