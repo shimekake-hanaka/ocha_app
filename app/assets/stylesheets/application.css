@@ -19,6 +19,7 @@ body {
     font-size: 40px;
     margin-top: 0;
     text-decoration: none;
+    Letter-spacing:1em;
 }
 .header-left a:hover{
     color: #dadada;
@@ -46,12 +47,14 @@ header {
 
 .text {
     text-align: center;
-    padding-top: 170px;   
+    padding-top: 170px;
+    line-height :4em;   
 }
 .text h1{
     background-color: rgba(255, 255, 255, 0.8);
     margin: 0;
     width: 100%;
+    Letter-spacing:1em;
 }
 .background {
     height: 500px;
