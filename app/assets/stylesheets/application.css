@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-/*ヘッダーcss*/
+/*ヘッダー*/
 .header-left a{
     padding-left: 10px;
     padding-top: 15px;
@@ -48,7 +48,7 @@ header {
     
 }
 
-/*トップmenu　css*/
+/*トップ*/
 
 .text {
     text-align: left;
@@ -97,12 +97,11 @@ header {
     height: 450px;
     overflow: hidden;
 }
-.content{
+.content-img {
     width: 500px;
-    height: 300px;
-    object-fit: cover;
+    height: 500px;
 }
-.slidshow {
+.slideshow {
     display: flex;
     animation: loop-slide 20s infinite linear 1s both;
 }
@@ -115,7 +114,7 @@ header {
     }
   }
 
-/*各種ご案内css*/
+/*各種ご案内*/
 .menu {
     float: left;
     height: 500px;
@@ -152,7 +151,7 @@ header {
     padding: 5px 200px;
 }
 
-/*フッターcss*/
+/*フッター*/
 
 footer {
     height: 80px;
