@@ -9,26 +9,24 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
   <body>
-       <header>
-           <div class="container">
-              <div class="header-left">
-                <a href="/" >さくら倶楽部</a>
-              </div>
-              <div class="header-right">
-                <a href="/appearance">お稽古の様子</a>
-                <a href="/class">クラス・お月謝</a>
-                <a href="#">体験教室</a>
-                <a href="/acsess">アクセス</a>
-              </div>
-           </div>
-       </header>
-    <%= yield %>
-       <footer>
-          <div class="container">
-            <div class="footer-left">
-              <p class="title">＞さくら倶楽部</p>
-            </div>
+    <header>
+      <div class="headeres">
+        <div class="header-left">
+          <a href="/" >SAKURA CLUB</a>
+          <div class="header-right">
+            <a href="/co">カウンセリング</a>
+            <a href="/class">クラス・お月謝</a>
+            <a href="/experience">体験教室</a>
+            <a href="/acsess">アクセス</a>
           </div>
-       </footer>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <div class="footer-left">
+        <p class="title">＞さくら倶楽部</p>
+      </div>
+    </footer>
   <body>
 </html>
