@@ -98,6 +98,7 @@ header {
     overflow: hidden;
 }
 .content-img {
+    margin-left: 15px;
     width: 500px;
     height: 500px;
 }
