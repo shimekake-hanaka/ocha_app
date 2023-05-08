@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/" => "home#top"
   get "acsess" => "home#acsess"
-  get "appearance" => "home#appearance"
+  get "experience" => "home#experience"
   get "class" => "home#class"
+  get "co" => "home#co"
 end
