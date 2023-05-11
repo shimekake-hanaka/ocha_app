@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "experience" => "home#experience"
   get "class" => "home#class"
   get "co" => "home#co"
+  get "children-class" => "home#children-class"
 end

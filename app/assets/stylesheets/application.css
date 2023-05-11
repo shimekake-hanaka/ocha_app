@@ -56,6 +56,7 @@ header {
     line-height :4em;   
     writing-mode: vertical-rl;
     Letter-spacing:1em;
+    Text-shadow: 3px 3px 5px #dfdfcd;
 }
 .container {
     display: flex;
@@ -103,6 +104,7 @@ header {
     height: 500px;
 }
 .slideshow {
+    padding: 0px;
     display: flex;
     animation: loop-slide 20s infinite linear 1s both;
 }
@@ -140,13 +142,23 @@ header {
 }
 .top-menu {
     margin-top: 100px;
-    height: 800px;
+    height: 600px;
 }
 .heading h1{
     color: #6a9a8c;
     
 }
 .heading span{
+    background-color: #dfdfcd;
+    border-radius: 8px;
+    padding: 5px 200px;
+}
+/* お問い合わせ */
+.query-warpper {
+    height: 500px;
+}
+.query span{
+    color: #6a9a8c;
     background-color: #dfdfcd;
     border-radius: 8px;
     padding: 5px 200px;
@@ -197,6 +209,10 @@ footer {
 .main-height {
     height: 1000px;
 }
+.main-height h1{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+}
 .classes {
     display: flex;
 }
@@ -206,4 +222,18 @@ footer {
 .class-menu p{
     padding-left: 20px;
     padding-right: 20px;
+    
+}
+
+/* co */
+
+.co span{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+}
+.co p{
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    line-height: 2em;
 }
