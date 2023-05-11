@@ -31,7 +31,7 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # processes).
 #
 
-if ENV['RENDER'].present?
+if ENV['RENDER']
     workers ENV.fetch("WEB_CONCURRENCY") { 4 }
 end
 
