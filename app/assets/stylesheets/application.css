@@ -1,22 +1,30 @@
 body {
-    background-color: #ffffff;
     width: 100%;
     height: 100%;
-    margin-top: 0;
-    margin-left: 0;
     font-family: serif;
     text-align: center;
 }
 
+
+/* ====================================================================== */
+
 /*ヘッダー*/
+header {
+    height: 130px;
+}
+
+.headeres {
+    text-align: left;
+}
+
 .header-left a{
     padding-left: 10px;
     padding-top: 15px;
     color: #6a9a8c;
-    font-size: 50px;
-    margin-top: 0;
+    font-size: 40px;
+    /* margin-top: 0; */
     text-decoration: none;
-    Letter-spacing:0.5em;
+    Letter-spacing:0.2em;
     transition: color 1s;
 }
 .header-left a:hover{
@@ -29,34 +37,49 @@ body {
     color: #6a9a8c;    
 }
 .header-right a{
-    padding-top: 0px;
+    padding: 5px 15px;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(242, 140, 140, 0.2);  */
+    background-color: rgba(242, 212, 145, 0.2);
+    color: black;
     line-height: 0px;
-    border-radius: 4px;
-    margin-left: 10px;
+    border-radius: 20px;
+    margin-left: 15px;
 }
 .header-right a:hover{
     color: #a6c4bb;
 }
-header {
-    height: 130px;
-    background-color: #dfdfcd;  
+
+/* フッター */
+
+footer {
+    height: 100px;
+    background-color: #dfdfcd;
 }
-.headeres {
+footer p{
+    color: #6a9a8c;
     text-align: left;
-    
+    padding: 10px 0px 0px 20px;
+    font-size: 20px;
 }
+
+/* ====================================================================== */
 
 /*トップ*/
-
+.top-warpper  {
+    height: 600px;
+    padding-top: 70px;
+    padding-bottom: 110px;
+    background: linear-gradient(to bottom,#dfdfcd  0%,  #ffffff 100%); 
+}
 .text {
     text-align: left;
-    padding-left: 100px;
-    line-height :4em;   
+    margin-left: 20px;
+    line-height :3.2em; 
+    Letter-spacing:0.5em;
     writing-mode: vertical-rl;
-    Letter-spacing:1em;
-    Text-shadow: 3px 3px 5px #dfdfcd;
+    Text-shadow: 3px 3px 5px #6a9a8c;
+    font-size: 27px;
 }
 .container {
     display: flex;
@@ -74,21 +97,18 @@ header {
     padding-left: 150px;
     padding-top: 30px;
 }
-.top-warpper  {
-    height: 600px;
-    margin-top: 40px;
-    margin-bottom: 100px;
-}
+
+/* ――――――――――――――――――――――――――――――――― */
 
 /* スライドショー画像 */
-.messege span{
+.messege h1{
     color: #6a9a8c;
-    background-color: #dfdfcd;
-    border-radius: 8px;
-    padding: 5px 200px;
+    border-bottom: 2px solid #6a9a8c;
+    margin: 100px;
 }
 .messege p{
     margin-top: 80px;
+    margin-bottom: 80px;
     font-size: 25px;
     line-height: 50px;
 }
@@ -117,7 +137,17 @@ header {
     }
   }
 
+/* ――――――――――――――――――――――――――――――――― */
 /*各種ご案内*/
+
+.top-information {
+    margin: 100px;
+    height: 600px;
+}
+.informations h1{
+    color: #6a9a8c;
+    border-bottom: 2px solid #dee7ec;
+}
 .menu {
     float: left;
     height: 500px;
@@ -140,41 +170,47 @@ header {
     text-decoration: none;
     color: black;
 }
-.top-menu {
-    margin-top: 100px;
-    height: 600px;
-}
-.heading h1{
-    color: #6a9a8c;
-    
-}
-.heading span{
-    background-color: #dfdfcd;
-    border-radius: 8px;
-    padding: 5px 200px;
-}
+
+/* ――――――――――――――――――――――――――――――――― */
 /* お問い合わせ */
-.query-warpper {
-    height: 500px;
-}
-.query span{
-    color: #6a9a8c;
-    background-color: #dfdfcd;
-    border-radius: 8px;
-    padding: 5px 200px;
-}
-
-/*フッター*/
-
-footer {
-    height: 80px;
-    background-color: #dfdfcd;
-    color: #6a9a8c;
+.contact-warpper {
+    height: 800px;
     text-align: left;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    font-size: 20px;
+    margin: 100px;
 }
+.contact {
+    color: #6a9a8c;
+    border-bottom: 2px solid #dee7ec;
+}
+.contact-form p{
+    font-size: 18px;
+    color: black;
+    line-height: 10px;
+}
+.contact-form input{
+    width: 500px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #dee7ec;
+}
+.contact-form textarea{
+    width: 500px;
+    font-size: 18px;
+    padding: 10px;
+    height: 200px;
+    border: 1px solid #dee7ec;
+    font-family: serif;
+}
+.contact-submit {
+    background-color: #dee7ec;
+    color: #889eab;
+}
+.contact-submit:hover {
+    background-color: #b4cbd7;
+    color: #718997;
+}
+
+/* ====================================================================== */
 
 /* アクセスページcss */
 
@@ -183,6 +219,9 @@ footer {
     text-align: left;
     padding-left: 400px;
 }
+
+/* ====================================================================== */
+
 /* クラスページ */
 .class-main {
     height: 1000px;
@@ -225,7 +264,9 @@ footer {
     
 }
 
-/* co */
+/* ====================================================================== */
+
+/* カウンセリング　ページ */
 
 .co span{
     color: #6a9a8c;
@@ -237,3 +278,5 @@ footer {
     margin-bottom: 100px;
     line-height: 2em;
 }
+
+/* ====================================================================== */
