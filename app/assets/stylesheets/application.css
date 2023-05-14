@@ -1,54 +1,57 @@
+*{
+    box-sizing: border-box;
+  }
+
 body {
-    width: 100%;
-    height: 100%;
     font-family: serif;
     text-align: center;
+    margin: 0px;
 }
 
 
 /* ====================================================================== */
 
 /*ヘッダー*/
-header {
-    height: 130px;
+header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(223, 223, 205);
 }
-
 .headeres {
     text-align: left;
 }
 
 .header-left a{
-    padding-left: 10px;
-    padding-top: 15px;
+    margin-left: 30px;
+    margin-top: 15px;
     color: #6a9a8c;
     font-size: 40px;
-    /* margin-top: 0; */
     text-decoration: none;
     Letter-spacing:0.2em;
-    transition: color 1s;
+    transition: color 0.5s;
 }
 .header-left a:hover{
     color: #a6c4bb;
 }
-.header-right {
-    padding-top: 90px;
-    float: right;
-    transition: color 1s;
-    color: #6a9a8c;    
-}
-.header-right a{
-    padding: 5px 15px;
+.drawer-menu a{
     font-size: 20px;
-    /* background-color: rgba(242, 140, 140, 0.2);  */
-    background-color: rgba(242, 212, 145, 0.2);
-    color: black;
-    line-height: 0px;
-    border-radius: 20px;
-    margin-left: 15px;
+    
+
 }
-.header-right a:hover{
-    color: #a6c4bb;
+ /*スマホヘッダー*/
+
+@media (max-width:670px ) {
+  
+header {
+    height: 50px;
 }
+.header-left a{
+    font-size: 10px;
+    margin-left: 10px;
+}
+  }
 
 /* フッター */
 
@@ -65,15 +68,14 @@ footer p{
 
 /* ====================================================================== */
 
-/*トップ*/
+/*トップ 茶道×カウンセリング*/
 .top-warpper  {
-    height: 600px;
-    padding-top: 70px;
-    padding-bottom: 110px;
+    height: 750px;
+    padding-top: 50px;
+    margin-bottom: 110px;
     background: linear-gradient(to bottom,#dfdfcd  0%,  #ffffff 100%); 
 }
 .text {
-    text-align: left;
     margin-left: 20px;
     line-height :3.2em; 
     Letter-spacing:0.5em;
@@ -83,11 +85,11 @@ footer p{
 }
 .container {
     display: flex;
+    padding-top: 100px;
 }
 .container img{
     width: 50%;
-    padding-left: 50px;
-    margin-left: 100px;
+    margin-left: 150px;
     height: 600px;
     object-fit: cover;
 } 
@@ -97,10 +99,42 @@ footer p{
     padding-left: 150px;
     padding-top: 30px;
 }
+/* スマホ */
+@media (max-width:670px ) {
+    .top-warpper  {
+        height: 500px;
+        padding-top: 60px;
+        padding-bottom: 50px;
+        margin-top: 0px;
+    }
+    .text {
+        margin-left: 0px;
+        line-height :2em; 
+        Letter-spacing:0.5em;
+        writing-mode: horizontal-tb;
+        font-size: 12px;
+        margin-bottom: 40px;
+    }
+    .container h1{
+        width: 100%;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+    .container img{
+        display: block;
+        width: 80%;
+        margin-left: 0px;
+        height: 300px;
+    } 
+    .container {
+        flex-direction:column;
+    }
+      }
+
 
 /* ――――――――――――――――――――――――――――――――― */
 
-/* スライドショー画像 */
+/* スライドショー画像 お稽古の様子 */
 .messege h1{
     color: #6a9a8c;
     border-bottom: 2px solid #6a9a8c;
@@ -137,6 +171,27 @@ footer p{
     }
   }
 
+@media (max-width:670px ) {
+    .messege h1{
+        margin: 0px 60px 0px 60px;
+        font-size: 22px;
+    }
+    .messege p{
+        margin: 40px 10px 40px 10px;
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+    .messege-warpper{
+        height: 210px;
+    }
+    .content-img {
+        margin-left: 5px;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
 /* ――――――――――――――――――――――――――――――――― */
 /*各種ご案内*/
 
@@ -171,6 +226,25 @@ footer p{
     color: black;
 }
 
+@media (max-width:670px ){
+    .top-information {
+        margin: 10px;
+        height: 550px;
+    }
+    .menu {
+        height: 250px;
+        width: 50%;
+    }
+    .menu a{
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .menus {
+        margin-top: 50px;
+    }
+}
+
+
 /* ――――――――――――――――――――――――――――――――― */
 /* お問い合わせ */
 .contact-warpper {
@@ -188,13 +262,13 @@ footer p{
     line-height: 10px;
 }
 .contact-form input{
-    width: 500px;
+    width: 35%;
     font-size: 18px;
     padding: 10px;
     border: 1px solid #dee7ec;
 }
 .contact-form textarea{
-    width: 500px;
+    width: 50%;
     font-size: 18px;
     padding: 10px;
     height: 200px;
@@ -208,6 +282,30 @@ footer p{
 .contact-submit:hover {
     background-color: #b4cbd7;
     color: #718997;
+}
+@media (max-width:670px ){
+    .contact-warpper {
+        height: 550px;
+        text-align: center;
+        margin: 10px;
+    }
+    .contact h1{
+        margin: 0px;
+    }
+    .contact{
+        margin-bottom: 20px;
+    }
+    .contact-form input{
+        width: 70%;
+        font-size: 16px;
+        padding: 3px;
+    }
+    .contact-form textarea{
+        width: 70%;
+        font-size: 16px;
+        padding: 3px;
+        height: 100px;
+    }
 }
 
 /* ====================================================================== */
