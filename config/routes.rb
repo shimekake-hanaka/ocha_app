@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get "class" => "home#class"
   get "co" => "home#co"
   get "children-class" => "home#children-class"
+  get "adult-class" => "home#adult-class"
+  get "personal-class" => "home#personal-class"
 end

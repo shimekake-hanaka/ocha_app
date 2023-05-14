@@ -17,7 +17,8 @@ header{
     top: 0px;
     width: 100%;
     z-index: 100;
-    background-color: rgba(223, 223, 205);
+    background-color: rgba(223, 223, 205,0.8);
+    height: 100px;
 }
 .headeres {
     text-align: left;
@@ -37,19 +38,20 @@ header{
 }
 .drawer-menu a{
     font-size: 20px;
-    
-
 }
  /*スマホヘッダー*/
 
 @media (max-width:670px ) {
   
 header {
-    height: 50px;
+    height: 60px;
 }
 .header-left a{
-    font-size: 10px;
+    font-size: 16px;
     margin-left: 10px;
+}
+.drawer-menu a{
+    font-size: 16px;
 }
   }
 
@@ -102,9 +104,9 @@ footer p{
 /* スマホ */
 @media (max-width:670px ) {
     .top-warpper  {
-        height: 500px;
-        padding-top: 60px;
-        padding-bottom: 50px;
+        height: 400px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         margin-top: 0px;
     }
     .text {
@@ -113,7 +115,7 @@ footer p{
         Letter-spacing:0.5em;
         writing-mode: horizontal-tb;
         font-size: 12px;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
     .container h1{
         width: 100%;
@@ -122,12 +124,13 @@ footer p{
     }
     .container img{
         display: block;
-        width: 80%;
+        width: 100%;
         margin-left: 0px;
         height: 300px;
     } 
     .container {
         flex-direction:column;
+        padding-top: 60px;
     }
       }
 
@@ -311,21 +314,51 @@ footer p{
 /* ====================================================================== */
 
 /* アクセスページcss */
-
+.acsess-warpper {
+    margin-top: 150px;
+    width: 100%;
+}
 .acsess {
     line-height :2em;
-    text-align: left;
-    padding-left: 400px;
+    
+}
+@media (max-width:670px ){
+    .acsess-map {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 /* ====================================================================== */
 
 /* クラスページ */
+
+.main-height {
+    height: 1000px;
+    margin-top: 150px;
+}
+.main-height h1{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+    margin: 20px 100px 20px 100px;
+}
 .class-main {
     height: 1000px;
     width: 100%;
     transition: all 0.5s;
-}  
+}
+.class-menu {
+    width: 33%;
+} 
+.class-menu a{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
 .class-icon img{
     height: 70%;
     width: 70%;
@@ -335,40 +368,124 @@ footer p{
 .class-icon:hover {
     opacity: 0.5;
 }
-.class-icon a{
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-}
+
 .class-icon p{
     font-size: 25px;
 }
-.main-height {
-    height: 1000px;
-}
-.main-height h1{
-    color: #6a9a8c;
-    Text-shadow: 3px 3px 5px #dfdfcd;
-}
+
 .classes {
     display: flex;
+    margin-top: 50px;
 }
-.class-menu {
-    width: 33%;
-}
+
 .class-menu p{
     padding-left: 20px;
     padding-right: 20px;
     
 }
+@media (max-width:670px ){
+    .main-height{
+        height: 1700px;
+    }
+    .class-menu {
+        width: 100%;
+    } 
+    .class-menu p{
+        padding-bottom: 30px;
+    }
+    .class-icon p{
+        padding-bottom: 0px;
+    }
+    .classes {
+        flex-direction: column;
+    }
+}
+
+/* ====================================================================== */
+/* 子どもクラスページ */
+
+.children-class {
+    height: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.children-class h1{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+    margin: 20px 100px 20px 100px;
+}
+.children table{
+    width: 50%;
+}
+.children a{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+}
+/* ====================================================================== */
+/* 大人クラスページ */
+.adult-class {
+    height: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.adult-class h1{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+    margin: 20px 100px 20px 100px;
+}
+.adult table{
+    width: 50%;
+}
+.adult a{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+}
+/* ====================================================================== */
+/* 個別稽古ページ */
+.personal-class {
+    height: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.personal-class h1{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+    margin: 20px 100px 20px 100px;
+}
+.personal table{
+    width: 50%;
+}
+.personal a{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+}
+
+/* ====================================================================== */
+/* テーブル共通CSS */
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ====================================================================== */
 
 /* カウンセリング　ページ */
-
+.co {
+    width: 100%;
+    height: 1000px;
+    margin: 200px 0px 100px 0px;
+}
 .co span{
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
 }
 .co p{
     font-size: 25px;
@@ -376,5 +493,25 @@ footer p{
     margin-bottom: 100px;
     line-height: 2em;
 }
+@media (max-width:670px ){
+    .co {
+        height: 1000px;
+        margin: 100px 0px 100px 0px;
+    }
+    .co-img img{
+        width: 100%;
+    } 
+    .co span{
+        font-size: 22px;
+        color: #6a9a8c;
+        Text-shadow: 3px 3px 5px #dfdfcd;
+    }
+    .co p{
+        font-size: 16px;
+        margin: 80px 10px 80px 10px;
+        line-height: 1.5em;
+    }
+}
+
 
 /* ====================================================================== */
