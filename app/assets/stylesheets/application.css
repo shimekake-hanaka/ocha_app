@@ -61,12 +61,29 @@ footer {
     height: 100px;
     background-color: #dfdfcd;
 }
-footer p{
+.footer-left p{
     color: #6a9a8c;
     text-align: left;
     padding: 10px 0px 0px 20px;
     font-size: 20px;
+    margin: 0px;
 }
+.number p{
+    font-size: 16px;
+    text-align: right;
+    margin: 0px;
+    color: #6a9a8c;
+    padding-right: 20px;
+}
+@media (max-width:670px ){
+    .number p{
+        padding-right: 0px;
+    }
+    .footer-left p{
+        padding: 10px 0px 0px 10px;
+    }  
+}
+
 
 /* ====================================================================== */
 
@@ -423,6 +440,14 @@ footer p{
     Text-shadow: 3px 3px 5px #dfdfcd;
     border-bottom: 2px solid #6a9a8c;
 }
+@media (max-width:670px ){
+    .children table{
+        width: 80%;
+    }    
+    .children-class h1{
+        margin: 20px;
+    }
+}
 /* ====================================================================== */
 /* 大人クラスページ */
 .adult-class {
@@ -443,6 +468,14 @@ footer p{
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #dfdfcd;
     border-bottom: 2px solid #6a9a8c;
+}
+@media (max-width:670px ){
+    .adult table{
+        width: 80%;
+    }    
+    .adult-class h1{
+        margin: 20px;
+    }
 }
 /* ====================================================================== */
 /* 個別稽古ページ */
@@ -465,7 +498,14 @@ footer p{
     Text-shadow: 3px 3px 5px #dfdfcd;
     border-bottom: 2px solid #6a9a8c;
 }
-
+@media (max-width:670px ){
+    .personal table{
+        width: 80%;
+    }    
+    .personal-class h1{
+        margin: 20px;
+    }
+}
 /* ====================================================================== */
 /* テーブル共通CSS */
 .table {
@@ -493,6 +533,9 @@ footer p{
     margin-bottom: 100px;
     line-height: 2em;
 }
+.co img{
+    width: 50%;
+}
 @media (max-width:670px ){
     .co {
         height: 1000px;
@@ -513,5 +556,47 @@ footer p{
     }
 }
 
+
+/* ====================================================================== */
+
+/* 体験教室 　ページ */
+.experience {
+    width: 100%;
+    height: 1000px;
+    margin: 200px 0px 100px 0px;
+}
+.experience h1{
+    margin: 0px 300px 20px 300px;
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+}
+
+.experience p{
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    line-height: 2em;
+}
+@media (max-width:670px ){
+    .experience {
+        height: 800px;
+        margin: 100px 0px 0px 0px;
+    }
+    .experience h1{
+        margin: 0px 0px 20px 0px;
+        font-size: 22px;
+        color: #6a9a8c;
+        Text-shadow: 3px 3px 5px #dfdfcd;
+    }
+    .experience-img img{
+        width: 100%;
+    } 
+    .experience p{
+        font-size: 16px;
+        margin: 80px 10px 80px 10px;
+        line-height: 1.5em;
+    }
+}
 
 /* ====================================================================== */
