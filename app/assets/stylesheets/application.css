@@ -153,6 +153,54 @@ footer {
 
 
 /* ――――――――――――――――――――――――――――――――― */
+/* good-point */
+.okashi {
+    display: flex;
+}
+.okashi img{
+    width: 30%;
+    margin-left: 10%;
+}
+.okashi p{
+    margin-left: 10%;
+    font-size: 40px !important;
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #6a9a8c;
+}
+/* ――――――――――――――――――――――――――――――――― */
+.shiki {
+    margin-top: -40px;
+    display: flex;
+    text-align: right;
+}
+.shiki img{
+    width: 30%;
+    margin-left: 25%;
+}
+.shiki p{
+    padding-top: 150px;
+    margin-left: 20%;
+    font-size: 40px !important;
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #6a9a8c;
+}
+/* ――――――――――――――――――――――――――――――――― */
+.only {
+    display: flex;
+    margin-top: -40px;
+    margin-bottom: 50px;
+}
+.only img{
+    width: 30%;
+    margin-left: 10%;
+}
+.only p{
+    padding-top: 200px;
+    margin-left: 10%;
+    font-size: 40px !important;
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #6a9a8c;
+}
 
 /* スライドショー画像 お稽古の様子 */
 .messege h1{
@@ -165,6 +213,16 @@ footer {
     margin-bottom: 80px;
     font-size: 25px;
     line-height: 50px;
+    
+}
+.messege span{
+    font-size: 30px !important;
+    color: #6a9a8c;
+    border-bottom: 2px solid #6a9a8c;
+}
+.yousu {
+    text-align: left;
+    padding-left: 25%;
 }
 .messege-warpper{
     display: flex;
@@ -426,19 +484,71 @@ footer {
     margin-top: 150px;
     margin-bottom: 50px;
 }
+.children-point1 {
+    display: flex;
+    margin-top: 50px;
+}
+.children-point1 img{
+    width: 30%;
+    margin-left: 5%;
+    border-radius: 20%;
+}
+.children-point1 p{
+    padding-top: 100px;
+    padding-left: 20px;
+    font-size: 40px !important;
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #6a9a8c;
+}
+.children-point2 {
+    margin-top: -40px;
+    display: flex;
+    text-align: right;
+}
+.children-point2 img{
+    width: 30%;
+    margin-left: 10%;
+    border-radius: 20%;
+    border: 1px solid #000000;
+}
+.children-point2 p{
+    padding-top: 150px;
+    margin-left: 5%;
+    font-size: 40px !important;
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #6a9a8c;
+}
+
 .children-class h1{
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #dfdfcd;
     border-bottom: 2px solid #6a9a8c;
     margin: 20px 100px 20px 100px;
+
+}
+.children p{
+    font-size: 30px;
+    text-align: left;
+    padding-left: 20%;
+    padding-bottom: 50px;
 }
 .children table{
     width: 50%;
+    font-size: 30px;
 }
 .children a{
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #dfdfcd;
     border-bottom: 2px solid #6a9a8c;
+}
+.children-insta {
+    margin-top: 50px;
+    margin-left: 15%;
+    width: 35%;
+    display: flex;
+}
+.insta {
+    margin-left: 5%;
 }
 @media (max-width:670px ){
     .children table{
@@ -578,6 +688,9 @@ footer {
     margin-bottom: 100px;
     line-height: 2em;
 }
+.experience-img img{
+    width: 60%;
+} 
 @media (max-width:670px ){
     .experience {
         height: 800px;
