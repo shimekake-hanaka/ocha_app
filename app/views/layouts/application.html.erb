@@ -3,10 +3,10 @@
   <head>
     <title>OchaApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="stylesheet#responsive.css">
+    <%# <link rel="stylesheet" href="stylesheet#responsive.css"> %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload" %>
     
     <!-- drawer.css ハンバーガーボタン作成-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
