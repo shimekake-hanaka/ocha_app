@@ -272,6 +272,9 @@ table tr{
     border-bottom: 2px solid #6a9a8c;
 }
 @media (max-width:670px ){
+    .submain {
+        height: 700px;
+    }
     .personal-class h1{
         width: 80%;
     }
@@ -304,16 +307,16 @@ table tr{
         padding-left: 50px;
     }
     .detail {
-        font-size: 30px;
-        line-height: 2em;
+        font-size: 20px;
+        padding: 10px;
     }
 
     table tr{
-        font-size: 30px;
+        font-size: 20px;
         line-height: 2em;
     }
     .personal a{
-        font-size: 30px;
+        font-size: 20px;
         color: #6a9a8c;
         text-shadow: 3px 3px 5px #dfdfcd;
         border-bottom: 2px solid #6a9a8c;

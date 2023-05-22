@@ -110,6 +110,20 @@
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #6a9a8c;
 }
+@media (max-width:670px ) {
+    .shiki {
+        margin-top: 0px;
+    }
+    .shiki img{
+        margin-left: 10%;
+    }
+    .shiki p{
+        padding-top: 0px;
+        padding-left: 10%;
+        font-size: 20px !important;
+    }
+}
+
 /* ――――――――――――――――――――――――――――――――― */
 .only {
     display: flex;
@@ -126,6 +140,23 @@
     font-size: 40px !important;
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #6a9a8c;
+}
+
+@media (max-width:670px ) {
+    .only {
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+    .only img{
+        width: 30%;
+        margin-left: 10%;
+    }
+    .only p{
+        padding-top: 0px;
+        margin-left: 10%;
+        font-size: 20px !important;
+    }
+
 }
 
 /* スライドショー画像 お稽古の様子 */
@@ -183,8 +214,8 @@
     }
     .messege p{
         margin: 40px 10px 40px 10px;
-        font-size: 16px;
-        line-height: 1.5em;
+        font-size: 18px;
+        line-height: 2em;
     }
     .messege-warpper{
         height: 210px;
@@ -193,6 +224,12 @@
         margin-left: 5px;
         width: 200px;
         height: 200px;
+    }
+    .yousu {
+        padding-left: 0%;
+    }
+    .messege span{
+        font-size: 20px !important;
     }
 }
 
