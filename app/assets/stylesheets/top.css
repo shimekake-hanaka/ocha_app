@@ -1,9 +1,13 @@
-/* require_tree .
+/* =require_tree .
 = require_self */
 
 
 /*トップ 茶道×カウンセリング*/
+
+/* ====================================================================== */
+/*トップ 茶道×カウンセリング*/
 .top-warpper  {
+    width: 100%;
     height: 750px;
     padding-top: 50px;
     margin-bottom: 110px;
@@ -17,19 +21,19 @@
     Text-shadow: 3px 3px 5px #6a9a8c;
     font-size: 27px;
 }
-.container {
+.media-top {
     display: flex;
     padding-top: 100px;
 }
 .container img{
-    width: 50%;
-    margin-left: 150px;
+    width: 60%;
+    margin-left: 10%;
     height: 600px;
     object-fit: cover;
 } 
 .container h1{
     color: #6a9a8c;
-    width: 50%;
+    width: 30%;
     padding-left: 150px;
     padding-top: 30px;
 }
@@ -40,123 +44,257 @@
         padding-top: 0px;
         padding-bottom: 0px;
         margin-top: 0px;
+        margin-bottom: 0;
+    }
+    .media-top img{
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        margin-left: 0px;
+        height: 300px;
+    } 
+    .grade-top {
+        position: absolute;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
     }
     .text {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        height: 300px;
+        z-index: 10;
         margin-left: 0px;
         line-height :2em; 
         Letter-spacing:0.5em;
-        writing-mode: horizontal-tb;
         font-size: 12px;
         margin-bottom: 10px;
+    }
+    .container {
+        padding-top: 60px;
     }
     .container h1{
         width: 100%;
         padding-left: 0px;
         padding-top: 0px;
     }
-    .container img{
-        display: block;
+    
+    .media-top {
+        position: relative;
         width: 100%;
-        margin-left: 0px;
         height: 300px;
-    } 
-    .container {
-        flex-direction:column;
-        padding-top: 60px;
     }
       }
 
 
 /* ――――――――――――――――――――――――――――――――― */
 /* good-point */
-.okashi {
-    display: flex;
-}
+
+/*  美味しいお菓子*/
 .okashi img{
+    position: absolute;
+    top: 0px;
+    left: 10%;
+    z-index: 0;
     width: 30%;
-    margin-left: 10%;
+    height: 300px;
+    object-fit: cover;
+} 
+.grade-okashi {
+    position: absolute;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+    top: 0;
+    left: 10%;
+    width: 30%;
+    height: 300px;
 }
-.okashi p{
-    margin-left: 10%;
+.text-okashi {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    height: 300px;
+    z-index: 10;
+}
+.text-okashi p{
     font-size: 40px !important;
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #6a9a8c;
+}
+.okashi {
+    position: relative;
+    width: 100%;
+    height: 300px;
 }
 
 @media (max-width:670px ) {
     .okashi img{
-        margin-left: 10%;
+        width: 30%;
+        height: 100px;
+        left: 0;
+    } 
+    .grade-okashi {
+        width: 31%;
+        height: 100px;
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
+
     }
-    .okashi p{
-        margin-left: 10%;
+    .text-okashi {
+        top: 20px;
+        height: 100px;
+    }
+    .text-okashi p{
         font-size: 20px !important;
+        margin: 0 !important;
+    }
+    .okashi {
+        height: 100px;
     }
 
 }
 /* ――――――――――――――――――――――――――――――――― */
+
+/* 四季 */
+
 .shiki {
-    margin-top: -40px;
-    display: flex;
-    text-align: right;
+    position: relative;
+    width: 100%;
+    height: 500px;
 }
 .shiki img{
+    position: absolute;
+    top: -50px;
+    right: 10%;
+    z-index: 0;
     width: 30%;
-    margin-left: 25%;
+    height: 500px;
+    object-fit: cover;
+} 
+.grade-shiki {
+    position: absolute;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+    top: -50px;
+    right: 10%;
+    width: 30%;
+    height: 500px;
 }
-.shiki p{
-    padding-top: 150px;
-    margin-left: 20%;
+.text-shiki {
+    position: absolute;
+    top: 60px;
+    right: 35%;
+    height: 500px;
+    z-index: 10;
+}
+.text-shiki p{
     font-size: 40px !important;
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #6a9a8c;
 }
+
+
 @media (max-width:670px ) {
     .shiki {
-        margin-top: 0px;
+        height: 150px;
     }
     .shiki img{
-        margin-left: 10%;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 150px;
+    } 
+    .grade-shiki {
+        top: 0;
+        right: 0;
+        width: 31%;
+        height: 150px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
+
     }
-    .shiki p{
-        padding-top: 0px;
-        padding-left: 10%;
+    .text-shiki {
+        top: 60px;
+        right: 45%;
+        height: 150px;
+    }
+    .text-shiki p{
         font-size: 20px !important;
+        margin: 0 !important;
     }
+    
 }
 
 /* ――――――――――――――――――――――――――――――――― */
+
+/* 自分と向き合える時間 */
+
 .only {
-    display: flex;
-    margin-top: -40px;
-    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+    height: 500px;
 }
 .only img{
+    position: absolute;
+    top: -150px;
+    left: 10%;
+    z-index: 0;
     width: 30%;
-    margin-left: 10%;
+    height: 500px;
+    object-fit: cover;
+} 
+.grade-only {
+    position: absolute;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+    top: -150px;
+    left: 10%;
+    width: 30%;
+    height: 500px;
 }
-.only p{
-    padding-top: 200px;
-    margin-left: 10%;
+.text-only {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    height: 500px;
+    z-index: 10;
+}
+.text-only p{
     font-size: 40px !important;
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #6a9a8c;
 }
+
+
 
 @media (max-width:670px ) {
     .only {
-        margin-top: 0px;
-        margin-bottom: 50px;
+        height: 150px;
     }
     .only img{
+        top: 0;
+        left: 0;
         width: 30%;
-        margin-left: 10%;
-    }
-    .only p{
-        padding-top: 0px;
-        margin-left: 10%;
-        font-size: 20px !important;
-    }
+        height: 150px;
+    } 
+    .grade-only {
+        top: 0;
+        left: 0;
+        width: 31%;
+        height: 150px;
+        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
 
+    }
+    .text-only {
+        height: 150px;
+        left: 45%;
+        top: 50px;
+    }
+    .text-only p{
+        font-size: 20px !important;
+        margin: 0 !important;
+    }
 }
 
 /* スライドショー画像 お稽古の様子 */
@@ -175,7 +313,6 @@
 .messege span{
     font-size: 30px !important;
     color: #6a9a8c;
-    border-bottom: 2px solid #6a9a8c;
 }
 .yousu {
     text-align: left;
@@ -214,7 +351,7 @@
     }
     .messege p{
         margin: 40px 10px 40px 10px;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 2em;
     }
     .messege-warpper{
@@ -229,7 +366,7 @@
         padding-left: 0%;
     }
     .messege span{
-        font-size: 20px !important;
+        font-size: 16px !important;
     }
 }
 
