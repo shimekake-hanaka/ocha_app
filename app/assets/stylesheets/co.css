@@ -4,7 +4,7 @@
 /* カウンセリング　ページ */
 .co {
     width: 100%;
-    height: 1000px;
+    height: 1500px;
     margin: 200px 0px 100px 0px;
 }
 .co span{
@@ -14,13 +14,19 @@
 }
 .co p{
     font-size: 25px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px;
     line-height: 2em;
+    text-align: left;
 }
 .co img{
     width: 50%;
 }
+.link-personal a{
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #dfdfcd;
+    font-size: 25px;
+}
+
 @media (max-width:670px ){
     .co {
         height: 1000px;
@@ -35,9 +41,14 @@
         Text-shadow: 3px 3px 5px #dfdfcd;
     }
     .co p{
-        font-size: 16px;
-        margin: 80px 10px 80px 10px;
+        font-size: 18px;
+        margin: 80px 20px 80px 20px;
         line-height: 1.5em;
+    }
+    .link-personal a{
+        color: #6a9a8c;
+        Text-shadow: 3px 3px 5px #dfdfcd;
+        font-size: 18px;
     }
 }
 

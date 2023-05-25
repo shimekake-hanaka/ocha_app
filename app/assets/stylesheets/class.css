@@ -70,47 +70,11 @@
 
 /* ====================================================================== */
 /* 子どもクラスページ */
-
 .children-class {
-    height: auto;
-    margin-top: 150px;
-    margin-bottom: 50px;
+    width: 100%;
+    margin-top: 120px;
+    height: 3500px;
 }
-.children-point1 {
-    display: flex;
-    margin-top: 50px;
-}
-.children-point1 img{
-    width: 30%;
-    margin-left: 5%;
-    border-radius: 20%;
-}
-.children-point1 p{
-    padding-top: 100px;
-    padding-left: 20px;
-    font-size: 40px !important;
-    color: #6a9a8c;
-    Text-shadow: 3px 3px 5px #6a9a8c;
-}
-.children-point2 {
-    margin-top: -40px;
-    display: flex;
-    text-align: right;
-}
-.children-point2 img{
-    width: 30%;
-    margin-left: 10%;
-    border-radius: 20%;
-    border: 1px solid #000000;
-}
-.children-point2 p{
-    padding-top: 150px;
-    margin-left: 5%;
-    font-size: 40px !important;
-    color: #6a9a8c;
-    Text-shadow: 3px 3px 5px #6a9a8c;
-}
-
 .children-class h1{
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #dfdfcd;
@@ -118,38 +82,177 @@
     margin: 20px 100px 20px 100px;
 
 }
-.children p{
+/*  画像下の文章  */
+.children-point {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.children-point img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+} 
+.grade-children {
+    position: absolute;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+    top: 0px;
+    left: 0;
+    width: 50%;
+    height: 500px;
+}
+.text-children {
+    position: absolute;
+    top: 100px;
+    left: 55%;
+    line-height: 5em;
+    height: 500px;
+    z-index: 10;
+}
+.text-children p{
+    font-size: 40px !important;
+    color: #6a9a8c;
+    Text-shadow: 3px 3px 5px #6a9a8c;
+}
+/* 画像下の文章 */
+.submain-children {
     font-size: 30px;
     text-align: left;
-    padding-left: 20%;
+    padding-left: 10%;
     padding-bottom: 50px;
 }
-.children table{
-    width: 50%;
-    font-size: 30px;
+/* 詳細 */
+.shousai {
+    height: 700px;
 }
-.children a{
+.shousai h1{
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #dfdfcd;
     border-bottom: 2px solid #6a9a8c;
+    margin: 20px 100px 20px 100px;
 }
+.shousai p{
+    text-align: left;
+    font-size: 30px;
+    padding-left: 20%;
+    padding-bottom: 50px;
+}
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time h1{
+    color: #6a9a8c;
+    text-shadow: 3px 3px 5px #dfdfcd;
+    width: 40%;
+    margin: 20px 0;
+    border-bottom: 2px solid #6a9a8c;
+    text-align: center;
+}
+.time table{
+    width: 50%;
+    font-size: 30px;
+}
+/* instagram */
 .children-insta {
     margin-top: 50px;
-    margin-left: 15%;
-    width: 35%;
+    width: 100%;
     display: flex;
+    background: linear-gradient(to bottom, rgba(223, 223, 205, 1), rgba(255, 255, 255, 0.1));
 }
 .insta {
+    width: 35%;
+    height: 1000px;
     margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
 }
+.insta-msg {
+    font-size: 30px;
+}
+.link p{
+    font-size: 20px;
+}
+
 @media (max-width:670px ){
-    .children table{
-        width: 80%;
-    }    
+    .children-class {
+        margin-top: 100px;
+        height: 4200px;
+    }
     .children-class h1{
-        margin: 20px;
+        color: #6a9a8c;
+        Text-shadow: 3px 3px 5px #dfdfcd;
+        border-bottom: 2px solid #6a9a8c;
+        margin: 20px 100px 20px 100px;
+    
+    }
+    /* 画像 */
+    .children-point img{
+        left: 0;
+        width: 100%;
+    } 
+    .grade-children {
+        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+        left: 0;
+        width: 101%;
+    }
+    .text-children {
+        top: 0;
+        left: 40%;
+        line-height: 5em;
+        writing-mode: vertical-rl
+    }
+    /* 画像下の文章 */
+    .submain-children {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /* 詳細 */
+    .shousai {
+        height: 500px;
+    }
+    .shousai p{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .time table{
+        width: 80%;
+    }
+    .time p{
+        font-size: 30px;
+    }
+    .time h1{
+        width: 80%;
+    }
+    /* インスタ*/
+    .children-insta {
+        margin-top: 50px;
+        width: 100%;
+        display: block;
+        background: none;
+    }
+    .insta {
+        width: 35%;
+        height: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 20px;
+    }
+    .insta-msg {
+        font-size: 18px;
+    }
+    .link p{
+        font-size: 20px;
     }
 }
+
+/* ====================================================================== */
 /* 大人クラスページ */
 .adult-class {
     height: auto;
@@ -162,8 +265,47 @@
     border-bottom: 2px solid #6a9a8c;
     margin: 20px 100px 20px 100px;
 }
-.adult table{
-    width: 50%;
+/* 画像 */
+.submain {
+    height: 800px;
+    position: relative;
+}
+.adult-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.adult-grade {
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15px;
+}
+.adult-point {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    z-index: 20px;
+    width: 55%;
+}
+
+
+.adult-point p{
+    font-size: 30px;
+    color: black;
+    text-shadow: 3px 3px 5px #dfdfcd;
+    text-align: left;
+    line-height: 3em;
+}
+/* 詳細・金額 */
+.font-sp {
+    font-size: 25px;
 }
 .adult a{
     color: #6a9a8c;
@@ -171,11 +313,43 @@
     border-bottom: 2px solid #6a9a8c;
 }
 @media (max-width:670px ){
-    .adult table{
-        width: 80%;
-    }    
-    .adult-class h1{
-        margin: 20px;
+    .submain {
+        height: 400px;
+    }
+    .adult-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .adult-grade {
+        background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2));
+        width: 100%;
+        height: 401px;
+    }
+    .adult-point {
+        top: 300px;
+        right: 10px;
+        writing-mode: vertical-rl
+    }
+    .adult-point p{
+        font-size: 16px;
+        text-align: left;
+        line-height: 3em;
+    }   
+    /* ------------------------ */
+    .adult-class {
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    }
+    /* 詳細・金額 */
+    .adult a{
+        color: #6a9a8c;
+        Text-shadow: 3px 3px 5px #dfdfcd;
+        border-bottom: 2px solid #6a9a8c;
+    }
+    .font-sp {
+        font-size: 16px;
     }
 }
 /* ====================================================================== */
@@ -202,19 +376,21 @@
     margin-bottom: 60px;
 }
 .submain {
-    height: 1000px;
+    height: 800px;
+    position: relative;
 }
 .personal-img {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 50%;
     height: 100%;
-    background-image: image-url('S_personal.jpg');
     background-size: cover;
 }
 .grade {
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 100%;
     top: 0;
     left: 0;
@@ -223,9 +399,9 @@
 .personal-point {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 50%;
     z-index: 20px;
-    width: 100%;
+    width: 50%;
 }
 
 
@@ -234,7 +410,7 @@
     color: #6a9a8c;
     text-shadow: 3px 3px 5px #dfdfcd;
     text-align: left;
-    line-height: 5em;
+    line-height: 4em;
 }
 .personal-point span{
     padding-left: 50px;
@@ -253,9 +429,13 @@
     border-bottom: 2px solid #6a9a8c;
 }
 
-.detail {
+.personal-detail {
     font-size: 30px;
     line-height: 2em;
+    
+}
+.value {
+    font-size: 30px;
 }
 
 .personal table{
@@ -280,6 +460,7 @@ table tr{
     }
     .personal-img {
         width: 100%;
+        left: 0;
     }
     
     .personal-point {
@@ -292,6 +473,8 @@ table tr{
         justify-content: start;
     }
     .grade {
+        left: 0;
+        width: 100%;
         background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     }
     .personal-point p{
@@ -299,16 +482,19 @@ table tr{
         font-size: 25px;
         color: black;
         text-shadow: 3px 3px 5px #0000003b;
-        /* text-align: ; */
-        line-height: 2.5em;
+        line-height: 2em;
         writing-mode: vertical-rl;
     }
     .personal-point span{
         padding-left: 50px;
     }
-    .detail {
-        font-size: 10px;
-        padding: 10px;
+    .personal-detail {
+        font-size: 16px !important;
+        padding: 10px 20px 10px 20px;
+        text-align: left;
+    }
+    .value p{
+        font-size: 20px;
     }
 
     table tr{
