@@ -435,12 +435,12 @@
     color: #6a9a8c;
     border-bottom: 2px solid #dee7ec;
 }
-.contact-form p{
+.contact-form text_field{
     font-size: 18px;
     color: black;
     line-height: 10px;
 }
-.contact-form input{
+.contact-form label{
     width: 35%;
     font-size: 18px;
     padding: 10px;

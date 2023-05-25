@@ -1,0 +1,11 @@
+<div class="contact-warpper">
+    <div class="contact">
+        <h1>お問い合わせ</h1>
+    </div>
+    <%= form_for @contact, url: confirm_contacts_path do |f| %>
+        <div class="contact-form">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+        </div>
+    <% end %>
+</div>
