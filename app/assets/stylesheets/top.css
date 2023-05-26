@@ -429,23 +429,32 @@
 .contact-warpper {
     height: 800px;
     text-align: left;
-    margin: 100px;
+    margin: 150px;
 }
 .contact {
     color: #6a9a8c;
     border-bottom: 2px solid #dee7ec;
+    text-align: center;
 }
-.contact-form text_field{
-    font-size: 18px;
-    color: black;
-    line-height: 10px;
+
+.contact-form {
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 25%;
 }
+
 .contact-form label{
-    width: 35%;
-    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
     padding: 10px;
-    border: 1px solid #dee7ec;
 }
+.contact-form input{
+    width: 80%;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
 .contact-form textarea{
     width: 50%;
     font-size: 18px;

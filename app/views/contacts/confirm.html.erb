@@ -1,0 +1,19 @@
+<div class="contact-warpper">
+    <div class="contact">
+        <h1>お問い合わせ内容の確認</h1>
+    </div>
+
+    <div>
+        <p>以下の内容でよろしいでしょうか？</p>
+        <div>
+            <%= t("activerecord.attributes.contact.name")%>
+            <%= @contact.name %>
+        </div>
+
+    </div>
+
+    <%= form_for @contact, url: contacts_path do |f| %>
+        <%= f.hidden_field :name %>
+        <%= f.button "OK", class:"confrim_btn" %>
+    <% end %>
+</div>
