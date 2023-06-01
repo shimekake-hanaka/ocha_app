@@ -9,7 +9,7 @@ class Contact < ApplicationRecord
 
     private
 
-    # メールアドレスの形式チェックメソッド
+    # メールアドレスの形式チェック
     def email_format
         return if /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.match?(email)
         
