@@ -6,14 +6,33 @@
     <div>
         <p>以下の内容でよろしいでしょうか？</p>
         <div>
-            <%= t("activerecord.attributes.contact.name")%>
-            <%= @contact.name %>
+            <%= t("activerecord.attributes.contact.name")%><br>
+            <%= @contact.name %><br>
+
+            <%= t("activerecord.attributes.contact.email")%><br>
+            <%= @contact.email %><br>
+
+            <%= t("activerecord.attributes.contact.telephone")%><br>
+            <%= @contact.telephone %><br>
+
+            <%= t("activerecord.attributes.contact.content_inquiry")%><br>
+            <%= @contact.content_inquiry %>
         </div>
 
     </div>
 
     <%= form_for @contact, url: contacts_path do |f| %>
         <%= f.hidden_field :name %>
+        <%= f.hidden_field :email %>
+        <%= f.hidden_field :telephone %>
+        <%= f.hidden_field :content_inquiry %>
         <%= f.button "OK", class:"confrim_btn" %>
+    <% end %>
+    <%= form_for @contact, url: contacts_path do |f| %>
+        <%= f.hidden_field :name %>
+        <%= f.hidden_field :email %>
+        <%= f.hidden_field :telephone %>
+        <%= f.hidden_field :content_inquiry %>
+        <%= f.button "戻る", value: "back" , class:"confrim_btn" %>
     <% end %>
 </div>
