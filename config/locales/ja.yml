@@ -6,3 +6,9 @@ ja:
         telephone: 電話番号
         content_inquiry: お問い合わせ内容
         email: メールアドレス
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              blank: を入力してください
