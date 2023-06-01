@@ -3,6 +3,6 @@ ja:
     attributes:
       contact:
         name: お名前
-        email: メールアドレス
         telephone: 電話番号
         content_inquiry: お問い合わせ内容
+        email: メールアドレス
