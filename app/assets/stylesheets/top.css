@@ -297,6 +297,7 @@
     }
 }
 
+
 /* スライドショー画像 お稽古の様子 */
 .messege h1{
     color: #6a9a8c;
@@ -426,6 +427,16 @@
 
 /* ――――――――――――――――――――――――――――――――― */
 /* お問い合わせ */
+.contacts a{
+    text-decoration: none;
+    color: #6a9a8c;
+    border-bottom: 2px solid #6a9a8c;
+   
+}
+.contacts h1{
+    margin-bottom: 100px;
+}
+
 .contact-warpper {
     height: 800px;
     text-align: left;
