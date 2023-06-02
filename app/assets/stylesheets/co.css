@@ -2,7 +2,178 @@
 = require_self */
 
 /* カウンセリング　ページ */
-.co {
+
+.personal-class {
+    height: auto;
+    margin-bottom: 50px;
+}
+.top-main {
+    height: 300px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.top-main h1{
+    color: #6a9a8c;
+    text-shadow: 3px 3px 5px #dfdfcd;
+    width: 40%;
+    margin: 20px 0;
+    margin-bottom: 60px;
+    border-bottom: 2px solid #6a9a8c;
+}
+.personal {
+    margin-bottom: 60px;
+}
+.submain {
+    height: 800px;
+    position: relative;
+}
+.personal-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+}
+.grade {
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15px;
+}
+.personal-point {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 20px;
+    width: 50%;
+}
+
+
+.personal-point p{
+    font-size: 30px;
+    color: #6a9a8c;
+    text-shadow: 3px 3px 5px #dfdfcd;
+    text-align: left;
+    line-height: 4em;
+}
+.personal-point span{
+    padding-left: 50px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main h1{
+    color: #6a9a8c;
+    text-shadow: 3px 3px 5px #dfdfcd;
+    width: 40%;
+    margin: 20px 0;
+    border-bottom: 2px solid #6a9a8c;
+}
+.main p{
+    font-size: 25px;
+}
+.personal-detail {
+    font-size: 30px;
+    line-height: 2em;
+    
+}
+.value {
+    font-size: 30px;
+}
+
+.personal table{
+    width: 50%;
+}
+table tr{
+    font-size: 30px;
+    line-height: 2em;
+}
+.personal a{
+    font-size: 30px;
+    color: #6a9a8c;
+    text-shadow: 3px 3px 5px #dfdfcd;
+    border-bottom: 2px solid #6a9a8c;
+}
+@media (max-width:670px ){
+    .submain {
+        height: 700px;
+    }
+    .personal-class h1{
+        width: 80%;
+    }
+    .personal-img {
+        width: 100%;
+        left: 0;
+    }
+    
+    .personal-point {
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 20px;
+        display: flex;
+        justify-content: start;
+    }
+    .grade {
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    .personal-point p{
+        padding-left: 0px;
+        font-size: 25px;
+        color: black;
+        text-shadow: 3px 3px 5px #0000003b;
+        line-height: 2em;
+        writing-mode: vertical-rl;
+    }
+    .personal-point span{
+        padding-left: 50px;
+    }
+    .personal-detail {
+        font-size: 16px !important;
+        padding: 10px 20px 10px 20px;
+        text-align: left;
+    }
+    .value p{
+        font-size: 20px;
+    }
+
+    table tr{
+        font-size: 20px;
+        line-height: 2em;
+    }
+    .personal a{
+        font-size: 20px;
+        color: #6a9a8c;
+        text-shadow: 3px 3px 5px #dfdfcd;
+        border-bottom: 2px solid #6a9a8c;
+    }
+    .table{
+        width: 80%;
+    } 
+    table{
+        width: 80%;
+    }    
+    .personal-class h1{
+        margin: 20px;
+    }
+}
+
+/* \\\\\\\\\\\\\\\\\\\\ */
+/* ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿CO：personal-classページ入れ替えた＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ */
+
+
+/* .co {
     width: 100%;
     height: 1500px;
     margin: 200px 0px 100px 0px;
@@ -51,4 +222,4 @@
         font-size: 18px;
     }
 }
-
+ */
