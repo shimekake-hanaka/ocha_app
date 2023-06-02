@@ -6,9 +6,20 @@ ja:
         telephone: 電話番号
         content_inquiry: お問い合わせ内容
         email: メールアドレス
+
     errors:
       models:
         contact:
           attributes:
             name:
+              blank: を入力してください
+
+            telephone:
+              blank: を入力してください
+              too_long: を確認して下さい
+
+            content_inquiry:
+              blank: を入力してください
+            
+            email:
               blank: を入力してください
