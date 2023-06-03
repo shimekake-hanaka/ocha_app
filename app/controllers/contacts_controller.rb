@@ -13,6 +13,8 @@ class ContactsController < ApplicationController
         @contact = Contact.new(contact_params)
         return render :new if params[:button] == "back"
         if @contact.save
+            ContactMailer.mail_to_user(@contact.id).deliver_now
+            ContactMailer.mail_to_staff(@contact.id).deliver_now
             return redirect_to complete_contacts_url
         end
 
