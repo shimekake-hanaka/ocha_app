@@ -114,7 +114,10 @@
     </div>
 </div>
 <div class="contacts">
-    <h1><a href="/contacts/new">お問い合わせはこちらから</a></h1>
+    <h1>
+        <%# <a href="/contacts/new">お問い合わせはこちらから</a> %>
+        <%= link_to "お問い合わせはこちらから", new_contact_path  %>
+    </h1>
 </div>
 
 <%# <label for="name">お名前（必須）</label><br>
