@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get "children-class" => "home#children-class"
   get "adult-class" => "home#adult-class"
   get "personal-class" => "home#personal-class"
-  get "new" => "contacts#new"
+
+
 
   resources :contacts, only: %i[new create] do
     collection do
