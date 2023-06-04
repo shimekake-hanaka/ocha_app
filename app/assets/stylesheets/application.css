@@ -76,16 +76,17 @@ footer {
     font-size: 20px;
     margin: 0px;
 }
-.number p{
+.number a{
+    display: flex;
+    justify-content: end;
     font-size: 16px;
-    text-align: right;
     margin: 0px;
     color: #6a9a8c;
     padding-right: 20px;
 }
 @media (max-width:670px ){
-    .number p{
-        padding-right: 0px;
+    .number a{
+        padding-right: 10px;
     }
     .footer-left p{
         padding: 10px 0px 0px 10px;
