@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   get "adult-class" => "home#adult-class"
   get "personal-class" => "home#personal-class"
 
-
-
   resources :contacts, only: %i[new create] do
     collection do
       post :confirm
