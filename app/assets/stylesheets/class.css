@@ -177,6 +177,10 @@
 }
 .link p{
     font-size: 20px;
+    
+}
+.link a{
+    color: #6a9a8c;
 }
 
 @media (max-width:670px ){
@@ -188,8 +192,9 @@
         color: #6a9a8c;
         Text-shadow: 3px 3px 5px #dfdfcd;
         border-bottom: 2px solid #6a9a8c;
-        margin: 20px 100px 20px 100px;
-    
+        width: 70%;
+        margin: auto;
+        margin-bottom: 20px;
     }
     /* 画像 */
     .children-point img{
@@ -379,7 +384,7 @@
 .co img{
     width: 50%;
 }
-.link-personal a{
+.main a{
     color: #6a9a8c;
     Text-shadow: 3px 3px 5px #dfdfcd;
     font-size: 25px;
@@ -403,7 +408,7 @@
         margin: 10px;
         line-height: 1.5em;
     }
-    .link-personal a{
+    .main a{
         color: #6a9a8c;
         Text-shadow: 3px 3px 5px #dfdfcd;
         font-size: 18px;
