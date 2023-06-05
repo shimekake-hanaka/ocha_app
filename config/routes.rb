@@ -20,4 +20,13 @@ Rails.application.routes.draw do
       get :complete
     end
   end
+
+  resources :reserves, only: %i[new create] do
+    collection do
+      post :confirm
+      get :complete
+    end
+  end
+
+
 end

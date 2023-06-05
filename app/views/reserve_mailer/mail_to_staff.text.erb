@@ -1,0 +1,13 @@
+<%= @contact.name %>様よりお問い合わせをいただきました。
+
+ お問い合わせ内容は以下のとおりです。
+
+ [<%= t("activerecord.attributes.contact.name")%>]<br>
+ <%= @contact.name %>
+ [<%= t("activerecord.attributes.contact.email")%>]<br>
+ <%= @contact.email %>
+ [<%= t("activerecord.attributes.contact.telephone")%>]<br>
+ <%= @contact.telephone %>
+ [<%= t("activerecord.attributes.contact.content_inquiry")%>]<br>
+ <%= @contact.content_inquiry %>
+
