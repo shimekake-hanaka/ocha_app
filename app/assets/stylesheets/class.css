@@ -230,7 +230,7 @@
         width: 80%;
     }
     .time p{
-        font-size: 30px;
+        font-size: 16px;
     }
     .time h1{
         width: 80%;
@@ -361,6 +361,8 @@
     .font-sp {
         font-size: 16px;
     }
+
+
 }
 /* ====================================================================== */
 /* 個別稽古ページ */
@@ -379,7 +381,6 @@
     font-size: 25px;
     margin: 30px;
     line-height: 2em;
-    text-align: left;
 }
 .co img{
     width: 50%;
@@ -389,6 +390,7 @@
     Text-shadow: 3px 3px 5px #dfdfcd;
     font-size: 25px;
 }
+
 
 @media (max-width:670px ){
     .co {
@@ -413,6 +415,7 @@
         Text-shadow: 3px 3px 5px #dfdfcd;
         font-size: 18px;
     }
+    
 }
 
 /* ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿CO：personal-classページ入れ替えた＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ */
