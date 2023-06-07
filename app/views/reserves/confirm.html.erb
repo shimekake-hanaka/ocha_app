@@ -1,39 +1,39 @@
 <div class="contact-warpper">
     <div class="contact">
-        <h1>お問い合わせ内容の確認</h1>
+        <h1>茶道体験ご予約内容の確認</h1>
     </div>
 
     <div class="confirm-warpper">
         <p>以下の内容でよろしいでしょうか？</p>
         <div>
-            <div class="confirm"><%= t("activerecord.attributes.contact.name")%></div>
-            <%= @contact.name %><br>
+            <div class="confirm"><%= t("activerecord.attributes.reserve.name")%></div>
+            <%= @reserve.name %><br>
             <br>
 
-            <div class="confirm"><%= t("activerecord.attributes.contact.email")%></div>
-            <%= @contact.email %><br>
+            <div class="confirm"><%= t("activerecord.attributes.reserve.email")%></div>
+            <%= @reserve.email %><br>
             <br>
 
-            <div class="confirm"><%= t("activerecord.attributes.contact.telephone")%></div>
-            <%= @contact.telephone %><br>
+            <div class="confirm"><%= t("activerecord.attributes.reserve.telephone")%></div>
+            <%= @reserve.telephone %><br>
             <br>
 
-            <div class="confirm"><%= t("activerecord.attributes.contact.content_inquiry")%></div>
-            <%= @contact.content_inquiry %><br>
+            <div class="confirm"><%= t("activerecord.attributes.reserve.content_inquiry")%></div>
+            <%= @reserve.content_inquiry %><br>
 
         </div>
 
     </div>
     <div class="button-confirm">
         <br>
-        <%= form_for @contact, url: contacts_path do |f| %>
+        <%= form_for @reserve, url: reserves_path do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
             <%= f.hidden_field :telephone %>
             <%= f.hidden_field :content_inquiry %>
             <%= f.button "OK", class:"complete_btn" %>
         <% end %><br>
-        <%= form_for @contact, url: contacts_path do |f| %>
+        <%= form_for @reserve, url: reserves_path do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
             <%= f.hidden_field :telephone %>

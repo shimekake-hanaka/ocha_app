@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_05_015024) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_06_131442) do
   create_table "contacts", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -29,4 +29,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_015024) do
     t.string "content_inquiry", default: "", null: false
   end
 
+  create_table "spaers", force: :cascade do |t|
+    t.integer "reserve_id"
+    t.datetime "date1", null: false
+    t.datetime "date2"
+    t.datetime "date3"
+    t.index ["reserve_id"], name: "index_spaers_on_reserve_id"
+  end
+
+  add_foreign_key "spaers", "reserves", column: "reserve_id"
 end
