@@ -103,6 +103,9 @@ table tr{
     border-bottom: 2px solid #6a9a8c;
 }
 @media (max-width:670px ){
+    .main p{
+        font-size: 16px;
+    }
     .submain {
         height: 700px;
     }
@@ -146,6 +149,7 @@ table tr{
     }
     .value p{
         font-size: 20px;
+        text-align: center;
     }
 
     table tr{
