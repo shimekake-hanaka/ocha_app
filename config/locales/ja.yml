@@ -12,6 +12,9 @@ ja:
         telephone: 電話番号
         content_inquiry: お問い合わせ内容
         email: メールアドレス
+        date1: 第一希望日
+        date2: 第二希望日
+        date3: 第三希望日
 
     errors:
       models:
@@ -43,4 +46,7 @@ ja:
               blank: を入力してください
             
             email:
+              blank: を入力してください
+              
+            date1:
               blank: を入力してください
