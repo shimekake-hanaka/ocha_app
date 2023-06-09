@@ -1,7 +1,8 @@
 class ReservesController < ApplicationController
     def new
         @reserve = Reserve.new
-        @spaer = @reserve.spaer.new
+        Reserve.find(1)
+        @spaer = @reserve.spaer.build
     end
 
     def confirm

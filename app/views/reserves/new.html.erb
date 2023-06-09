@@ -26,7 +26,7 @@
         </div>
         <div class="contact-form">
             <%= f.label :date1, class:"contact-label" %><br>
-            <%= f.datetime_field :date1, value: nil ,class:"contact-label" %>
+            <%= f.datetime_field :date1, class:"contact-label" %>
             <% @spaer.errors.full_messages_for(:date1).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
