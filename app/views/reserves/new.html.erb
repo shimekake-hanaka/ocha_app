@@ -1,0 +1,52 @@
+<div class="contact-warpper">
+    <div class="contact">
+        <h1>茶道体験ご予約</h1>
+    </div>
+    <%= form_with(model: @reserve, url: confirm_reserves_path) do |f| %>
+        <div class="contact-form">
+            <%= f.label :name, class:"contact-label" %><br>
+            <%= f.text_field :name, class:"contact-label" %>
+            <% @reserve.errors.full_messages_for(:name).each do |message| %>
+                <div class="error">*<%= message %></div>
+            <% end %>
+        </div>
+        <div class="contact-form">
+            <%= f.label :email, class:"contact-label" %><br>
+            <%= f.text_field :email, class:"contact-label" %>
+            <% @reserve.errors.full_messages_for(:email).each do |message| %>
+                <div class="error">*<%= message %></div>
+            <% end %>
+        </div>
+        <div class="contact-form">
+            <%= f.label :telephone, class:"contact-label" %><br>
+            <%= f.text_field :telephone, class:"contact-label" %>
+            <% @reserve.errors.full_messages_for(:telephone).each do |message| %>
+                <div class="error">*<%= message %></div>
+            <% end %>
+        </div>
+        <div class="contact-form">
+            <%= f.label :date1, class:"contact-label" %><br>
+            <%= f.datetime_field :date1, class:"contact-label" %>
+            <% @reserve.errors.full_messages_for(:date1).each do |message| %>
+                <div class="error">*<%= message %></div>
+            <% end %>
+        </div>
+        <div class="contact-form">
+            <%= f.label :date2, class:"contact-label" %><br>
+            <%= f.datetime_field :date2,  value: nil ,class:"contact-label" %>
+        </div>
+        <div class="contact-form">
+            <%= f.label :date3, class:"contact-label" %><br>
+            <%= f.datetime_field :date3,  value: nil ,class:"contact-label" %>
+        </div>
+        
+        <div class="contact-form">
+            <%= f.label :content_inquiry, class:"contact-label" %><br>【個人稽古の希望・ご年齢をご入力下さい。】<br>
+            <%= f.text_area :content_inquiry, class:"contact-label" %>
+            <% @reserve.errors.full_messages_for(:content_inquiry).each do |message| %>
+                <div class="error">*<%= message %></div>
+            <% end %>
+        </div>
+        <%= f.button "確認画面へ", class:"confrim_btn" %>
+    <% end %>
+</div>

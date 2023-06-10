@@ -1,0 +1,27 @@
+<%= @reserve.name %>様より茶道体験予約のお問い合わせをいただきました。
+
+ お問い合わせ内容は以下のとおりです。
+
+ [<%= t("activerecord.attributes.reserve.name")%>]
+ <%= @reserve.name %>
+ [<%= t("activerecord.attributes.reserve.email")%>]
+ <%= @reserve.email %>
+ [<%= t("activerecord.attributes.reserve.telephone")%>]
+ <%= @reserve.telephone %>
+   [<%= t("activerecord.attributes.reserve.date1")%>]
+ <%= l @reserve.date1 %>
+   [<%= t("activerecord.attributes.reserve.date2")%>]
+ <% if @reserve.date2 != nil %>
+  <%= l @reserve.date2 %>
+ <% else %>
+  <%= @reserve.date2 %>
+ <% end %>
+   [<%= t("activerecord.attributes.reserve.date3")%>]
+ <% if @reserve.date3 != nil %>
+  <%= l @reserve.date3 %>
+ <% else %>
+  <%= @reserve.date3 %>
+ <% end %>
+ [<%= t("activerecord.attributes.reserve.content_inquiry")%>]
+ <%= @reserve.content_inquiry %>
+

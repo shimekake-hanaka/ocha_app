@@ -420,10 +420,11 @@
     justify-content: center;
 }
 .contacts h1{
-    width: 600px;
+    width: 40%;
     background: linear-gradient(to left, rgba(223, 223, 205, 1), rgba(255, 255, 255, 0));
     padding: 15px;
     border: 1px solid #6a9a8c;
+    margin: 10px;
     
 }
 .contacts a{
@@ -454,7 +455,7 @@
     text-align: center;
 }
 .contact-warpper {
-    height: 850px;
+    height: 1300px;
     text-align: left;
     margin: 150px;
 }

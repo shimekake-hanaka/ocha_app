@@ -6,6 +6,15 @@ ja:
         telephone: 電話番号
         content_inquiry: お問い合わせ内容
         email: メールアドレス
+      
+      reserve:
+        name: お名前
+        telephone: 電話番号
+        content_inquiry: お問い合わせ内容
+        email: メールアドレス
+        date1: 第一希望日
+        date2: 第二希望日
+        date3: 第三希望日
 
     errors:
       models:
@@ -23,3 +32,25 @@ ja:
             
             email:
               blank: を入力してください
+
+        reserve:
+          attributes:
+            name:
+              blank: を入力してください
+
+            telephone:
+              blank: を入力してください
+              too_long: を確認して下さい
+
+            content_inquiry:
+              blank: を入力してください
+            
+            email:
+              blank: を入力してください
+              
+            date1:
+              blank: を入力してください
+
+  time:
+    formats:
+      default: "%Y年%m月%d日 %-H:%M~" 

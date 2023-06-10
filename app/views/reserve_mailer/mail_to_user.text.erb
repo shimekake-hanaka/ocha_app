@@ -1,0 +1,40 @@
+<%= @reserve.name %>様
+ この度は茶道体験のご予約をいただきまして、誠にありがとうございます。
+
+ お問い合わせ内容は以下のとおりです。
+
+------------------------------------
+ [<%= t("activerecord.attributes.reserve.name")%>]
+ <%= @reserve.name %>
+ [<%= t("activerecord.attributes.reserve.email")%>]
+ <%= @reserve.email %>
+ [<%= t("activerecord.attributes.reserve.telephone")%>]
+ <%= @reserve.telephone %>
+  [<%= t("activerecord.attributes.reserve.date1")%>]
+ <%= l @reserve.date1 %>
+   [<%= t("activerecord.attributes.reserve.date2")%>]
+ <% if @reserve.date2 != nil %>
+  <%= l @reserve.date2 %>
+ <% else %>
+  <%= @reserve.date2 %>
+ <% end %>
+   [<%= t("activerecord.attributes.reserve.date3")%>]
+ <% if @reserve.date3 != nil %>
+  <%= l @reserve.date3 %>
+ <% else %>
+  <%= @reserve.date3 %>
+ <% end %>
+ [<%= t("activerecord.attributes.reserve.content_inquiry")%>]
+ <%= @reserve.content_inquiry %>
+ ------------------------------------
+
+ 他にもご不明な点がございましたらお気軽にお問い合わせください。
+ 後ほど折り返しお返事させていただきます。
+ いましばらくお待ちください。
+
+ _____________________________________
+ さくらクラブ
+ メール: sakura.club.info@gmail.com
+ 電話番号: 080-1099-5052
+ 七五三掛宗桜
+ _____________________________________

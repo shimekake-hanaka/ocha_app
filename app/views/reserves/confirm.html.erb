@@ -1,0 +1,67 @@
+<div class="contact-warpper">
+    <div class="contact">
+        <h1>茶道体験ご予約内容の確認</h1>
+    </div>
+
+    <div class="confirm-warpper">
+        <p>以下の内容でよろしいでしょうか？</p>
+        <div>
+            <div class="confirm"><%= t("activerecord.attributes.reserve.name")%></div>
+            <%= @reserve.name %><br>
+            <br>
+
+            <div class="confirm"><%= t("activerecord.attributes.reserve.email")%></div>
+            <%= @reserve.email %><br>
+            <br>
+
+            <div class="confirm"><%= t("activerecord.attributes.reserve.telephone")%></div>
+            <%= @reserve.telephone %><br>
+            <br>
+
+            <div class="confirm"><%= t("activerecord.attributes.reserve.date1")%></div>
+            <%= l @reserve.date1 %><br>
+            
+            <div class="confirm"><%= t("activerecord.attributes.reserve.date2")%></div>
+            <% if @reserve.date2 != nil %>
+                <%= l @reserve.date2 %><br>
+            <% else %>
+                <%= @reserve.date2 %><br>
+            <% end %>
+            
+            <div class="confirm"><%= t("activerecord.attributes.reserve.date3")%></div>
+            <% if @reserve.date3 != nil %>
+                <%= l @reserve.date3 %><br>
+            <% else %>
+                <%= @reserve.date3 %><br>
+            <% end %>
+
+            <div class="confirm"><%= t("activerecord.attributes.reserve.content_inquiry")%></div>
+            <%= @reserve.content_inquiry %><br>
+
+        </div>
+
+    </div>
+    <div class="button-confirm">
+        <br>
+        <%= form_with(model: @reserve, url: reserves_path) do |f| %>
+            <%= f.hidden_field :name %>
+            <%= f.hidden_field :email %>
+            <%= f.hidden_field :telephone %>
+            <%= f.hidden_field :date1 %>
+            <%= f.hidden_field :date2 %>
+            <%= f.hidden_field :date3 %>
+            <%= f.hidden_field :content_inquiry %>
+            <%= f.button "OK", class:"complete_btn" %>
+        <% end %><br>
+        <%= form_with(model: @reserve, url: reserves_path) do |f| %>
+            <%= f.hidden_field :name %>
+            <%= f.hidden_field :email %>
+            <%= f.hidden_field :telephone %>
+            <%= f.hidden_field :date1 %>
+            <%= f.hidden_field :date2 %>
+            <%= f.hidden_field :date3 %>
+            <%= f.hidden_field :content_inquiry %>
+            <%= f.button "戻る", value: "back" , class:"complete_btn" %>
+        <% end %>
+    </div>
+</div>

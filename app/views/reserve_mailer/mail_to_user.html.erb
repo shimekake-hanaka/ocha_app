@@ -1,0 +1,44 @@
+<%= @reserve.name %>様<br>
+<br>
+ この度は茶道体験のご予約をいただきまして、誠にありがとうございます。<br>
+ <br>
+ お問い合わせ内容は以下のとおりです。<br>
+ <br>
+ ------------------------------------<br>
+ <br>
+ [<%= t("activerecord.attributes.reserve.name")%>]<br>
+ <%= @reserve.name %><br>
+ [<%= t("activerecord.attributes.reserve.email")%>]<br>
+ <%= @reserve.email %><br>
+ [<%= t("activerecord.attributes.reserve.telephone")%>]<br>
+ <%= @reserve.telephone %><br>
+   [<%= t("activerecord.attributes.reserve.date1")%>]<br>
+ <%= l @reserve.date1 %><br>
+   [<%= t("activerecord.attributes.reserve.date2")%>]<br>
+ <% if @reserve.date2 != nil %>
+  <%= l @reserve.date2 %><br>
+ <% else %>
+  <%= @reserve.date2 %><br>
+ <% end %>
+   [<%= t("activerecord.attributes.reserve.date3")%>]<br>
+ <% if @reserve.date3 != nil %>
+  <%= l @reserve.date3 %><br>
+ <% else %>
+  <%= @reserve.date3 %><br>
+ <% end %>
+ [<%= t("activerecord.attributes.reserve.content_inquiry")%>]<br>
+ <%= @reserve.content_inquiry %><br>
+ <br>
+ ------------------------------------<br>
+ <br>
+ 他にもご不明な点がございましたらお気軽にお問い合わせください。<br>
+ 後ほど折り返しお返事させていただきます。<br>
+ いましばらくお待ちください。<br>
+<br>
+<br>
+ _____________________________________<br>
+ さくらクラブ<br>
+ メール:<a href="mailto:sakura.club.info@gmail.com">sakura.club.info@gmail.com</a><br>
+ 電話番号: <a href="tel:080-1099-5052">080-1099-5052</a><br>
+ 七五三掛宗桜<br>
+ _____________________________________
