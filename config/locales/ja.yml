@@ -32,7 +32,7 @@ ja:
             
             email:
               blank: を入力してください
-    
+
         reserve:
           attributes:
             name:
@@ -50,3 +50,7 @@ ja:
               
             date1:
               blank: を入力してください
+
+  time:
+    formats:
+      default: "%Y年%m月%d日 %-H:%M~" 

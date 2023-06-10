@@ -1,8 +1,6 @@
 class ReservesController < ApplicationController
     def new
         @reserve = Reserve.new
-        Reserve.find(1)
-        @spaer = @reserve.spaer.build
     end
 
     def confirm
@@ -26,7 +24,7 @@ class ReservesController < ApplicationController
     private
 
     def reserve_params
-        params.require(:reserve).permit(:name, :email, :telephone, :content_inquiry)
+        params.require(:reserve).permit(:name, :email, :telephone, :content_inquiry, :date1, :date2, :date3)
     end
 
 end

@@ -19,13 +19,21 @@
             <br>
 
             <div class="confirm"><%= t("activerecord.attributes.reserve.date1")%></div>
-            <%= @reserve.date1 %><br>
+            <%= l @reserve.date1 %><br>
             
             <div class="confirm"><%= t("activerecord.attributes.reserve.date2")%></div>
-            <%= @reserve.date2 %><br>
+            <% if @reserve.date2 != nil %>
+                <%= l @reserve.date2 %><br>
+            <% else %>
+                <%= @reserve.date2 %><br>
+            <% end %>
             
             <div class="confirm"><%= t("activerecord.attributes.reserve.date3")%></div>
-            <%= @reserve.date3 %><br>
+            <% if @reserve.date3 != nil %>
+                <%= l @reserve.date3 %><br>
+            <% else %>
+                <%= @reserve.date3 %><br>
+            <% end %>
 
             <div class="confirm"><%= t("activerecord.attributes.reserve.content_inquiry")%></div>
             <%= @reserve.content_inquiry %><br>

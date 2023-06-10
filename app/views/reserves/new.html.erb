@@ -2,7 +2,7 @@
     <div class="contact">
         <h1>茶道体験ご予約</h1>
     </div>
-    <%= form_with(model: @reserve , url: confirm_reserves_path) do |f| %>
+    <%= form_with(model: @reserve, url: confirm_reserves_path) do |f| %>
         <div class="contact-form">
             <%= f.label :name, class:"contact-label" %><br>
             <%= f.text_field :name, class:"contact-label" %>
@@ -27,7 +27,7 @@
         <div class="contact-form">
             <%= f.label :date1, class:"contact-label" %><br>
             <%= f.datetime_field :date1, class:"contact-label" %>
-            <% @spaer.errors.full_messages_for(:date1).each do |message| %>
+            <% @reserve.errors.full_messages_for(:date1).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
