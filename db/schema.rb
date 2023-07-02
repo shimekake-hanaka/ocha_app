@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_10_112940) do
   end
 
   create_table "reserves", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
