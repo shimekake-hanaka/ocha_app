@@ -78,3 +78,5 @@ group :test do
 end
 
 gem "font-awesome-sass", "~> 6.4.0"
+
+gem 'imgix-rails'

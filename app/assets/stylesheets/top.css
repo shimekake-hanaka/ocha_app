@@ -25,12 +25,12 @@
     display: flex;
     padding-top: 100px;
 }
-.container img{
+.S_co {
     width: 60%;
     margin-left: 10%;
     height: 600px;
     object-fit: cover;
-} 
+}
 .container h1{
     color: #6a9a8c;
     width: 100%;

@@ -13,7 +13,12 @@ module OchaApp2
     config.i18n.default_locale = :ja
     #↓追加
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
-
+      #↓追加
+      Rails.application.configure do
+        config.imgix = {
+          source: ENV['IMGIX_SOURCE']
+        }
+      end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
