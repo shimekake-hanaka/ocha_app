@@ -8,9 +8,9 @@
             <div class="classes">
                 <%# 子供クラス %>
                 <div class="class-menu">
-                    <a href="/children-class">
+                    <a href="children-class">
                         <div class="class-icon">
-                            <img src="https://ohaapp.s3.ap-southeast-2.amazonaws.com/children.jpg">
+                            <%= ix_image_tag("children.jpg", tag_options: { class: "class-icon-img" })%>
                             <p>こどもクラス</p>
                         </div>
                     </a>
@@ -24,7 +24,7 @@
                 <div class="class-menu">
                     <a href="/adult-class">
                         <div class="class-icon">
-                            <img src="https://ohaapp.s3.ap-southeast-2.amazonaws.com/adult.jpg">
+                            <%= ix_image_tag("adult.jpg", tag_options: { class: "class-icon-img" })%>
                             <p>大人クラス</p>
                         </div>
                     </a>
@@ -37,7 +37,7 @@
                 <div class="class-menu">
                     <a href="/personal-class">
                         <div class="class-icon">
-                            <img src="https://ohaapp.s3.ap-southeast-2.amazonaws.com/personal.jpg">
+                            <%= ix_image_tag("personal.jpg", tag_options: { class: "class-icon-img" })%>
                             <p>個別稽古</p>
                         </div>
                     </a>

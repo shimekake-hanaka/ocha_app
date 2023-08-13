@@ -21,9 +21,9 @@
     margin-bottom: 100px;
     line-height: 2em;
 }
-.experience-img img{
+.experience-img{
     width: 60%;
-} 
+}
 @media (max-width:670px ){
     .experience {
         height: 1000px;
@@ -35,9 +35,9 @@
         color: #6a9a8c;
         Text-shadow: 3px 3px 5px #dfdfcd;
     }
-    .experience-img img{
+    .experience-img {
         width: 100%;
-    } 
+    }
     .experience p{
         font-size: 16px;
         margin: 80px 10px 80px 10px;

@@ -6,16 +6,16 @@
 
 /* ====================================================================== */
 /*トップ 茶道×カウンセリング*/
-.top-warpper  {
+.top-warpper {
     width: 100%;
     height: 750px;
     padding-top: 50px;
     margin-bottom: 110px;
-    background: linear-gradient(to bottom,#dfdfcd  0%,  #ffffff 100%); 
+    background: linear-gradient(to bottom,#dfdfcd  0%,  #ffffff 100%);
 }
 .text {
     margin-left: 20px;
-    line-height :3.2em; 
+    line-height :3.2em;
     Letter-spacing:0.5em;
     /* writing-mode: vertical-rl; */
     Text-shadow: 3px 3px 5px #e4e4e4;
@@ -46,7 +46,7 @@
         margin-top: 0px;
         margin-bottom: 0;
     }
-    .media-top img{
+    .S_co {
         position: absolute;
         top: 0px;
         left: 0;
@@ -54,7 +54,7 @@
         width: 100%;
         margin-left: 0px;
         height: 300px;
-    } 
+    }
     .grade-top {
         position: absolute;
         background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
@@ -70,7 +70,7 @@
         height: 300px;
         z-index: 10;
         margin-left: 0px;
-        line-height :2em; 
+        line-height :2em;
         Letter-spacing:0.5em;
         font-size: 12px;
         margin-bottom: 10px;
@@ -89,7 +89,7 @@
         width: 100%;
         height: 300px;
     }
-      }
+    }
 
 
 /* ――――――――――――――――――――――――――――――――― */
@@ -104,7 +104,7 @@
 }
 
 /*  美味しいお菓子*/
-.okashi img{
+.S_okashi {
     position: absolute;
     top: 0;
     left: 0;
@@ -112,7 +112,7 @@
     width: 100%;
     height: 500px;
     object-fit: cover;
-} 
+}
 .grade-okashi {
     position: absolute;
     background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
@@ -141,9 +141,9 @@
 }
 
 @media (max-width:670px ) {
-    .okashi img{
+    .S_okashi {
         height: 150px;
-    } 
+    }
     .grade-okashi {
         height: 150px;
     }
@@ -169,7 +169,7 @@
     width: 33%;
     height: 500px;
 }
-.shiki img{
+.S_momo {
     position: absolute;
     top: 0;
     left: 0;
@@ -204,7 +204,7 @@
     .shiki {
         height: 150px;
     }
-    .shiki img{
+    .S_momo {
         height: 150px;
     } 
     .grade-shiki {
@@ -230,7 +230,7 @@
     width: 33%;
     height: 500px;
 }
-.only img{
+.S_sakura {
     position: absolute;
     top: 0;
     left: 0;
@@ -238,7 +238,7 @@
     width: 100%;
     height: 500px;
     object-fit: cover;
-} 
+}
 .grade-only {
     position: absolute;
     background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
@@ -267,7 +267,7 @@
     .only {
         height: 150px;
     }
-    .only img{
+    .S_sakura {
         height: 150px;
     } 
     .grade-only {
@@ -311,7 +311,7 @@
     height: 450px;
     overflow: hidden;
 }
-.content-img {
+.slideshow_img {
     margin-left: 15px;
     width: 500px;
     height: 500px;
@@ -346,7 +346,7 @@
     .messege-warpper{
         height: 210px;
     }
-    .content-img {
+    .slideshow_img {
         margin-left: 5px;
         width: 200px;
         height: 200px;
@@ -380,7 +380,7 @@
 .menus {
     margin-top: 100px;
 }
-.menu-icon img{
+.content-img {
     height: 70%;
     width: 70%;
     opacity: 0.65;
@@ -418,6 +418,7 @@
 .contacts {
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
 }
 .contacts h1{
     width: 40%;

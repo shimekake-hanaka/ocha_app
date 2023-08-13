@@ -68,6 +68,7 @@ header {
 footer {
     height: 100px;
     background-color: #dfdfcd;
+    margin-top: 100px;
 }
 .footer-left p{
     color: #6a9a8c;
@@ -90,7 +91,7 @@ footer {
     }
     .footer-left p{
         padding: 10px 0px 0px 10px;
-    }  
+    }
 }
 
 /* ====================================================================== */

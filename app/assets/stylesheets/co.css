@@ -28,7 +28,7 @@
     height: 800px;
     position: relative;
 }
-.personal-img {
+.S_personal-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,8 +39,8 @@
 .grade {
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     position: absolute;
-    width: 50%;
-    height: 100%;
+    width: 50.1%;
+    height: 100.1%;
     top: 0;
     left: 0;
     z-index: 15px;
@@ -112,7 +112,7 @@ table tr{
     .personal-class h1{
         width: 80%;
     }
-    .personal-img {
+    .S_personal-img {
         width: 100%;
         left: 0;
     }
@@ -128,7 +128,7 @@ table tr{
     }
     .grade {
         left: 0;
-        width: 100%;
+        width: 100.1%;
         background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2));
     }
     .personal-point p{
@@ -164,10 +164,10 @@ table tr{
     }
     .table{
         width: 80%;
-    } 
+    }
     table{
         width: 80%;
-    }    
+    }
     .personal-class h1{
         margin: 20px;
     }
