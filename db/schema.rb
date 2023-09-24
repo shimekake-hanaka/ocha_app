@@ -11,8 +11,11 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_06_10_112940) do
-  create_table "contacts", force: :cascade do |t|
-    t.string "name", null: false
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "contacts", comment: "お問合せ", force: :cascade do |t|
+    t.string "name", null: false, comment: "お名前"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -20,8 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_10_112940) do
     t.string "content_inquiry", default: "", null: false
   end
 
-  create_table "reserves", force: :cascade do |t|
-    t.string "name", default: "", null: false
+  create_table "reserves", comment: "ご予約", force: :cascade do |t|
+    t.string "name", default: "", null: false, comment: "お名前"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
