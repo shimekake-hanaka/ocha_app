@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
 gem 'pg'
 
@@ -30,6 +30,10 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem 'dotenv-rails'
+
+# 論理削除用パッケージ
+gem 'paranoia'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -80,3 +84,13 @@ end
 gem "font-awesome-sass", "~> 6.4.0"
 
 gem 'imgix-rails'
+
+# bootstrap
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
+
+# aws s3 接続
+gem "aws-sdk-s3", require: false
+
+# ページネーションに使用
+gem 'kaminari'

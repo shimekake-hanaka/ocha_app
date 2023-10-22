@@ -19,6 +19,8 @@ module OchaApp2
           source: ENV['IMGIX_SOURCE']
         }
       end
+    # timestampを東京に変更
+    config.time_zone = 'Tokyo'
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

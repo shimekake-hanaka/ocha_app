@@ -1,0 +1,99 @@
+
+/* main画面 */
+
+.main_img {
+  width: 100vw;
+  height: calc(100vh * 0.75);
+}
+.main_img_text {
+  top: 43%;
+  left: 60%;
+  width: 25%;
+}
+#mainText {
+  display: none;
+}
+
+/* コンセプト専用css */
+.concept_center {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -30%);
+}
+.fadeIn_right {
+  opacity: 0;
+  transition: 2s;
+}
+.fadeIn_right.is_show {
+  opacity: 1;
+}
+.fadeIn_left {
+  opacity: 0;
+  transition: 2s;
+}
+.fadeIn_left.is_show {
+  opacity: 1;
+}
+
+/* お稽古日記の専用css */
+.article_img {
+  height: calc(100vh * 0.35);
+  width: calc(100vh * 0.35);
+}
+.article_img:hover {
+  height: calc(100vh * 0.37);
+  width: calc(100vh * 0.37);
+  opacity: 0.7;
+  transition: 1s;
+}
+.article_bg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  opacity: 0.4;
+  z-index: -10;
+}
+/* クラス紹介 */
+.class_img {
+  width: 33vw;
+  height: 30vh;
+  object-fit: cover;
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.class_box {
+  width: 15vw;
+  height: 40vh;
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+.class_box p {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+}
+.class_box:hover {
+  width: 17vw;
+  height: 42vh;
+  color: black;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 1s;
+}
+/* 体験教室案内 */
+.experience_btn {
+  width: 12%;
+  height: 5%;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.experience_btn.is_show {
+  width: 24%;
+  height: 10%;
+  transition: 1s;
+}
+.experience_btn.is_show:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}

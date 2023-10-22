@@ -1,0 +1,14 @@
+<%= render partial: 'layouts/admin_header' %>
+<div class="center-block text-center" style="height: 65vh; width: 90vh; ">
+  <%= form_for @daily_post, url: daily_post_create_path, method: :post do |form| %>
+    <p>タイトル</p>
+    <%= form.text_field :title %><br>
+    <p>内容</p>
+    <%= form.text_area :content %><br>
+    <p>メイン画像（１枚のみ）</p>
+    <%= form.file_field :img_main %><br>
+    <p>サブ画像（複数可能）</p>
+    <%= form.file_field :images_sub, multiple: true %><br>
+    <%= submit_tag("保存") %>
+  <% end %>
+</div>

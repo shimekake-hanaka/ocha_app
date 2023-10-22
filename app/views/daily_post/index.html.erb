@@ -1,0 +1,50 @@
+<%= render partial: 'layouts/admin_header' %>
+<div class="center-block text-center" style="height: 120vh; width: 90vh; ">
+  <div>
+  日記一覧
+  </div>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="align-middle text-center" scope="col">日付</th>
+          <th class="align-middle text-center" scope="col">メイン画像</th>
+          <th class="align-middle text-center" scope="col">サブ画像</th>
+          <th class="align-middle text-center" scope="col">タイトル</th>
+          <th class="align-middle text-center" scope="col">内容</th>
+          <th class="align-middle text-center" scope="col">詳細ボタン</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <% @daily_posts.each do |daily_post| %>
+          <tr>
+            <td class="align-middle"><%= daily_post.updated_at.strftime("%Y年%m月%d日") %></td>
+            <td class="align-middle" style= "width:25%;">
+              <% if daily_post.img_main.attached? %>
+                <%= image_tag daily_post.img_main, style: "width:90%; height:90%;" %>
+              <% else %>
+                <%= ix_image_tag('no-image.png', tag_options: { style: "width:90%; height:90%;" }) %>
+              <% end %>
+            </td>
+            <td class="align-middle" style= "width:10%;">
+              <% if daily_post.images_sub.attached? %>
+                <% daily_post.images_sub.each do |image_sub| %>
+                  <%= image_tag image_sub, style: "width:90%; height:90%;" %>
+                <% end %>
+              <% else %>
+                <%= ix_image_tag('no-image.png', tag_options: { style: "width:90%; height:90%;" }) %>
+              <% end %>
+            </td>
+            <td class="align-middle"><%= daily_post.title.truncate(15, omission: '~~') %></td>
+            <td class="align-middle"><%= daily_post.content.truncate(24, omission: '~~') %></td>
+            <td class="align-middle"><%= link_to "詳細", daily_post_show_path(daily_post.id) %> </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="pagination large">
+      <%= paginate @daily_posts %>
+    </div>
+  </div>
+</div>
+

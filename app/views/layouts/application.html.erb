@@ -6,67 +6,43 @@
     
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application","top", media: 'all', "data-turbo-track": "reload" %>
-    
-    <!-- drawer.css ハンバーガーボタン作成-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
-    <!-- jquery & iScroll -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-    <!-- drawer.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78GYS50PFF"></script>
+    <%= stylesheet_link_tag "application", "top", "admin", media: 'all', "data-turbo-track": "reload" %>
+
+    <!-- jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <%# google font %>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
     <%# googleアナリティクス認識用スクリプト %>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-78GYS50PFF');
     </script>
   </head>
-  <body class="drawer drawer--right">
+  <body>
     <header>
-      <div class="headeres">
-        <div class="header-left">
-          <a href="/" >SAKURA CLUB</a>
-          <div class="header-right">
-            <button type="button" class="drawer-toggle drawer-hamburger">
-              <span class="sr-only">toggle navigation</span>
-              <span class="drawer-hamburger-icon"></span>
-            </button>
-            <nav class="drawer-nav" role="navigation">
-              <ul class="drawer-menu">
-                <li><a class="drawer-brand" href="/">SAKURA CLUB</a></li>
-                <li><a class="drawer-menu-item" href="/co">カウンセリング</a></li>
-                <li><a class="drawer-menu-item" href="/class">クラス・お月謝</a></li>
-                <li><a class="drawer-menu-item" href="/experience">体験教室</a></li>
-                <li><a class="drawer-menu-item" href="/acsess">アクセス</a></li>
-                <li><a class="drawer-menu-item" href="/contacts/new">お問い合わせ</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+      <div class="flex between">
+        <p class="letter_spacing_sm line_height_sm">茶道教室<br>SAKURA　CLUB</p>
+        <table>
+          <tr>
+            <td><a class="link ml_2 letter_spacing_sm" href="#">カウンセリング</a></td>
+            <td><a class="link ml_2 letter_spacing_sm" href="#">クラス・お月謝</a></td>
+            <td><a class="link ml_2 letter_spacing_sm" href="#">体験教室</a></td>
+            <td><a class="link ml_2 letter_spacing_sm" href="#">アクセス</a></td>
+            <td><a class="link ml_2 letter_spacing_sm" href="#">お問い合わせ</a></td>
+          </tr>
+        </table>
       </div>
     </header>
     <%= yield %>
     <footer>
-      <div class="footer-left">
-        <p class="title">SAKURA CLUB</p>
-      </div>
-      <div class="number">
-        <a href="mailto:sakura.club.info@gmail.com">sakura.club.info@gmail.com</a>
-        <a href="tel:080-1099-5052">080-1099-5052</a>
+      <p class="absolute bottom_0 left_0 letter_spacing_sm line_height_md mg_2">茶道教室<br>SAKURA　CLUB</p>
+      <div class="absolute bottom_0 right_0 flex flex_column letter_spacing_sm line_height_md mg_1">
+        <a class="link" href="mailto:sakura.club.info@gmail.com">メールアドレス：sakura.club.info@gmail.com</a>
+        <a class="link" href="tel:080-1099-5052">電話番号：080-1099-5052</a>
+        <a class="link" href="#">【　お問い合わせはこちらから　】</a>
       </div>
     </footer>
-
-    <!-- ドロワーメニューの利用宣言 -->
-    <script>
-      $(document).ready(function() {
-      $('.drawer').drawer();
-    });
-    </script>
-
   <body>
 </html>

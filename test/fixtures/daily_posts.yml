@@ -1,0 +1,18 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 日記タイトルテスト１
+  content: 日記の内容テスト２
+  img_main: https://ohaapp.s3.ap-southeast-2.amazonaws.com/adult_class.jpg
+
+
+two:
+  title: 日記タイトルテスト１
+  content: 日記の内容テスト２
+  img_main: https://ohaapp.s3.ap-southeast-2.amazonaws.com/adult_class.jpg
+
+
+three:
+  title: 日記タイトルテスト１
+  content: 日記の内容テスト２
+  img_main: https://ohaapp.s3.ap-southeast-2.amazonaws.com/adult_class.jpg

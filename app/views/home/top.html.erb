@@ -1,130 +1,137 @@
-<div class="top-warpper">
-    <div class="container">
-        <div class="media-top">
-            <div class="text">
-                <h1>茶道教室<br>
-                    <br>
-                    SAKURA <br class="sp">CLUB</h1>
-            </div>
-            <%= ix_image_tag("S_co.jpg", tag_options: { class: "S_co" })%>
-            <div class="grade-top"> </div>
-        </div>
+<div class="vh_100">
+    <%= ix_image_tag("main_img.jpg", tag_options: { class: "main_img relative cover" })%>
+    <div id="mainText"><%= ix_image_tag("main_text.png", tag_options: { class: "main_img_text absolute" })%></div>
+    <%# main画面専用ヘッダー %>
+    <div class="relative vh_25">
+      <p class="absolute absolute_top_2 absolute_left_8 font_md letter_spacing_sm line_height_sm">茶道教室<br>SAKURA　CLUB</p>
+      <table class="absolute absolute_top_2 absolute_right_8">
+        <tr>
+          <td><a class="rl link line_height_lg letter_spacing_sm" href="#">カウンセリング</a></td>
+          <td><a class="rl link line_height_lg letter_spacing_sm" href="#">クラス・お月謝</a></td>
+          <td><a class="rl link line_height_lg letter_spacing_sm" href="#">体験教室</a></td>
+          <td><a class="rl link line_height_lg letter_spacing_sm" href="#">アクセス</a></td>
+          <td><a class="rl link line_height_lg letter_spacing_sm" href="#">お問い合わせ</a></td>
+        </tr>
+      </table>
     </div>
 </div>
-
-<div class="messege">
-    <h1>たまにはゆっくりお話しましょ</h1>
-    <p>
-    当教室は、小学生からご高齢の方まで<br>いろんな方がお稽古にいらしています。<br>
-    堅苦しくなく、<br>和やかにお稽古をしています。<br>
-    どうぞ四畳半の異空間で特別な時間を<br>体験してみてください。
-    </p>
-    <div class="good-point">
-        <div class="okashi">
-            <div class="text-okashi">
-                <p>美味しいお菓子と</p>
-            </div>
-            <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "S_okashi" })%>
-            <div class="grade-okashi"> </div>
-        </div>
-        <div class="shiki">
-            <div class="text-shiki">
-                <p>四季を感じて</p>
-            </div>
-            <%= ix_image_tag("S_momo.jpg", tag_options: { class: "S_momo" })%>
-            <div class="grade-shiki"> </div>
-        </div>
-        <div class="only">
-            <div class="text-only">
-                <p>自分と向き合える時間</p>
-            </div>
-            <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "S_sakura" })%>
-            <div class="grade-only"> </div>
-        </div>
-    </div>
-
-     <h1>お稽古の様子</h1>
-     <p class="yousu">
-     皆さんがお稽古を始めたきっかけは、<br>
-     <span>何か新しいことをしてみたい</span><br>
-     <span>和に触れてみたい</span><br>
-     <span>いつもと違う時間を過ごしてみたい</span><br>
-     <span>抹茶が好き</span>と<br>
-     皆さん様々ですが、<br class="sp">それでも皆が一つになれるのが茶道です。<br>
-     茶道の手前と所作が<br class="sp">そんな人柄をつくってくれます。<br>
-    </p>
-
-    <div class="messege-warpper">
-        <ul class="slideshow">
-            <li class="content"><%= ix_image_tag("slideshow1.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow2.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow8.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow7.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow6.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow9.jpg", tag_options: { class: "slideshow_img" })%></li>
-        </ul>
-        <ul class="slideshow">
-            <li class="content"><%= ix_image_tag("slideshow1.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow2.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow8.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow7.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow6.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow9.jpg", tag_options: { class: "slideshow_img" })%></li>
-        </ul>
-        <ul class="slideshow">
-            <li class="content"><%= ix_image_tag("slideshow1.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow2.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow8.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow7.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow6.jpg", tag_options: { class: "slideshow_img" })%></li>
-            <li class="content"><%= ix_image_tag("slideshow9.jpg", tag_options: { class: "slideshow_img" })%></li>
-        </ul>
-    </div>
-   
-</div>
-<div class="top-information">
-    <div class="informations">
-        <h1>各種ご案内</h1>
-        <div class="menus">
-            <div class="menu">
-                <a href="/co"><div class="menu-icon">
-                    <%= ix_image_tag("S_spring.jpg", tag_options: { class: "content-img" })%>
-                    <p>カウンセリング<br>稽古</p>
-                </div></a>
-            </div>
-            <div class="menu">
-                <a href="/class"><div class="menu-icon">
-                    <%= ix_image_tag("S_summer.jpg", tag_options: { class: "content-img" })%>
-                    <p>クラス稽古<br>
-                    ・<br>
-                    個別稽古</p>
-                </div></a>
-            </div>
-            <div class="menu">
-                <a href="/experience"><div class="menu-icon">
-                    <%= ix_image_tag("S_autumn.jpg", tag_options: { class: "content-img" })%>
-                    <p>体験教室</p>
-                </div></a>
-            </div>
-            <div class="menu">
-                <a href="/acsess"><div class="menu-icon">
-                    <%= ix_image_tag("S_winter.jpg", tag_options: { class: "content-img" })%>
-                    <p>アクセス</p>
-                </div></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="news">
-    <h1>お知らせ</h1>
-    <div class="box">
-        <a>
-            <%= ix_image_tag("", tag_options: { class: "content-img" })%>
+<main>
+  <%# 教室のコンセプト %>
+  <div class="concept vh_100 relative">
+    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 vh_35 top_2 left_0 fadeIn_left" })%>
+    <%= ix_image_tag("slideshow8.jpg", tag_options: { class: "absolute cover my_1 vh_35 bottom_0 left_0 fadeIn_left" })%>
+    <div class="z_0 absolute concept_center letter_spacing_sm line_height_sm">
+      <p class="font_lg mb_5">教室のコンセプト</p>
+      <p class="font_sm">
+        当教室は、小学生からご高齢の方まで<br>
+        いろんな方がお稽古にいらしています。<br>
+        堅苦しくなく、<br>
+        和やかにお稽古をしています。<br>
+        どうぞ四畳半の異空間で特別な時間を<br>
+        体験してみてください。</p>
+      </div>
+    <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "absolute cover my_2 vh_55 bottom_0 right_0 fadeIn_right" })%>
+  </div>
+  <div class="concept_end"></div>
+  <%# お稽古日記 %>
+  <div class="vh_100 relative my_10">
+    <%= ix_image_tag("S_personal.jpg", tag_options: { class: "absolute top_0 left_0 article_bg" })%>
+    <div class="pd_1 transform_1">
+      <p class="font_lg my_10 letter_spacing_sm text_center">お稽古日記</p>
+      <div class="flex around mx_10">
+        <a action="#">
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CxhvQOFS1QB/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CxhvQOFS1QB/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">この投稿をInstagramで見る</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CxhvQOFS1QB/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">はなか(@hanaka_126)がシェアした投稿</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+          <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "cover article_img" })%>
+          <p>お稽古日記のタイトル</p>
+          <p>投稿日時：0000年00月00日（曜日）</p>
         </a>
+        <a action="#">
+          <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "cover article_img" })%>
+          <p>お稽古日記のタイトル</p>
+          <p>投稿日時：0000年00月00日（曜日）</p>
+        </a>
+        <a action="#">
+          <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "cover article_img" })%>
+          <p>お稽古日記のタイトル</p>
+          <p>投稿日時：0000年00月00日（曜日）</p>
+        </a>
+      </div>
     </div>
-</div>
-<div class="contacts">
-    <h1>
-        <%= link_to "お問い合わせはこちらから", new_contact_path %>
-    </h1>
-</div>
+  </div>
+  <%# お稽古紹介 %>
+  <div class="experience"><%# 体験教室jqueryイベント開始 %>
+    <%# クラス紹介 %>
+    <div class="relative vh_100">
+      <p class="font_lg mt_20 letter_spacing_sm text_center">クラス紹介</p>
+      <div class="flex flex_center mt_20 absolute top_0 left_0">
+        <%= ix_image_tag("slideshow5.jpg", tag_options: { class: "flex_grow class_img" })%>
+        <%= ix_image_tag("adult.jpg", tag_options: { class: "flex_grow class_img" })%>
+        <%= ix_image_tag("S_co.jpg", tag_options: { class: "flex_grow class_img" })%>
+      </div>
+      <div class="vw_100 mt_15 flex around absolute top_0 left_0">
+        <div><a action="#" class="rl link around class_box relative"><p class="absolute">子どもクラス</p></a></div>
+        <div><a action="#" class="rl link around class_box relative"><p class="absolute">大人クラス</p></a></div>
+        <div><a action="#" class="rl link around class_box relative"><p class="absolute">個別教室</p></a></div>
+      </div>
+      <%# 体験教室紹介 %>
+      <div class="experience_btn absolute bottom_10 right_10 flex flex_center">
+        <a action="#">体験教室のご案内 >></a>
+      </div>
+    </div>
+  </div>
+  <div class="experience_end"><%# 体験教室jqueryイベント終了 %></div>
+</main>
+
+<%# js %>
+<script>
+// headerスクロール時の表示指定
+  $(window).scroll(function () {
+    var pos = $('main').offset();
+    if ($(this).scrollTop() > pos.top) {
+      $('header').fadeIn();
+    } else {
+      $('header').fadeOut();
+    }
+  });
+</script>
+
+<script>
+// mainTextのフェードイン
+  $(window).on('load', function () {
+    setTimeout(function () {
+      $('#mainText').fadeIn(2000);
+    },);
+  });
+// スクロール時のコンセプト画像フェードイン
+  var hasFadedIn = false;
+  $(window).scroll(function () {
+    if (hasFadedIn) {
+        return;
+    }
+    var pos = $('.concept').offset();
+    var posEnd = $('.concept_end').offset();
+    if ($(this).scrollTop() > pos.top && $(this).scrollTop() < posEnd.top) {
+      $.when(
+        $('.fadeIn_right').addClass("is_show"),
+        $('.fadeIn_right').animate({ right: '5vw' }, 2),
+        $('.fadeIn_left').addClass("is_show"),
+        $('.fadeIn_left').animate({ left: '5vw' }, 2)
+      ).then(function () {
+        hasFadedIn = true;
+      });
+    }
+  });
+
+// 体験教室のスクロール時のイベント
+  $(window).scroll(function () {
+    var pos = $('.experience').offset();
+    var posEnd = $('.experience_end').offset();
+    if ($(this).scrollTop() > pos.top && $(this).scrollTop() < posEnd.top) {
+      $('.experience_btn').addClass("is_show");
+    }else {
+      $('.experience_btn').removeClass("is_show");
+    }
+  });
+
+
+</script>
