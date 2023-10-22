@@ -20,7 +20,7 @@ class DailyPostController < ApplicationController
 
   private
   def daily_post_params
-    params.require(:daily_post).permit(:title, :content, :img_main)
+    params.require(:daily_post).permit(:title, :content, :img_main, images_sub: [])
   end
 
   def show
