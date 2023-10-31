@@ -1,22 +1,25 @@
 <%= render partial: 'layouts/admin_header' %>
 <div class="center-block text-center" style="height: 120vh; width: 90vh; ">
-  <div><%= @daily_post.title %></div>
-  <div>
+  <% if !@daily_post.nil? %>
     <%# メイン画像                                                                                                                                                                                                                                                                                                                                                                         %>
     <div class="align-middle" style= "width:25%;">
       <% if @daily_post.img_main.attached? %>
-       <%= image_tag @daily_post.img_main, style: "width:90%; height:90%;" %>
-     <% else %>
-       <%= ix_image_tag('no-image.png', tag_options: { style: "width:90%; height:90%;" }) %>
-     <% end %>
+        <%= image_tag @daily_post.img_main, style: "width:90%; height:90%;" %>
+      <% else %>
+        <%= ix_image_tag('no-image.png', tag_options: { style: "width:90%; height:90%;" }) %>
+      <% end %>
+    </div>
     <%# 内容テキスト %>
-    </div><%= simple_format(@daily_post.content) %></div>
+    <div><%= simple_format(@daily_post.content) %></div>
     <%# サブ画像 ３枚まで%>
     <div>
-    <% if @daily_post.images_sub.attached? %>
-      <% @daily_post.images_sub.each do |image_sub| %>
-        <%= image_sub %>
+      <% if @daily_post.images_sub.attached? %>
+        <% @daily_post.images_sub.each do |image_sub| %>
+          <%= image_tag image_sub, style: "width:30vh; height:30vh%;"%>
+        <% end %>
       <% end %>
-    <% end %>
     </div>
+  <% else %>
+    <h2>レコードが見つかりません</h2>
+  <% end %>
 </div>

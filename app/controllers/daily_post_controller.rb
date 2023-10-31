@@ -1,6 +1,8 @@
 class DailyPostController < ApplicationController
   def index
+
     @daily_posts = DailyPost.all
+    byebug
     @daily_posts = DailyPost.page(params[:page])
   end
   
@@ -25,12 +27,6 @@ class DailyPostController < ApplicationController
 
   def show
     @daily_post = DailyPost.find(params[:id])
-
-    # @daily_post_subImages = []
-
-    # has_one_attached :daily_post do |attachable|
-    #   @daily_post_subImages = attachable.variant :images_sub, resize_to_limit: [100, 100]
-  # end
   end
 
   def edit
