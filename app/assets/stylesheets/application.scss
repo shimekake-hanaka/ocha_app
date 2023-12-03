@@ -18,6 +18,19 @@ a {
     display: inline-block;
 }
 
+img {
+    object-fit: cover;
+}
+
+.img_center {
+    object-position: top 50% left 50%;
+}
+
+.img_square_4_5 {
+    width: 50vw;
+    height: 40vw;
+}
+
 /* 高さ */
 .vh_100 {
     height: 100vh;
@@ -28,6 +41,9 @@ a {
 .vh_55 {
     height: calc(100vh * 0.6);
 }
+.height_auto {
+    height: auto;
+}
 
 /* 横幅 */
 .vw_100 {
@@ -36,9 +52,20 @@ a {
 .vw_50 {
     width: 50vw;
 }
+@media (max-width:670px ){
+    .vw_50 {
+        width: 80vw;
+    }
+    }
 
-/* 正方形 */
+/* display */
+.inline_block {
+    display: inline-block;
+}
 
+.display_block {
+    display: block;
+}
 
 /* 間隔 */
 /* CSS class名の定義：　mt=margin-top  mb=margin-bottom  my=margin-top&bottom(y軸の意味)　横も同様 */
@@ -60,6 +87,9 @@ a {
 }
 
 /* margin y軸*/
+.mt_3 {
+    margin-top: 30px;
+}
 .mt_10 {
     margin-top: 100px;
 }
@@ -69,7 +99,9 @@ a {
 .mt_20 {
     margin-top: 200px;
 }
-
+.mb_3 {
+    margin-bottom: 30px;
+}
 .mb_5 {
     margin-bottom: 50px;
 }
@@ -216,6 +248,13 @@ a {
     flex-direction: column;
 }
 
+// 背景色
+.bgc_gray {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.color_black {
+    color: black !important;
+}
 
 /* ====================================================================== */
 
@@ -242,31 +281,57 @@ footer {
 
 /*スマホヘッダー*/
 
+// .navbar_collapse::after {
+//     margin: 20px;
+//     background-color: rgba(0, 0, 0, 0.5);
+// }
+
 @media (max-width:670px ) {}
 
 
 /* ====================================================================== */
 /* スマホだけ改行 */
 .sp {
-    display:none;
+    display: none;
 }
 @media (max-width:670px ){
 .sp {
-    display:inline;
+    display: inline;
+}
+}
+// スマホだけ表示
+
+.sp_display {
+    display: none;
+}
+
+@media (max-width:670px ){
+.sp_display {
+    display: inline;
 }
 }
 
 /* ====================================================================== */
 /* PCだけ改行 */
 .pc {
-    display:inline;
+    display: inline;
 }
 @media (max-width:670px ){
 .pc {
-    display:none;
+    display: none;
 }
 }
 
+// pcだけ表示
+
+.pc_display {
+    display: inline;
+}
+@media (max-width:670px ){
+.pc_display {
+    display: none;
+}
+}
 
 /* ====================================================================== */
 

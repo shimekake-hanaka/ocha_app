@@ -5,5 +5,4 @@ class DailyPost < ApplicationRecord
   has_one_attached :img_main
   has_many_attached :images_sub
 
-  paginates_per 5
 end

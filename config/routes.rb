@@ -5,7 +5,17 @@ Rails.application.routes.draw do
   # end
   # Defines the root path route ("/")
   # root "articles#index"
+  
+  # User画面
   get "/" => "home#top"
+  get "/contect" => "home#contect"
+  get "/reserve" => "home#reserve"
+  get "/class" => "home#class"
+  get "/access" => "home#access"
+  get "/counseling" => "home#counseling"
+  get "/ocha_dailypost_show/:id" => "home#ocha_dailypost_show"
+
+  # 管理者画面用
   get "admin/top" => "admin#top"
   get "admin/create" => "admin#create"
 

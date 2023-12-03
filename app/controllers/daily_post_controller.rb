@@ -2,8 +2,8 @@ class DailyPostController < ApplicationController
   def index
 
     @daily_posts = DailyPost.all
-    byebug
-    @daily_posts = DailyPost.page(params[:page])
+    @daily_posts = DailyPost.page(params[:page]).per(5)
+
   end
   
   def new
@@ -18,11 +18,6 @@ class DailyPostController < ApplicationController
       flash[:alert] = "投稿に失敗しました"
       render :new
     end
-  end
-
-  private
-  def daily_post_params
-    params.require(:daily_post).permit(:title, :content, :img_main, images_sub: [])
   end
 
   def show
@@ -40,6 +35,11 @@ class DailyPostController < ApplicationController
 
   def delete
     @id = params[:id]
+  end
+  
+  private
+  def daily_post_params
+    params.require(:daily_post).permit(:title, :content, :img_main, images_sub: [])
   end
   
 end
