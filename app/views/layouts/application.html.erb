@@ -29,14 +29,14 @@
   <body>
     <header>
       <div class="flex between">
-        <p class="letter_spacing_sm line_height_sm">茶道教室<br>SAKURA　CLUB</p>
+        <a class="link letter_spacing_sm line_height_sm" href="/">茶道教室<br>SAKURA　CLUB</a>
         <table>
           <tr>
             <td><a class="link ml_2 letter_spacing_sm" href="#">カウンセリング</a></td>
             <td><a class="link ml_2 letter_spacing_sm" href="#">クラス・お月謝</a></td>
             <td><a class="link ml_2 letter_spacing_sm" href="#">体験教室</a></td>
             <td><a class="link ml_2 letter_spacing_sm" href="#">アクセス</a></td>
-            <td><a class="link ml_2 letter_spacing_sm" href="#">お問い合わせ</a></td>
+            <td><%= link_to "お問い合わせ", new_contact_path, class: "link ml_2 letter_spacing_sm" %></td>
           </tr>
         </table>
       </div>
@@ -47,7 +47,7 @@
       <div class="absolute bottom_0 right_0 flex flex_column letter_spacing_sm line_height_md mg_1">
         <a class="link" href="mailto:sakura.club.info@gmail.com">メールアドレス：sakura.club.info@gmail.com</a>
         <a class="link" href="tel:080-1099-5052">電話番号：080-1099-5052</a>
-        <a class="link" href="#">【　お問い合わせはこちらから　】</a>
+        <%= link_to "【　お問い合わせはこちらから　】", new_contact_path, class: "link" %>
       </div>
     </footer>
   <body>

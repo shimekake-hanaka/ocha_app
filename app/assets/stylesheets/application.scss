@@ -35,6 +35,9 @@ img {
 .vh_100 {
     height: 100vh;
 }
+.vh_15 {
+    height: calc(100vh * 0.2);
+}
 .vh_35 {
     height: calc(100vh * 0.38);
 }
@@ -48,6 +51,9 @@ img {
 /* 横幅 */
 .vw_100 {
     width: 100vw;
+}
+.vw_30 {
+    width: 30vw;
 }
 .vw_50 {
     width: 50vw;
@@ -74,6 +80,9 @@ img {
 .pd_1 {
     padding: 10px;
 }
+.pd_btn {
+    padding: 10px 20px;
+}
 
 /* margin */
 .mg_1{
@@ -84,6 +93,9 @@ img {
 }
 .mg_auto {
     margin: auto;
+}
+.mg_10px {
+    margin: 10px;
 }
 
 /* margin y軸*/
@@ -162,6 +174,9 @@ img {
 }
 .text_center {
     text-align: center;
+}
+.text_left {
+    text-align: left;
 }
 .xy_center {
     vertical-align: middle;
