@@ -80,11 +80,23 @@ img {
 .pd_1 {
     padding: 10px;
 }
+.pd_5 {
+    padding: 50px;
+}
+.pd_l_10 {
+    padding-left: 100px;
+}
+.pd_t_5 {
+    padding-top: 50px;
+}
 .pd_btn {
     padding: 10px 20px;
 }
 
 /* margin */
+.mg_0 {
+    margin: 0 auto;
+}
 .mg_1{
     margin: 4vw;
 }
@@ -160,6 +172,9 @@ img {
 .letter_spacing_sm {
     letter-spacing: 5px;
 }
+.letter_spacing_md {
+    letter-spacing: 10px;
+}
 .line_height_sm {
     line-height: 2em;
 }
@@ -177,6 +192,9 @@ img {
 }
 .text_left {
     text-align: left;
+}
+.text_right {
+    text-align: right;
 }
 .xy_center {
     vertical-align: middle;
@@ -270,6 +288,11 @@ img {
 .color_black {
     color: black !important;
 }
+.bg_img {
+    width: 50vw;
+    object-fit: cover;
+    z-index: -5;
+}
 
 /* ====================================================================== */
 
@@ -285,6 +308,9 @@ header {
     padding: 30px;
     z-index: 100;
 }
+.header_fixed {
+    position: fixed !important;
+}
 
 /* フッター */
 footer {
@@ -293,6 +319,26 @@ footer {
     position: relative;
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+// テーブル　表の形式統一
+
+.table {
+    width: 50vh;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table th{
+    text-align: center;
+    padding: 10px;
+    border-bottom: solid 4px black;
+    color: black;
+}
+.table td{
+    padding: 10px;
+    border-bottom: solid 1px black;
+}
+
 
 /*スマホヘッダー*/
 
