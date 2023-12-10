@@ -10,6 +10,10 @@ body {
     font-family: 'Noto Serif JP', serif;
     margin: 0;
 }
+table {
+    font-family: 'Klee One', cursive;
+    font-family: 'Noto Serif JP', serif;
+}
 
 /* ====================================================================== */
 /* 共通css */
@@ -49,11 +53,17 @@ img {
 }
 
 /* 横幅 */
+.w_100 {
+    width: 100%;
+}
+.w_80 {
+    width: 80%;
+}
 .vw_100 {
     width: 100vw;
 }
 .vw_30 {
-    width: 30vw;
+    width: 30%;
 }
 .vw_50 {
     width: 50vw;
@@ -83,8 +93,17 @@ img {
 .pd_5 {
     padding: 50px;
 }
+.pd_x_7 {
+    padding: 0 70px;
+}
+.pd_x_5 {
+    padding: 0 50px;
+}
 .pd_l_10 {
     padding-left: 100px;
+}
+.pd_l_5 {
+    padding-left: 50px;
 }
 .pd_t_5 {
     padding-top: 50px;
@@ -208,6 +227,12 @@ img {
     color: rgba(0, 0, 0, 0.5);
 }
 
+// hover
+.hov_big:hover {
+    padding: 0 30px;
+    transition: 1s;
+}
+
 /* 画像配置 */
 .relative {
     position: relative;
@@ -274,6 +299,9 @@ img {
     justify-content: center;
     align-items: center;
 }
+.flex_center_up {
+    justify-content: center;
+}
 .flex_grow {
     flex-grow: 1;
 }
@@ -331,7 +359,7 @@ footer {
 .table th{
     text-align: center;
     padding: 10px;
-    border-bottom: solid 4px black;
+    border-bottom: solid 2px black;
     color: black;
 }
 .table td{
