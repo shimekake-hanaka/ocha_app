@@ -1,0 +1,64 @@
+<div class="text-center">
+    <div class="flex">
+        <div class="text-center display_none" id="triallImg">
+            <%= ix_image_tag("experience.jpg", tag_options: { class: "bg_img" })%>
+        </div>
+        <div class="">
+            <h3 class="line_height_sm mb_3 pd_l_10 text_left letter_spacing_md">体験教室</h3>
+            <p class="vw_50 pd_l_10 text_left line_height_md">
+                予約フォームよりご予約下さい。<br>
+                お電話やメールでも受け付けております。<br>
+                詳細等、お気軽にお問合せください。<br>
+                個々のご事情に合わせて対応させていただきます。<br>
+            </p>
+            <div class="trial_btn">
+                <a href="#">体験予約はこちらから</a>
+            </div>
+            <div class="trial_btn">
+                <%= link_to "お問い合わせはこちらから", new_contact_path %>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <h3 class="letter_spacing_md mt_10">～個別稽古/料金～</h3>
+            <div class="pd_5">
+                <table class="table mg_0">
+                    <tr>
+                    <th>1回　(約90分)</th>
+                    </tr>
+                    <tr>
+                    <td>3000円</td>
+                    </tr>
+                </table>
+            </div>
+        <h3 class="letter_spacing_md mt_10">～お稽古の時間～</h3>
+        <div class="pd_5">
+            <table class="table mg_0">
+                <tr>
+                    <th>曜日</th>
+                    <th>時間</th>
+                </tr>
+                <tr>
+                    <td>木曜日</td>
+                    <td>9:00-20:00</td>
+                </tr>
+                <tr>
+                    <td>日曜日</td>
+                    <td>13:00-20:00</td>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#triallImg').fadeIn(2000);
+        },);
+    });
+
+    $(function() {
+        $('header').show();
+    });
+
+</script>

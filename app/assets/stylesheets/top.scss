@@ -97,3 +97,20 @@
   background-color: rgba(0, 0, 0, 0.1);
   transition: 1s;
 }
+.trial_btn {
+  margin: 30px 100px;
+  width: 220px;
+  height: 60px;
+  line-height: 60px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.trial_btn:hover {
+  width: 240px;
+  height: 80px;
+  line-height: 80px;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}
+.trial_btn a{
+  color: black;
+}

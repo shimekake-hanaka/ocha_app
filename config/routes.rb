@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "/kids" => "home#kids"
   get "/general" => "home#general"
   get "/personal" => "home#personal"
+  get "/trial" => "home#trial"
   get "/access" => "home#access"
   get "/counseling" => "home#counseling"
   get "/ocha_dailypost_show/:id" => "home#ocha_dailypost_show"
