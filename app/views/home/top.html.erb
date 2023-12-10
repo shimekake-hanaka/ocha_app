@@ -18,8 +18,8 @@
 <main>
   <%# 教室のコンセプト %>
   <div class="concept vh_100 relative">
-    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 vh_35 top_2 left_0 fadeIn_left" })%>
-    <%= ix_image_tag("slideshow8.jpg", tag_options: { class: "absolute cover my_1 vh_35 bottom_0 left_0 fadeIn_left" })%>
+    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 vh_35 top_2 left_0 fadeIn_left", loading: "lazy" })%>
+    <%= ix_image_tag("slideshow8.jpg", tag_options: { class: "absolute cover my_1 vh_35 bottom_0 left_0 fadeIn_left", loading: "lazy" })%>
     <div class="z_0 absolute concept_center letter_spacing_sm line_height_sm">
       <p class="font_lg mb_5">教室のコンセプト</p>
       <p class="font_sm">
@@ -30,12 +30,12 @@
         どうぞ四畳半の異空間で特別な時間を<br>
         体験してみてください。</p>
       </div>
-    <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "absolute cover my_2 vh_55 bottom_0 right_0 fadeIn_right" })%>
+    <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "absolute cover my_2 vh_55 bottom_0 right_0 fadeIn_right", loading: "lazy" })%>
   </div>
   <div class="concept_end"></div>
   <%# お稽古日記 %>
   <div class="vh_100 relative my_10">
-    <%= ix_image_tag("S_personal.jpg", tag_options: { class: "absolute top_0 left_0 article_bg" })%>
+    <%= ix_image_tag("S_personal.jpg", tag_options: { class: "absolute top_0 left_0 article_bg", loading: "lazy" })%>
     <div class="pd_1 transform_1">
       <p class="font_lg my_10 letter_spacing_sm text_center">お稽古日記</p>
       <div class="flex around mx_10">
@@ -44,7 +44,7 @@
             <% if daily_post_home.img_main.attached? %>
               <%= image_tag daily_post_home.img_main, class: "cover article_img mb_3" %>
             <% else %>
-              <%= ix_image_tag('no-image.png', tag_options: { class: "cover article_img" }) %>
+              <%= ix_image_tag('no-image.png', tag_options: { class: "cover article_img", loading: "lazy" }) %>
             <% end %>
             <p class="color_black"><%= daily_post_home.title.truncate(15, omission: '~~') %></p>
             <p class="color_black">投稿日時：<%= daily_post_home.updated_at.strftime("%Y年%m月%d日") %></p>
@@ -59,9 +59,9 @@
     <div class="relative vh_100">
       <p class="font_lg mt_20 letter_spacing_sm text_center">クラス紹介</p>
       <div class="flex flex_center mt_20 absolute top_0 left_0">
-        <%= ix_image_tag("slideshow5.jpg", tag_options: { class: "flex_grow class_img" })%>
-        <%= ix_image_tag("adult.jpg", tag_options: { class: "flex_grow class_img" })%>
-        <%= ix_image_tag("S_co.jpg", tag_options: { class: "flex_grow class_img" })%>
+        <%= ix_image_tag("slideshow5.jpg", tag_options: { class: "flex_grow class_img", loading: "lazy" })%>
+        <%= ix_image_tag("adult.jpg", tag_options: { class: "flex_grow class_img", loading: "lazy" })%>
+        <%= ix_image_tag("S_co.jpg", tag_options: { class: "flex_grow class_img", loading: "lazy" })%>
       </div>
       <div class="vw_100 mt_15 flex around absolute top_0 left_0">
         <div><a href="kids" class="rl link around class_box relative"><p class="absolute">子どもクラス</p></a></div>
@@ -91,12 +91,19 @@
 </script>
 
 <script>
-// mainTextのフェードイン
-  $(window).on('load', function () {
-    setTimeout(function () {
-      $('#mainText').fadeIn(2000);
-    },);
+// mainTextのフェードイン(上部が読み込まれたらすぐに読みこむ設定)
+  document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('*');
+    for (var i = 0; i < elements.length; i++) {
+      var elementTop = elements[i].getBoundingClientRect().top;
+      if (elementTop >= 0 && elementTop <= window.innerHeight) {
+        setTimeout(function () {
+          $('#mainText').fadeIn(2000);
+        },);
+      }
+    }
   });
+
 // スクロール時のコンセプト画像フェードイン
   var hasFadedIn = false;
   $(window).scroll(function () {
