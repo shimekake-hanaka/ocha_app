@@ -1,52 +1,65 @@
-<div class="contact-warpper">
-    <div class="contact">
-        <h1>茶道体験ご予約</h1>
+<div class="text-center height_auto mg_10px">
+    <div class="mb_5">
+        <h1 class="mb_3">【茶道体験ご予約】</h1>
+        <p class="line_height_sm bgc_gray pd_1">
+            体験をご希望の方は<br>
+            下記フォームをご利用ください<br>
+            お電話やメールでも受け付けております<br>
+            （体験で予約したい旨をお伝えください）
+        </p>
     </div>
     <%= form_with(model: @reserve, url: confirm_reserves_path) do |f| %>
-        <div class="contact-form">
-            <%= f.label :name, class:"contact-label" %><br>
-            <%= f.text_field :name, class:"contact-label" %>
+        <div class="mb_5">
+            <%= f.label :name, class:"vw_30 text_left ml_2" %><br>
+            <%= f.text_field :name, class:"vw_30" %>
             <% @reserve.errors.full_messages_for(:name).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
-        <div class="contact-form">
-            <%= f.label :email, class:"contact-label" %><br>
-            <%= f.text_field :email, class:"contact-label" %>
+        <div class="mb_5">
+            <%= f.label :email, class:"vw_30 text_left ml_2" %><br>
+            <%= f.text_field :email, class:"vw_30" %>
             <% @reserve.errors.full_messages_for(:email).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
-        <div class="contact-form">
-            <%= f.label :telephone, class:"contact-label" %><br>
-            <%= f.text_field :telephone, class:"contact-label" %>
+        <div class="mb_5">
+            <%= f.label :telephone, class:"vw_30 text_left ml_2" %><br>
+            <%= f.text_field :telephone, class:"vw_30" %>
             <% @reserve.errors.full_messages_for(:telephone).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
-        <div class="contact-form">
-            <%= f.label :date1, class:"contact-label" %><br>
-            <%= f.datetime_field :date1, class:"contact-label" %>
+        <div class="mb_5">
+            <%= f.label :date1, class:"vw_30 text_left ml_2" %><br>
+            <%= f.datetime_field :date1, class:"vw_30" %>
             <% @reserve.errors.full_messages_for(:date1).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
-        <div class="contact-form">
-            <%= f.label :date2, class:"contact-label" %><br>
-            <%= f.datetime_field :date2,  value: nil ,class:"contact-label" %>
+        <div class="mb_5">
+            <%= f.label :date2, class:"vw_30 text_left ml_2" %><br>
+            <%= f.datetime_field :date2,  value: nil ,class:"vw_30" %>
         </div>
-        <div class="contact-form">
-            <%= f.label :date3, class:"contact-label" %><br>
-            <%= f.datetime_field :date3,  value: nil ,class:"contact-label" %>
+        <div class="mb_5">
+            <%= f.label :date3, class:"vw_30 text_left ml_2" %><br>
+            <%= f.datetime_field :date3,  value: nil ,class:"vw_30" %>
         </div>
-        
-        <div class="contact-form">
-            <%= f.label :content_inquiry, class:"contact-label" %><br>【個人稽古の希望・ご年齢をご入力下さい。】<br>
-            <%= f.text_area :content_inquiry, class:"contact-label" %>
+        <div class="mb_5">
+            <%= f.label :content_inquiry, class:"vw_50 text_left ml_2" %><br>【個人稽古の希望・ご年齢をご入力下さい。】<br>
+            <%= f.text_area :content_inquiry, class:"vh_15 vw_30" %>
+            <% @reserve.errors.full_messages_for(:content_inquiry).each do |message| %>
+
             <% @reserve.errors.full_messages_for(:content_inquiry).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
-        <%= f.button "確認画面へ", class:"confrim_btn" %>
+        <%= f.button "確認画面へ", class:"confrim_btn mb_5 pd_btn" %>
     <% end %>
 </div>
+
+<script>
+    $(function() {
+        $('header').show();
+    });
+</script>
