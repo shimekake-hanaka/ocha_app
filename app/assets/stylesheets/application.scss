@@ -83,6 +83,10 @@ img {
     display: block;
 }
 
+.display_none {
+    display: none;
+}
+
 /* 間隔 */
 /* CSS class名の定義：　mt=margin-top  mb=margin-bottom  my=margin-top&bottom(y軸の意味)　横も同様 */
 
@@ -132,6 +136,9 @@ img {
 /* margin y軸*/
 .mt_3 {
     margin-top: 30px;
+}
+.mt_5 {
+    margin-top: 50px;
 }
 .mt_10 {
     margin-top: 100px;
