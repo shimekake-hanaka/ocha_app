@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/class" => "home#class"
   get "/kids" => "home#kids"
   get "/general" => "home#general"
+  get "/personal" => "home#personal"
   get "/access" => "home#access"
   get "/counseling" => "home#counseling"
   get "/ocha_dailypost_show/:id" => "home#ocha_dailypost_show"

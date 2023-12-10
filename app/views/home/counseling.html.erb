@@ -1,6 +1,6 @@
 <div class="text-center">
     <div class="flex">
-        <div class="text-center">
+        <div class="text-center display_none" id="counselinglImg">
             <%= ix_image_tag("S_personal.jpg", tag_options: { class: "bg_img" })%>
         </div>
         <div class="mb_5 mt_15">
@@ -53,12 +53,18 @@
         </div>
         <p class="pd_5 line_height_md">
             他のクラスもございます。気になる方は
-            <a href="#">こちら</a>をご覧ください。
+            <a href="class">こちら</a>をご覧ください。
         </p>
     </div>
 </div>
 
 <script>
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#counselinglImg').fadeIn(2000);
+        },);
+    });
+
     $(function() {
         $('header').show();
         $('header').toggleClass("header_fixed");

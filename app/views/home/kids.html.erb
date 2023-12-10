@@ -1,6 +1,6 @@
 <div class="text-center">
     <div class="flex">
-        <div class="text-center">
+        <div class="text-center display_none" id="kidslImg">
             <%= ix_image_tag("tanpopo.jpg", tag_options: { class: "bg_img" })%>
         </div>
         <div class="mb_5 mt_15">
@@ -85,6 +85,12 @@
 </div>
 
 <script>
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#kidslImg').fadeIn(2000);
+        },);
+    });
+
     $(function() {
         $('header').show();
         $('header').toggleClass("header_fixed");

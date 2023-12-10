@@ -1,0 +1,68 @@
+<div class="text-center">
+    <div class="flex">
+        <div class="text-center display_none" id="personallImg">
+            <%= ix_image_tag("S_co.jpg", tag_options: { class: "bg_img" })%>
+        </div>
+        <div class="mt_15">
+            <h3 class="line_height_sm mb_3 pd_l_10 text_left letter_spacing_md">個別稽古</h3>
+            <h3 class="vw_50 pd_t_5 pd_l_10 text_left letter_spacing_md">どんなことをしているの？</h3>
+            <p class="vw_50 pd_t_5 pd_l_10 text_left line_height_md">
+                おひとりで集中してゆっくりお稽古なさりたい方は個別にお稽古いたします。<br>
+                お稽古の内容は大人クラスと同様です。<br>
+                また、不登校等のお子様にはチャイルドカウンセラー、<br class="pc">
+                家族療法カウンセラーの資格を持つ講師がお稽古中に寄り添ってお話を聞きます。<br>
+                お点前の時はお稽古に集中して、<br>
+                客の時は美味しいお菓子と抹茶をいただきながら講師と楽しい会話を。<br>
+                子育てにお悩みの保護者の方や不登校などでお悩みのお子様等々、<br>
+                どうぞお気軽にお問合せください。
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3 class="letter_spacing_md mt_10">～お稽古の時間～</h3>
+        <div class="pd_5">
+            <table class="table mg_0">
+                <tr>
+                    <th>曜日</th>
+                    <th>時間</th>
+                </tr>
+                <tr>
+                    <td>木曜日</td>
+                    <td>9:00-20:00</td>
+                </tr>
+                <tr>
+                    <td>日曜日</td>
+                    <td>13:00-20:00</td>
+            </table>
+        </div>
+        <h3 class="letter_spacing_md mt_10">～個別稽古/料金～</h3>
+        <div class="pd_5">
+            <table class="table mg_0">
+                <tr>
+                <th>1回　(約90分)</th>
+                </tr>
+                <tr>
+                <td>3000円</td>
+                </tr>
+            </table>
+        </div>
+        <p class="pd_5 line_height_md">
+            お稽古のキャンセルはありませんが、<br class="sp">当月・翌月の変更は可能です。<br>
+            お稽古日の振り替え連絡は三日前までに<br class="sp">お願いいたします。<br>
+            <a href="kids">子どもクラスはこちら</a>・<a href="general">大人クラスはこちら</a>をご覧ください。
+        </p>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#personallImg').fadeIn(2000);
+        },);
+    });
+
+    $(function() {
+        $('header').show();
+        $('header').toggleClass("header_fixed");
+    });
+</script>
