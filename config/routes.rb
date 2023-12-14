@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   
   # User画面
   get "/" => "home#top"
-  # get "/contect" => "home#contect"
-  # get "/reserve" => "home#reserve"
   get "/class" => "home#class"
   get "/kids" => "home#kids"
   get "/general" => "home#general"

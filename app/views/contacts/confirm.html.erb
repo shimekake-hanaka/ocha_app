@@ -1,44 +1,50 @@
-<div class="contact-warpper">
+<div class="text-center height_auto mg_10px mb_5">
     <div class="contact">
-        <h1>お問い合わせ内容の確認</h1>
+        <h3>お問い合わせ内容の確認</h3>
     </div>
 
-    <div class="confirm-warpper">
+    <div class="">
         <p>以下の内容でよろしいでしょうか？</p>
-        <div>
-            <div class="confirm"><%= t("activerecord.attributes.contact.name")%></div>
-            <%= @contact.name %><br>
-            <br>
-
-            <div class="confirm"><%= t("activerecord.attributes.contact.email")%></div>
-            <%= @contact.email %><br>
-            <br>
-
-            <div class="confirm"><%= t("activerecord.attributes.contact.telephone")%></div>
-            <%= @contact.telephone %><br>
-            <br>
-
-            <div class="confirm"><%= t("activerecord.attributes.contact.content_inquiry")%></div>
-            <%= @contact.content_inquiry %><br>
-
+        <div class="pd_5 vw_50 mg_0">
+            <table class="table mb_5 table_color" style="width: 50vw !important;">
+                <tr>
+                    <th style="border-top: none; border-bottom: none;"></th>
+                    <th style="border-top: none; border-bottom: none;"></th>
+                </tr>
+                <tr>
+                    <td style="border-top: none;"><%= t("activerecord.attributes.contact.name")%></td>
+                    <td style="border-top: none;"><%= @contact.name %></td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.contact.email")%></td>
+                    <td><%= @contact.email %></td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.contact.telephone")%></td>
+                    <td><%= @contact.telephone %></td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.contact.content_inquiry")%></td>
+                    <td><%= @contact.content_inquiry %></td>
+                </tr>
+            </table>
         </div>
-
     </div>
-    <div class="button-confirm">
+    <div class="flex flex_center">
         <br>
         <%= form_for @contact, url: contacts_path do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
             <%= f.hidden_field :telephone %>
             <%= f.hidden_field :content_inquiry %>
-            <%= f.button "OK", class:"complete_btn" %>
+            <%= f.button "OK", class:"complete_btn mg_20px" %>
         <% end %><br>
         <%= form_for @contact, url: contacts_path do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
             <%= f.hidden_field :telephone %>
             <%= f.hidden_field :content_inquiry %>
-            <%= f.button "戻る", value: "back" , class:"complete_btn" %>
+            <%= f.button "戻る", value: "back" , class:"complete_btn mg_20px" %>
         <% end %>
     </div>
 </div>
