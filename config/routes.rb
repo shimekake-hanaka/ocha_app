@@ -19,7 +19,6 @@ Rails.application.routes.draw do
 
   # 管理者画面用
   get "admin/top" => "admin#top"
-  get "admin/create" => "admin#create"
 
   get "daily_post/index" => "daily_post#index", as: 'daily_post_index' #一覧
   get "daily_post/new" => "daily_post#new", as: 'daily_post_new' #新規作成画面遷移
