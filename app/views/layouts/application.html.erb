@@ -46,11 +46,12 @@
               <span></span>
             </label>
             <ul class="menu__box">
-              <li><a class="menu__item" href="#"><span class="red">Home</span></a></li>
-              <li><a class="menu__item" href="#">Services</a></li>
-              <li><a class="menu__item" href="#">Portfolio</a></li>
-              <li><a class="menu__item" href="#">About</a></li>
-              <li><a class="menu__item" href="#">Contact</a></li>
+              <li><a class="menu__item" href="/"><span class="red">Home</span></a></li>
+              <li><a class="menu__item" href="/counseling">カウンセリング</a></li>
+              <li><a class="menu__item" href="/class">クラス・お月謝</a></li>
+              <li><a class="menu__item" href="/trial">体験教室</a></li>
+              <li><a class="menu__item" href="#">アクセス</a></li>
+              <li><%= link_to "お問い合わせ", new_contact_path, class: "menu__item" %></li>
             </ul>
           </nav>
         </div>
