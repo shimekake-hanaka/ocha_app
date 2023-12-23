@@ -3,8 +3,8 @@
     <div id="mainText"><%= ix_image_tag("main_text.png", tag_options: { class: "main_img_text absolute" })%></div>
     <%# main画面専用ヘッダー %>
     <div class="relative vh_25">
-      <p class="absolute absolute_top_2 absolute_left_8 font_md letter_spacing_sm line_height_sm">茶道教室<br>SAKURA　CLUB</p>
-      <table class="absolute absolute_top_2 absolute_right_8">
+      <p class="absolute absolute_top_2 absolute_top_sp absolute_left_8 font_md letter_spacing_sm line_height_sm">茶道教室<br>SAKURA　CLUB</p>
+      <table class="pc_display absolute absolute_top_2 absolute_right_8">
         <tr>
           <td><a class="rl link line_height_lg letter_spacing_sm" href="counseling">カウンセリング</a></td>
           <td><a class="rl link line_height_lg letter_spacing_sm" href="class">クラス・お月謝</a></td>
@@ -18,9 +18,9 @@
 <main>
   <%# 教室のコンセプト %>
   <div class="concept vh_100 relative">
-    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 top_2 left_0 fadeIn_left", loading: "lazy" })%>
-    <%= ix_image_tag("topIMG_20231216.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 bottom_0 left_0 fadeIn_left", loading: "lazy" })%>
-    <div class="z_0 absolute concept_center letter_spacing_sm line_height_sm">
+    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 vh_20sp vw_100sp top_2 top_10sp left_0_sp fadeIn_left", loading: "lazy" })%>
+    <%= ix_image_tag("topIMG_20231216.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 bottom_0 fadeIn_left vh_20sp vw_100sp left_0_sp", loading: "lazy" })%>
+    <div class="w_100 z_0 absolute concept_center letter_spacing_sm line_height_sm letter_spacing_sm_sp line_height_sm_sp">
       <p class="font_lg mb_5">教室のコンセプト</p>
       <p class="font_sm">
         当教室は、小学生からご高齢の方まで<br>
@@ -30,24 +30,24 @@
         どうぞ四畳半の異空間で特別な時間を<br>
         体験してみてください。</p>
       </div>
-    <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "absolute cover my_2 vh_55 bottom_0 right_0 fadeIn_right", loading: "lazy" })%>
+    <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "absolute cover my_2 vh_55 vh_30sp bottom_0 right_0 fadeIn_right pc_display", loading: "lazy" })%>
   </div>
   <div class="concept_end"></div>
   <%# お稽古日記 %>
   <div class="vh_100 relative my_10">
     <%= ix_image_tag("S_personal.jpg", tag_options: { class: "absolute top_0 left_0 article_bg", loading: "lazy" })%>
-    <div class="pd_1 transform_1">
-      <p class="font_lg my_10 letter_spacing_sm text_center">お稽古日記</p>
-      <div class="flex around mx_10">
+    <div class="pd_1 transform_1 transform_0_sp">
+      <p class="font_lg my_10 letter_spacing_sm text_center my_2_sp">お稽古日記</p>
+      <div class="flex around mx_10 mb_1_sp text_center_sp flex_column_sp mx_0_sp">
         <% @daily_posts_home.each do |daily_post_home| %>
           <a href="ocha_dailypost_show/<%= daily_post_home.id %> " >
             <% if daily_post_home.img_main.attached? %>
-              <%= image_tag daily_post_home.img_main, class: "cover article_img mb_3" %>
+              <%= image_tag daily_post_home.img_main, class: "cover article_img mb_3 mb_1_sp mt_5vh_sp" %>
             <% else %>
               <%= ix_image_tag('no-image.png', tag_options: { class: "cover article_img", loading: "lazy" }) %>
             <% end %>
-            <p class="color_black"><%= daily_post_home.title.truncate(15, omission: '~~') %></p>
-            <p class="color_black">投稿日時：<%= daily_post_home.updated_at.strftime("%Y年%m月%d日") %></p>
+            <p class="color_black w_100sp"><%= daily_post_home.title.truncate(15, omission: '~~') %></p>
+            <p class="color_black w_100sp">投稿日時：<%= daily_post_home.updated_at.strftime("%Y年%m月%d日") %></p>
           </a>
         <% end %>
       </div>
@@ -58,18 +58,18 @@
     <%# クラス紹介 %>
     <div class="relative vh_100">
       <p class="font_lg mt_20 letter_spacing_sm text_center">クラス紹介</p>
-      <div class="flex flex_center mt_20 absolute top_0 left_0">
-        <%= ix_image_tag("kidsClassImg.jpg", tag_options: { class: "flex_grow class_img", loading: "lazy" })%>
-        <%= ix_image_tag("adult.jpg", tag_options: { class: "flex_grow class_img", loading: "lazy" })%>
-        <%= ix_image_tag("S_co.jpg", tag_options: { class: "flex_grow class_img", loading: "lazy" })%>
+      <div class="flex flex_center mt_20 absolute top_0 left_0 flex_column_sp vw_100sp mt_5_sp">
+        <%= ix_image_tag("kidsClassImg.jpg", tag_options: { class: "flex_grow class_img mt_3_sp", loading: "lazy" })%>
+        <%= ix_image_tag("adult.jpg", tag_options: { class: "flex_grow class_img mt_3_sp", loading: "lazy" })%>
+        <%= ix_image_tag("S_co.jpg", tag_options: { class: "flex_grow class_img mt_3_sp", loading: "lazy" })%>
       </div>
-      <div class="vw_100 mt_15 flex around absolute top_0 left_0">
-        <div><a href="kids" class="rl link around class_box relative"><p class="absolute">子どもクラス</p></a></div>
-        <div><a href="general" class="rl link around class_box relative"><p class="absolute">大人クラス</p></a></div>
-        <div><a href="personal" class="rl link around class_box relative"><p class="absolute">個別教室</p></a></div>
+      <div class="vw_100 mt_15 flex around absolute top_0 left_0 flex_column_sp mt_5_sp">
+        <div class="mg_0_sp transform_y50_sp"><a href="kids" class="rl link around class_box relative hori_sp mt_2_sp"><p class="absolute">子どもクラス</p></a></div>
+        <div class="mg_10auto_sp transform_y50_sp mt_10vh_sp"><a href="general" class="rl link around class_box relative hori_sp mt_2_sp"><p class="absolute">大人クラス</p></a></div>
+        <div class="mg_10auto_sp transform_y50_sp mt_10vh_sp"><a href="personal" class="rl link around class_box relative hori_sp mt_2_sp"><p class="absolute">個別教室</p></a></div>
       </div>
       <%# 体験教室紹介 %>
-      <div class="experience_btn absolute bottom_10 right_10 flex flex_center">
+      <div class="experience_btn absolute bottom_10 right_10 flex flex_center transform_80_sp">
         <a href="/trial">体験教室のご案内 >></a>
       </div>
     </div>

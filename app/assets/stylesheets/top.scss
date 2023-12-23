@@ -5,10 +5,23 @@
   width: 100vw;
   height: calc(100vh * 0.75);
 }
+@media (max-width:670px ){
+  .main_img {
+    height: calc(100vh * 0.7);
+  }
+}
+
 .main_img_text {
   top: 43%;
   left: 60%;
   width: 25%;
+}
+@media (max-width:670px ){
+  .main_img_text {
+    top: 33%;
+    left: 35%;
+    width: 60%;
+  }
 }
 #mainText {
   display: none;
@@ -20,6 +33,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-40%, -30%);
+}
+@media (max-width:670px ){
+  .concept_center {
+    transform: translate(-50%, -38%);
+  }
 }
 .fadeIn_right {
   opacity: 0;
@@ -47,6 +65,16 @@
   opacity: 0.7;
   transition: 1s;
 }
+@media (max-width:670px ){
+  .article_img {
+    height: calc(100vw * 0.25);
+    width: calc(100vw * 0.25);
+  }
+  .article_img:hover {
+    height: calc(100vw * 0.28);
+    width: calc(100vw * 0.28);
+  }
+}
 .article_bg {
   height: 100%;
   width: 100%;
@@ -62,6 +90,12 @@
   object-fit: cover;
   filter: grayscale(100%);
   opacity: 0.5;
+}
+@media (max-width:670px ){
+  .class_img {
+    width: 100vw;
+    height: 20vh;
+  }
 }
 .class_box {
   width: 15vw;
@@ -82,11 +116,31 @@
   background-color: rgba(255, 255, 255, 0.5);
   transition: 1s;
 }
+@media (max-width:670px ){
+  .class_box {
+    width: 70vw;
+    height: 10vh;
+    border: 1px solid rgba(0, 0, 0, 1);
+  }
+  .class_box p {
+    transform: translate(-60%, -50%);
+  }
+  .class_box:hover {
+    width: 75vw;
+    height: 12vh;
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+  }
+}
+
 /* 体験教室案内 */
 .experience_btn {
   width: 12%;
   height: 5%;
   border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.experience_btn a{
+  color: black;
 }
 .experience_btn.is_show {
   width: 24%;
@@ -96,6 +150,17 @@
 .experience_btn.is_show:hover {
   background-color: rgba(0, 0, 0, 0.1);
   transition: 1s;
+}
+@media (max-width:670px ){
+  .experience_btn {
+    width: 40%;
+    height: 6%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  .experience_btn.is_show {
+    width: 50%;
+    height: 8%;
+  }
 }
 .trial_btn {
   margin: 30px 100px;
