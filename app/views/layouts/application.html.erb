@@ -30,30 +30,32 @@
     <header>
       <div class="flex between w_100">
         <a class="link letter_spacing_sm line_height_sm" href="/">茶道教室<br>SAKURA　CLUB</a>
-        <table class="pc_display">
-          <tr>
-            <td><a class="link ml_2 letter_spacing_sm" href="/counseling">カウンセリング</a></td>
-            <td><a class="link ml_2 letter_spacing_sm" href="/class">クラス・お月謝</a></td>
-            <td><a class="link ml_2 letter_spacing_sm" href="/trial">体験教室</a></td>
-            <td><a class="link ml_2 letter_spacing_sm" href="#">アクセス</a></td>
-            <td><%= link_to "お問い合わせ", new_contact_path, class: "link ml_2 letter_spacing_sm" %></td>
-          </tr>
-        </table>
-        <div class="mr_2">
-          <nav class="sp_display">
-            <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
-              <span></span>
-            </label>
-            <ul class="menu__box">
-              <li><a class="menu__item" href="/"><span class="red">Home</span></a></li>
-              <li><a class="menu__item" href="/counseling">カウンセリング</a></li>
-              <li><a class="menu__item" href="/class">クラス・お月謝</a></li>
-              <li><a class="menu__item" href="/trial">体験教室</a></li>
-              <li><a class="menu__item" href="#">アクセス</a></li>
-              <li><%= link_to "お問い合わせ", new_contact_path, class: "menu__item" %></li>
-            </ul>
-          </nav>
+        <div>
+          <table class="pc_display">
+            <tr>
+              <td><a class="link ml_2 letter_spacing_sm" href="/counseling">カウンセリング</a></td>
+              <td><a class="link ml_2 letter_spacing_sm" href="/class">クラス・お月謝</a></td>
+              <td><a class="link ml_2 letter_spacing_sm" href="/trial">体験教室</a></td>
+              <td><a class="link ml_2 letter_spacing_sm" href="#">アクセス</a></td>
+              <td><%= link_to "お問い合わせ", new_contact_path, class: "link ml_2 letter_spacing_sm" %></td>
+            </tr>
+          </table>
+          <div class="mr_2">
+            <nav class="sp_display">
+              <input id="menu__toggle" type="checkbox" />
+              <label class="menu__btn" for="menu__toggle">
+                <span></span>
+              </label>
+              <ul class="menu__box">
+                <li><a class="menu__item" href="/"><span class="red">Home</span></a></li>
+                <li><a class="menu__item" href="/counseling">カウンセリング</a></li>
+                <li><a class="menu__item" href="/class">クラス・お月謝</a></li>
+                <li><a class="menu__item" href="/trial">体験教室</a></li>
+                <li><a class="menu__item" href="#">アクセス</a></li>
+                <li><%= link_to "お問い合わせ", new_contact_path, class: "menu__item" %></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
