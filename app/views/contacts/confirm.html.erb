@@ -1,11 +1,11 @@
 <div class="text-center height_auto mg_10px mb_5">
-    <div class="contact">
+    <div class="contact mt_20vh_sp">
         <h3>お問い合わせ内容の確認</h3>
     </div>
 
     <div class="">
-        <p>以下の内容でよろしいでしょうか？</p>
-        <div class="pd_5 vw_50 mg_0">
+        <p class="mb_1_sp">以下の内容でよろしいでしょうか？</p>
+        <div class="pd_5 vw_50 mg_0 pc_display">
             <table class="table mb_5 table_color" style="width: 50vw !important;">
                 <tr>
                     <th style="border-top: none; border-bottom: none;"></th>
@@ -28,6 +28,16 @@
                     <td><%= @contact.content_inquiry %></td>
                 </tr>
             </table>
+        </div>
+        <div class="sp_display text_left">
+            <p class="pl_10vw_sp"><%= t("activerecord.attributes.contact.name")%></p>
+            <p class="pl_10vw_sp"><%= @contact.name %></p>
+            <p class="pl_10vw_sp"><%= t("activerecord.attributes.contact.email")%></p>
+            <p class="pl_10vw_sp"><%= @contact.email %></p>
+            <p class="pl_10vw_sp"><%= t("activerecord.attributes.contact.telephone")%></p>
+            <p class="pl_10vw_sp"><%= @contact.telephone %></p>
+            <p class="pl_10vw_sp"><%= t("activerecord.attributes.contact.content_inquiry")%></p>
+            <p class="pl_10vw_sp"><%= @contact.content_inquiry %></p>
         </div>
     </div>
     <div class="flex flex_center">

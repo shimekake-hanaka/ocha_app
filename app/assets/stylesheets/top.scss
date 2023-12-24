@@ -181,3 +181,9 @@
 .trial_btn a{
   color: black;
 }
+@media (max-width:670px ){
+  .trial_btn {
+    margin: 30px auto;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}

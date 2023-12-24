@@ -91,6 +91,9 @@ img {
     .w_100sp{
         width: 100%;
     }
+    .vw_70_sp {
+        width: 70vw;
+    }
     }
 
 /* display */
@@ -137,6 +140,9 @@ img {
 @media (max-width:670px ){
     .pd_0_sp {
         padding: 0;
+    }
+    .pl_10vw_sp {
+        padding-left: 10vw;
     }
     .pd_sm_sp {
         padding: 20px 20px 0;
@@ -213,6 +219,9 @@ img {
     .mt_7vh_sp {
         margin-top: 7vh;
     }
+    .mt_20vh_sp {
+        margin-top: 20vh;
+    }
     .mt_25vh_sp {
         margin-top: 25vh;
     }
@@ -283,7 +292,7 @@ img {
 }
 @media (max-width:670px ){
     .line_height_sm_sp {
-        line-height: 1.5em;
+        line-height: 1.7em;
     }
 }
 
@@ -453,7 +462,6 @@ img {
     color: black !important;
 }
 .bg_img {
-    margin-top: 150px;
     width: 50vw;
     object-fit: cover;
     z-index: -5;

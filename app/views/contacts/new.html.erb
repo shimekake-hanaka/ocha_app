@@ -1,5 +1,5 @@
 <div class="text-center height_auto mg_10px">
-    <div class="mb_5">
+    <div class="mb_5 mt_20vh_sp">
         <h1 class="mb_3">【お問い合わせ】</h1>
         <p class="line_height_sm bgc_gray pd_1">
             お名前、ご連絡先、お問い合わせ内容をご入力ください。<br>
@@ -11,29 +11,29 @@
     </div>
     <%= form_for @contact, url: confirm_contacts_path do |f| %>
         <div class="mb_5">
-            <%= f.label :name, class:"vw_30 text_left ml_2" %><br>
-            <%= f.text_field :name, class:"vw_30" %>
+            <%= f.label :name, class:"vw_30 text_left ml_2 vw_70_sp" %><br>
+            <%= f.text_field :name, class:"vw_30 vw_70_sp" %>
             <% @contact.errors.full_messages_for(:name).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
         <div class="mb_5">
-            <%= f.label :email, class:"vw_30 text_left ml_2" %><br>
-            <%= f.text_field :email, class:"vw_30" %>
+            <%= f.label :email, class:"vw_30 text_left ml_2 vw_70_sp" %><br>
+            <%= f.text_field :email, class:"vw_30 vw_70_sp" %>
             <% @contact.errors.full_messages_for(:email).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
             <div class="mb_5">
-            <%= f.label :telephone, class:"vw_30 text_left ml_2" %><br>
-            <%= f.text_field :telephone, class:"vw_30" %>
+            <%= f.label :telephone, class:"vw_30 text_left ml_2 vw_70_sp" %><br>
+            <%= f.text_field :telephone, class:"vw_30 vw_70_sp" %>
             <% @contact.errors.full_messages_for(:telephone).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
         </div>
         <div class="mb_5">
-            <%= f.label :content_inquiry, class:"vw_50 text_left ml_2" %><br>
-            <%= f.text_area :content_inquiry, class:"vh_15 vw_50" %>
+            <%= f.label :content_inquiry, class:"vw_50 text_left ml_2 vw_70_sp" %><br>
+            <%= f.text_area :content_inquiry, class:"vh_15 vw_50 vw_70_sp" %>
             <% @contact.errors.full_messages_for(:content_inquiry).each do |message| %>
                 <div class="error">*<%= message %></div>
             <% end %>
