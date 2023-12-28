@@ -3,7 +3,7 @@ class Reserve < ApplicationRecord
     validates :email, presence: true
     validates :telephone, presence: true, length: { maximum: 11 }
     validates :content_inquiry, presence: true
-    validates :date1, presence: true
+    validates :reserve_date1, presence: true
 
     validate :email_format
     validate :telephone_format

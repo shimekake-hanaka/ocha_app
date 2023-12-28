@@ -32,11 +32,12 @@
 .concept_center {
   text-align: center;
   top: 50%;
-  left: 50%;
-  transform: translate(-40%, -30%);
+  left: 0;
+  transform: translate(3%, -30%);
 }
 @media (max-width:670px ){
   .concept_center {
+    left: 50%;
     transform: translate(-50%, -38%);
   }
 }

@@ -1,67 +1,115 @@
-<div class="contact-warpper">
-    <div class="contact">
+<div class="text-center height_auto mg_10px mb_5">
+    <div class="contact mt_20vh_sp">
         <h1>茶道体験ご予約内容の確認</h1>
     </div>
 
-    <div class="confirm-warpper">
-        <p>以下の内容でよろしいでしょうか？</p>
-        <div>
-            <div class="confirm"><%= t("activerecord.attributes.reserve.name")%></div>
-            <%= @reserve.name %><br>
-            <br>
-
-            <div class="confirm"><%= t("activerecord.attributes.reserve.email")%></div>
-            <%= @reserve.email %><br>
-            <br>
-
-            <div class="confirm"><%= t("activerecord.attributes.reserve.telephone")%></div>
-            <%= @reserve.telephone %><br>
-            <br>
-
-            <div class="confirm"><%= t("activerecord.attributes.reserve.date1")%></div>
-            <%= l @reserve.date1 %><br>
-            
-            <div class="confirm"><%= t("activerecord.attributes.reserve.date2")%></div>
-            <% if @reserve.date2 != nil %>
-                <%= l @reserve.date2 %><br>
-            <% else %>
-                <%= @reserve.date2 %><br>
-            <% end %>
-            
-            <div class="confirm"><%= t("activerecord.attributes.reserve.date3")%></div>
-            <% if @reserve.date3 != nil %>
-                <%= l @reserve.date3 %><br>
-            <% else %>
-                <%= @reserve.date3 %><br>
-            <% end %>
-
-            <div class="confirm"><%= t("activerecord.attributes.reserve.content_inquiry")%></div>
-            <%= @reserve.content_inquiry %><br>
-
+    <div class="">
+        <p class="mb_1_sp">以下の内容でよろしいでしょうか？</p>
+        <div class="pd_5 vw_50 mg_0 pc_display">
+            <table class="table mg_auto_contact table_color" style="width: 50vw !important;">
+                <tr>
+                    <th style="border-top: none; border-bottom: none;"></th>
+                    <th style="border-top: none; border-bottom: none;"></th>
+                </tr>
+                <tr>
+                    <td style="border-top: none;"><%= t("activerecord.attributes.reserve.name")%></td>
+                    <td style="border-top: none;"><%= @reserve.name %></td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.reserve.email")%></td>
+                    <td><%= @reserve.email %></td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.reserve.telephone")%></td>
+                    <td><%= @reserve.telephone %></td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.reserve.content_inquiry")%></td>
+                    <td><%= @reserve.content_inquiry %></td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.reserve.reserve_date1")%></td>
+                    <td><%= @reserve.reserve_date1 %></td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.reserve.reserve_date2")%></td>
+                    <td>
+                        <% if @reserve.reserve_date2 != nil %>
+                            <%= @reserve.reserve_date2 %><br>
+                        <% else %>
+                            <%= @reserve.reserve_date2 %><br>
+                        <% end %>
+                    </td>
+                </tr>
+                <tr>
+                    <td><%= t("activerecord.attributes.reserve.reserve_date3")%></td>
+                    <td>
+                        <% if @reserve.reserve_date3 != nil %>
+                            <%= @reserve.reserve_date3 %><br>
+                        <% else %>
+                            <%= @reserve.reserve_date3 %><br>
+                        <% end %>
+                    </td>
+                </tr>
+            </table>
         </div>
-
+        <div class="sp_display text_left">
+            <p class="pl_10vw_sp mt_5_sp">◎<%= t("activerecord.attributes.reserve.name")%></p>
+            <p class="pl_10vw_sp"><%= @reserve.name %></p>
+            <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.email")%></p>
+            <p class="pl_10vw_sp"><%= @reserve.email %></p>
+            <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.telephone")%></p>
+            <p class="pl_10vw_sp"><%= @reserve.telephone %></p>
+            <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.reserve_date1")%></p>
+            <p class="pl_10vw_sp mb_4_sp"><%= @reserve.reserve_date1 %></p>
+            <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.reserve_date2")%></p>
+            <p class="pl_10vw_sp mb_4_sp"><%= @reserve.reserve_date2 %></p>
+            <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.reserve_date2")%></p>
+            <p class="pl_10vw_sp mb_4_sp">
+                <% if @reserve.reserve_date2 != nil %>
+                    <%= @reserve.reserve_date2 %><br>
+                <% else %>
+                    <%= @reserve.reserve_date2 %><br>
+                <% end %>
+            </p>
+            <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.reserve_date3")%></p>
+            <p class="pl_10vw_sp mb_4_sp">
+                <% if @reserve.reserve_date3 != nil %>
+                    <%= @reserve.reserve_date3 %><br>
+                <% else %>
+                    <%= @reserve.reserve_date3 %><br>
+                <% end %>
+            </p>
+            <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.content_inquiry")%></p>
+            <p class="pl_10vw_sp mb_4_sp"><%= @reserve.content_inquiry %></p>
+        </div>
     </div>
-    <div class="button-confirm">
+    <div class="flex flex_center">
         <br>
         <%= form_with(model: @reserve, url: reserves_path) do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
             <%= f.hidden_field :telephone %>
-            <%= f.hidden_field :date1 %>
-            <%= f.hidden_field :date2 %>
-            <%= f.hidden_field :date3 %>
+            <%= f.hidden_field :reserve_date1 %>
+            <%= f.hidden_field :reserve_date2 %>
+            <%= f.hidden_field :reserve_date3 %>
             <%= f.hidden_field :content_inquiry %>
-            <%= f.button "OK", class:"complete_btn" %>
+            <%= f.button "OK", class:"complete_btn mg_20px" %>
         <% end %><br>
         <%= form_with(model: @reserve, url: reserves_path) do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
             <%= f.hidden_field :telephone %>
-            <%= f.hidden_field :date1 %>
-            <%= f.hidden_field :date2 %>
-            <%= f.hidden_field :date3 %>
-            <%= f.hidden_field :content_inquiry %>
-            <%= f.button "戻る", value: "back" , class:"complete_btn" %>
+            <%= f.hidden_field :reserve_date1 %>
+            <%= f.hidden_field :reserve_date2 %>
+            <%= f.hidden_field :reserve_date3 %>
+            <%= f.button "戻る", value: "back" , class:"complete_btn mg_20px" %>
         <% end %>
     </div>
 </div>
+
+<script>
+    $(function() {
+        $('header').show();
+    });
+</script>
