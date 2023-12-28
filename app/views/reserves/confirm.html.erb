@@ -29,15 +29,15 @@
                 </tr>
                 <tr>
                     <td><%= t("activerecord.attributes.reserve.reserve_date1")%></td>
-                    <td><%= @reserve.reserve_date1 %></td>
+                    <td><%= l @reserve.reserve_date1, class:"margin_0" %></td>
                 </tr>
                 <tr>
                     <td><%= t("activerecord.attributes.reserve.reserve_date2")%></td>
                     <td>
                         <% if @reserve.reserve_date2 != nil %>
-                            <%= @reserve.reserve_date2 %><br>
+                            <%= l @reserve.reserve_date2, class:"margin_0" %><br>
                         <% else %>
-                            <%= @reserve.reserve_date2 %><br>
+                            <p class="inline_block margin_0">未入力</p><br>
                         <% end %>
                     </td>
                 </tr>
@@ -45,9 +45,9 @@
                     <td><%= t("activerecord.attributes.reserve.reserve_date3")%></td>
                     <td>
                         <% if @reserve.reserve_date3 != nil %>
-                            <%= @reserve.reserve_date3 %><br>
+                            <%= l @reserve.reserve_date3, class:"margin_0" %><br>
                         <% else %>
-                            <%= @reserve.reserve_date3 %><br>
+                            <p class="inline_block margin_0">未入力</p><br>
                         <% end %>
                     </td>
                 </tr>
@@ -61,23 +61,21 @@
             <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.telephone")%></p>
             <p class="pl_10vw_sp"><%= @reserve.telephone %></p>
             <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.reserve_date1")%></p>
-            <p class="pl_10vw_sp mb_4_sp"><%= @reserve.reserve_date1 %></p>
+            <p class="pl_10vw_sp"><%= l @reserve.reserve_date1 %></p>
             <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.reserve_date2")%></p>
-            <p class="pl_10vw_sp mb_4_sp"><%= @reserve.reserve_date2 %></p>
-            <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.reserve_date2")%></p>
-            <p class="pl_10vw_sp mb_4_sp">
+            <p class="pl_10vw_sp">
                 <% if @reserve.reserve_date2 != nil %>
-                    <%= @reserve.reserve_date2 %><br>
+                    <%= l @reserve.reserve_date2 %><br>
                 <% else %>
-                    <%= @reserve.reserve_date2 %><br>
+                    <p class="flex pl_10vw_sp margin_0">未入力</p><br>
                 <% end %>
             </p>
             <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.reserve_date3")%></p>
-            <p class="pl_10vw_sp mb_4_sp">
+            <p class="pl_10vw_sp">
                 <% if @reserve.reserve_date3 != nil %>
-                    <%= @reserve.reserve_date3 %><br>
+                    <%= l @reserve.reserve_date3 %><br>
                 <% else %>
-                    <%= @reserve.reserve_date3 %><br>
+                    <p class="flex pl_10vw_sp margin_0">未入力</p><br>
                 <% end %>
             </p>
             <p class="pl_10vw_sp">◎<%= t("activerecord.attributes.reserve.content_inquiry")%></p>
