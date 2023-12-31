@@ -1,23 +1,23 @@
-<div class="center-block text-center height_auto" style="height: auto; width: 90vw;">
+<div class="center-block text-center height_auto daily_post_width" style="height: auto;">
   <% if !@daily_post_home.nil? %>
     <h1><%= @daily_post_home.title %></h1>
     <%# メイン画像 %>
-    <div class="align-middle inline_block mt_3 mb_5 img_center" style= "width: 100%; height:40vw;">
+    <div class="align-middle inline_block mt_3 mb_5 img_center" style= "width: 100%; height:40%;">
       <% if @daily_post_home.img_main.attached? %>
-        <div><%= image_tag @daily_post_home.img_main , style: "width: 40vw; height: 40vw;" %></div>
+        <div><%= image_tag @daily_post_home.img_main , style: "width: 40%; height: 40%;" %></div>
       <% else %>
         <div style ="width:90%; height:90%;"><%= ix_image_tag('no-image.png') %></div>
       <% end %>
     </div>
     <%# 内容テキスト %>
-    <div class ="mt_3 line_height_md" style= "width: 60vw; margin: auto;">
+    <div class ="mt_3 line_height_md" style= "width: 60%; margin: auto;">
       <%= simple_format(@daily_post_home.content) %>
     </div>
     <%# サブ画像 6枚まで %>
-    <div class="mt_3 mb_10 flex flex_center" style= "height: 50vh;">
+    <div class="mt_3 mb_10 daily_post_flex" style= "height: auto; width: 100%;">
       <% if @daily_post_home.images_sub.attached? %>
         <% @daily_post_home.images_sub.each do |image_sub| %>
-          <div class= "ml_2", style= "width: 30%; height: 100%;"><%= image_tag image_sub, style: "width: 100%; height: 100%;" %></div>
+          <div class= "daily_post_subimg"><%= image_tag image_sub, style: "width: 100%; height: 100%;" %></div>
         <% end %>
       <% end %>
     </div>
