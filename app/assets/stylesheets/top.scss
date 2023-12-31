@@ -58,6 +58,23 @@
   }
 }
 
+@media (max-width:670px ){
+  .concept_top_fadeIn{
+    opacity: 0;
+    transition: 3s;
+  }
+  .concept_top_fadeIn.is_show_sp {
+    opacity: 1;
+  }
+  .concept_bottom_fadeIn{
+    opacity: 0;
+    transition: 4s;
+  }
+  .concept_bottom_fadeIn.is_show_sp {
+    opacity: 1;
+  }
+}
+
 /* お稽古日記の専用css */
 .article_img {
   height: calc(100vh * 0.35);

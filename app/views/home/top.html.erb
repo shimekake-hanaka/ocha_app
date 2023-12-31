@@ -18,8 +18,8 @@
 <main>
   <%# 教室のコンセプト %>
   <div class="concept vh_100 relative">
-    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 vh_20sp vw_100sp top_2 left_0 top_10sp left_0_sp fadeIn_left", loading: "lazy" })%>
-    <%= ix_image_tag("topIMG_20231216.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 bottom_0 left_0 fadeIn_left vh_20sp vw_100sp left_0_sp", loading: "lazy" })%>
+    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 vh_20sp vw_100sp top_2 left_0 top_10sp left_0_sp fadeIn_left concept_top_fadeIn", loading: "lazy" })%>
+    <%= ix_image_tag("topIMG_20231216.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 bottom_0 left_0 fadeIn_left vh_20sp vw_100sp left_0_sp concept_bottom_fadeIn", loading: "lazy" })%>
     <div class="w_100 z_0 absolute concept_center letter_spacing_sm line_height_sm letter_spacing_sm_sp line_height_sm_sp">
       <p class="font_lg mb_5">教室のコンセプト</p>
       <p class="font_sm">
@@ -34,10 +34,10 @@
   </div>
   <div class="concept_end"></div>
   <%# お稽古日記 %>
-  <div class="vh_100 relative my_10">
+  <div class="vh_100 relative my_10 concept_bottom_img">
     <%= ix_image_tag("S_personal.jpg", tag_options: { class: "absolute top_0 left_0 article_bg", loading: "lazy" })%>
     <div class="pd_1 transform_1 transform_0_sp">
-      <p class="font_lg my_10 letter_spacing_sm text_center my_2_sp">お稽古日記</p>
+      <p class="font_lg my_10 letter_spacing_sm text_center my_2_sp concept_bottom_img_end">お稽古日記</p>
       <div class="flex around mx_10 mb_1_sp text_center_sp flex_column_sp mx_0_sp">
         <% @daily_posts_home.each do |daily_post_home| %>
           <a href="ocha_dailypost_show/<%= daily_post_home.id %> " >
@@ -91,7 +91,7 @@
 </script>
 
 <script>
-// mainTextのフェードイン(上部が読み込まれたらすぐに読みこむ設定)
+// mainTextのフェードイン(上部が読み込まれたらすぐにmainTextを表示する設定)
   document.addEventListener('DOMContentLoaded', function() {
     var elements = document.querySelectorAll('*');
     for (var i = 0; i < elements.length; i++) {
@@ -106,20 +106,69 @@
 
 // スクロール時のコンセプト画像フェードイン
   var hasFadedIn = false;
-  $(window).scroll(function () {
-    if (hasFadedIn) {
-        return;
+  var hasFadedIn_bottom = false;
+  document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('*');
+    for (var i = 0; i < elements.length; i++) {
+      $(window).scroll(function () {
+        if (hasFadedIn) {
+            return;
+        }
+        var pos = $('.concept').offset();
+        var posEnd = $('.concept_end').offset();
+        if ($(this).scrollTop() > pos.top || $(this).scrollTop() < posEnd.top) {
+          $.when(
+            $('.fadeIn_right').addClass("is_show"),
+            $('.fadeIn_right').animate({ right: '5vw' }, 2),
+            $('.fadeIn_left').addClass("is_show"),
+            $('.fadeIn_left').animate({ left: '5vw' }, 2)
+          ).then(function () {
+            hasFadedIn = true;
+          });
+        }
+      });
     }
-    var pos = $('.concept').offset();
-    var posEnd = $('.concept_end').offset();
-    if ($(this).scrollTop() > pos.top && $(this).scrollTop() < posEnd.top) {
-      $.when(
-        $('.fadeIn_right').addClass("is_show"),
-        $('.fadeIn_right').animate({ right: '5vw' }, 2),
-        $('.fadeIn_left').addClass("is_show"),
-        $('.fadeIn_left').animate({ left: '5vw' }, 2)
-      ).then(function () {
-        hasFadedIn = true;
+  });
+
+// sp時の読み込みでコンセプト画像フェードイン
+  document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('*');
+    for (var i = 0; i < elements.length; i++) {
+      $(window).scroll(function () {
+        if (hasFadedIn) {
+          return;
+        }
+        var pos = $('.concept_bottom_img').offset();
+        var posEnd = $('.concept_end').offset();
+        console.log(pos)
+        if ($(this).scrollTop() > pos.top || $(this).scrollTop() < posEnd.top) {
+          $.when(
+            $('.concept_top_fadeIn').addClass("is_show_sp")
+          ).then(function () {
+            hasFadedIn = true;
+          });
+        }
+      });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('*');
+    for (var i = 0; i < elements.length; i++) {
+      $(window).scroll(function () {
+        if (hasFadedIn_bottom) {
+          return;
+        }
+        var pos = $('.concept').offset();
+        var posEnd = $('.concept_bottom_img_end').offset();
+        console.log(posEnd)
+        if ($(this).scrollTop() > posEnd.top || $(this).scrollTop() < posEnd.top) {
+          $.when(
+            $('.concept_bottom_fadeIn').addClass("is_show_sp")
+          ).then(function () {
+            hasFadedIn_bottom = true;
+          });
+        }
       });
     }
   });
