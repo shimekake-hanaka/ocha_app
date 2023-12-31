@@ -28,7 +28,6 @@ Rails.application.routes.draw do
   put "daily_post/:id" => "daily_post#update", as: 'daily_post_update' #編集更新
   delete "daily_post/:id" => "daily_post#delete", as: 'daily_post_delete' #投稿削除
 
-
   resources :contacts, only: %i[new create] do
     collection do
       post :confirm
