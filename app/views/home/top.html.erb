@@ -17,9 +17,9 @@
 </div>
 <main>
   <%# 教室のコンセプト %>
-  <div class="concept vh_100 relative">
-    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 vh_20sp vw_100sp top_2 left_0 top_10sp left_0_sp fadeIn_left concept_top_fadeIn", loading: "lazy" })%>
-    <%= ix_image_tag("topIMG_20231216.jpg", tag_options: { class: "absolute cover my_1 vh_35 vw_30 bottom_0 left_0 fadeIn_left vh_20sp vw_100sp left_0_sp concept_bottom_fadeIn", loading: "lazy" })%>
+  <div class="concept vh_100 relative w_100">
+    <%= ix_image_tag("S_okashi.jpg", tag_options: { class: "absolute cover my_1 top_2 top_10sp fadeIn_left concept_top_fadeIn", loading: "lazy" })%>
+    <%= ix_image_tag("topIMG_20231216.jpg", tag_options: { class: "absolute cover my_1 bottom_0 fadeIn_left concept_bottom_fadeIn", loading: "lazy" })%>
     <div class="w_100 z_0 absolute concept_center letter_spacing_sm line_height_sm letter_spacing_sm_sp line_height_sm_sp">
       <p class="font_lg mb_5">教室のコンセプト</p>
       <p class="font_sm">
@@ -30,11 +30,11 @@
         どうぞ四畳半の異空間で特別な時間を<br>
         体験してみてください。</p>
       </div>
-    <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "absolute cover my_2 vh_55 vh_30sp bottom_0 right_0 fadeIn_right pc_display", loading: "lazy" })%>
+    <%= ix_image_tag("S_sakura.jpg", tag_options: { class: "absolute cover my_2 vh_30sp fadeIn_right pc_display", loading: "lazy" })%>
   </div>
   <div class="concept_end"></div>
   <%# お稽古日記 %>
-  <div class="vh_100 relative my_10 concept_bottom_img">
+  <div class="vh_100 relative my_10">
     <%= ix_image_tag("S_personal.jpg", tag_options: { class: "absolute top_0 left_0 article_bg", loading: "lazy" })%>
     <div class="pd_1 transform_1 transform_0_sp">
       <p class="font_lg my_10 letter_spacing_sm text_center my_2_sp concept_bottom_img_end">お稽古日記</p>
@@ -103,76 +103,83 @@
       }
     }
   });
+</script>
 
+<script>
 // スクロール時のコンセプト画像フェードイン
-  var hasFadedIn = false;
-  var hasFadedIn_bottom = false;
-  document.addEventListener('DOMContentLoaded', function() {
-    var elements = document.querySelectorAll('*');
-    for (var i = 0; i < elements.length; i++) {
-      $(window).scroll(function () {
-        if (hasFadedIn) {
-            return;
-        }
-        var pos = $('.concept').offset();
-        var posEnd = $('.concept_end').offset();
-        if ($(this).scrollTop() > pos.top || $(this).scrollTop() < posEnd.top) {
-          $.when(
-            $('.fadeIn_right').addClass("is_show"),
-            $('.fadeIn_right').animate({ right: '5vw' }, 2),
-            $('.fadeIn_left').addClass("is_show"),
-            $('.fadeIn_left').animate({ left: '5vw' }, 2)
-          ).then(function () {
-            hasFadedIn = true;
-          });
-        }
-      });
-    }
-  });
+  if ($(window).width() > 670) {
+    var hasFadedIn = false;
+    document.addEventListener('DOMContentLoaded', function() {
+      var elements = document.querySelectorAll('*');
+      for (var i = 0; i < elements.length; i++) {
+        $(window).scroll(function () {
+          if (hasFadedIn) {
+              return;
+          }
+          var pos = $('.concept').offset();
+          var posEnd = $('.concept_end').offset();
+          if ($(this).scrollTop() > pos.top || $(this).scrollTop() < posEnd.top) {
+            $.when(
+              $('.fadeIn_right').addClass("is_show_right"),
+              $('.fadeIn_left').addClass("is_show_left")
+            ).then(function () {
+              hasFadedIn = true;
+            });
+          }
+        });
+      }
+    });
+  };
+</script>
 
+<script>
 // sp時の読み込みでコンセプト画像フェードイン
-  document.addEventListener('DOMContentLoaded', function() {
-    var elements = document.querySelectorAll('*');
-    for (var i = 0; i < elements.length; i++) {
-      $(window).scroll(function () {
-        if (hasFadedIn) {
-          return;
-        }
-        var pos = $('.concept_bottom_img').offset();
-        var posEnd = $('.concept_end').offset();
-        console.log(pos)
-        if ($(this).scrollTop() > pos.top || $(this).scrollTop() < posEnd.top) {
-          $.when(
-            $('.concept_top_fadeIn').addClass("is_show_sp")
-          ).then(function () {
-            hasFadedIn = true;
-          });
-        }
-      });
-    }
-  });
+  if ($(window).width() < 670) {
+    var hasFadedIn_top = false;
+    var hasFadedIn_bottom = false;
+    document.addEventListener('DOMContentLoaded', function() {
+      var elements = document.querySelectorAll('*');
+      for (var i = 0; i < elements.length; i++) {
+        $(window).scroll(function () {
+          if (hasFadedIn_top) {
+            return;
+          }
+          var pos = $('.concept_top_fadeIn').offset();
+          var posEnd = $('.concept_end').offset();
+          if ($(this).scrollTop() > pos.top || $(this).scrollTop() < posEnd.top) {
+            $.when(
+              $('.concept_top_fadeIn').addClass("is_show_sp")
+            ).then(function () {
+              hasFadedIn_top = true;
+            });
+          }
+        });
+      }
+    });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var elements = document.querySelectorAll('*');
-    for (var i = 0; i < elements.length; i++) {
-      $(window).scroll(function () {
-        if (hasFadedIn_bottom) {
-          return;
-        }
-        var pos = $('.concept').offset();
-        var posEnd = $('.concept_bottom_img_end').offset();
-        console.log(posEnd)
-        if ($(this).scrollTop() > posEnd.top || $(this).scrollTop() < posEnd.top) {
-          $.when(
-            $('.concept_bottom_fadeIn').addClass("is_show_sp")
-          ).then(function () {
-            hasFadedIn_bottom = true;
-          });
-        }
-      });
-    }
-  });
+    document.addEventListener('DOMContentLoaded', function() {
+      var elements = document.querySelectorAll('*');
+      for (var i = 0; i < elements.length; i++) {
+        $(window).scroll(function () {
+          if (hasFadedIn_bottom) {
+            return;
+          }
+          var pos = $('.concept_top_fadeIn').offset();
+          var posEnd = $('.concept_end').offset();
+          if ($(this).scrollTop() > posEnd.top || $(this).scrollTop() < posEnd.top) {
+            $.when(
+              $('.concept_bottom_fadeIn').addClass("is_show_sp")
+            ).then(function () {
+              hasFadedIn_bottom = true;
+            });
+          }
+        });
+      }
+    });
+  };
+</script>
 
+<script>
 // 体験教室のスクロール時のイベント
   $(window).scroll(function () {
     var pos = $('.experience').offset();

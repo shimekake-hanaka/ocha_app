@@ -47,16 +47,10 @@ img {
 .vh_35 {
     height: calc(100vh * 0.38);
 }
-.vh_55 {
-    height: calc(100vh * 0.6);
-}
 .height_auto {
     height: auto;
 }
 @media (max-width:670px ){
-    .vh_20sp{
-        height: calc(100vh * 0.2);
-    }
     .vh_30sp{
         height: calc(100vh * 0.3);
     }
