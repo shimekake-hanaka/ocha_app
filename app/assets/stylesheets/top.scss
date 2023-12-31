@@ -33,7 +33,7 @@
   text-align: center;
   top: 50%;
   left: 0;
-  transform: translate(3%, -30%);
+  transform: translate(0, -30%);
 }
 @media (max-width:670px ){
   .concept_center {
@@ -41,19 +41,21 @@
     transform: translate(-50%, -38%);
   }
 }
-.fadeIn_right {
-  opacity: 0;
-  transition: 2s;
-}
-.fadeIn_right.is_show {
-  opacity: 1;
-}
-.fadeIn_left {
-  opacity: 0;
-  transition: 2s;
-}
-.fadeIn_left.is_show {
-  opacity: 1;
+@media (min-width:670px ){
+  .fadeIn_right {
+    opacity: 0;
+    transition: 2s;
+  }
+  .fadeIn_right.is_show {
+    opacity: 1;
+  }
+  .fadeIn_left {
+    opacity: 0;
+    transition: 2s;
+  }
+  .fadeIn_left.is_show {
+    opacity: 1;
+  }
 }
 
 /* お稽古日記の専用css */
