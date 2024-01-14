@@ -1,0 +1,26 @@
+// 日記一覧表
+
+.post_table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.post_table th{
+  vertical-align: bottom !important;
+  text-align: center;
+  padding: 5px;
+  border-bottom: solid 2px black;
+  color: black;
+}
+.post_table td{
+  vertical-align: bottom !important;
+  padding: 10px;
+  border-bottom: solid 1px black;
+}
+.post_table tr{
+  height: 50px;
+}
+.table_color td{
+  border-bottom: solid 1px rgba(0, 0, 0, 0.5) !important;
+}

@@ -545,6 +545,7 @@ header {
         padding: 1.4em;
         background: #d0d0d087;
         border-bottom: 2px solid #b3b3b3;
+        height: 75px;
     }
     
     .logotype {
@@ -617,6 +618,10 @@ header {
     
     #menu__toggle {
         opacity: 0;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        z-index: 5;
         
         &:checked ~ .menu__btn > span {
         transform: rotate(45deg);
@@ -680,7 +685,7 @@ header {
 /* フッター */
 footer {
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     position: relative;
     background-color: rgba(0, 0, 0, 0.1);
 }
