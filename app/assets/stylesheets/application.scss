@@ -785,4 +785,10 @@ footer {
 }
 
 /* ====================================================================== */
+// サファリボタン対応
+
+input[type="submit"] {
+appearance: none;
+-webkit-appearance: none;
+}
 
