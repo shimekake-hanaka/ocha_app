@@ -25,8 +25,11 @@ Rails.application.routes.draw do
   post "daily_post/create" => "daily_post#create", as: 'daily_post_create' #新規保存
   get "daily_post/show/:id" => "daily_post#show", as: 'daily_post_show' #詳細画面遷移
   get "daily_post/edit/:id" => "daily_post#edit", as: 'daily_post_edit' #編集画面遷移
+  get "daily_post/image_edit/:id" => "daily_post#image_edit", as: 'daily_post_image_edit' #編集画面遷移
   put "daily_post/:id" => "daily_post#update", as: 'daily_post_update' #編集更新
   delete "daily_post/:id" => "daily_post#delete", as: 'daily_post_delete' #投稿削除
+  put "daily_post/image/:id" => "daily_post#image_delete", as: 'daily_post_image_delete' #サブ画像削除
+  put "daily_post/is_open/:id" => "daily_post#is_open", as: 'daily_post_is_open' #サブ画像削除
 
   resources :contacts, only: %i[new create] do
     collection do

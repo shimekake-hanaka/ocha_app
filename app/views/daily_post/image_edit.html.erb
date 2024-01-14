@@ -1,0 +1,25 @@
+<%= render partial: 'layouts/admin_header' %>
+
+<div class="center-block text-center" style="height: auto; width: 90vw; ">
+  <p>現在登録されている画像（削除する画像をチェックしてください）</p>
+  <%= form_for @daily_post, url: daily_post_image_delete_path, method: :put do |form| %>
+    <input type="checkbox" id="all_delete_images_sub" name="images_sub[]" value="">
+    <p>全件削除</p>
+    <% @daily_post.images_sub.each do |image| %>
+      <input type="checkbox" id="images_sub" class="checks" name="images_sub[]" value="<%= image.signed_id %>">
+      <%= image_tag image, size:"100x100" %> <br>
+    <% end %>
+    <input type="submit" value="削除">
+  <% end %>
+</div>
+
+<script>
+  const checkall = document.getElementById("all_delete_images_sub");
+  const checks = document.querySelectorAll(".checks");
+
+  checkall.addEventListener('click', () => {
+    for (val of checks) {
+      checkall.checked == true ? val.checked = true : val.checked = false;
+    }
+  });
+</script>

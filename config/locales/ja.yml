@@ -15,6 +15,12 @@ ja:
         reserve_date1: 第一希望日
         reserve_date2: 第二希望日
         reserve_date3: 第三希望日
+      
+      daily_post:
+        title: タイトル
+        content: 内容
+        img_main: メイン画像
+        is_open: 表示・非表示
 
     errors:
       models:
@@ -22,14 +28,11 @@ ja:
           attributes:
             name:
               blank: を入力してください
-
             telephone:
               blank: を入力してください
               too_long: を確認して下さい
-
             content_inquiry:
               blank: を入力してください
-            
             email:
               blank: を入力してください
 
@@ -37,18 +40,19 @@ ja:
           attributes:
             name:
               blank: を入力してください
-
             telephone:
               blank: を入力してください
               too_long: を確認して下さい
-
             content_inquiry:
               blank: を入力してください
-            
             email:
               blank: を入力してください
-              
             reserve_date1:
+              blank: を入力してください
+
+        daily_post:
+          attributes:
+            title:
               blank: を入力してください
 
   date:

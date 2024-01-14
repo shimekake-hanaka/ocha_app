@@ -95,3 +95,6 @@ gem "aws-sdk-s3", require: false
 
 # ページネーションに使用
 gem 'kaminari'
+
+# 画像保存
+gem 'image_processing'

@@ -2,13 +2,16 @@
 <div class="center-block text-center" style="height: auto; width: 90vw; ">
   <%= form_for @daily_post, url: daily_post_create_path, method: :post do |form| %>
     <p class="mt_3">タイトル</p>
-    <%= form.text_field :title, class: "mt_3" %><br>
+    <%= form.text_field :title, class: "mt_3", required: true %><br>
+
     <p class="mt_3">内容</p>
-    <%= form.text_area :content, class: "vw_50 vh_35 mt_3" %><br>
+    <%= form.text_area :content, class: "vw_50 vh_35 mt_3", required: true %><br>
+
     <p class="mt_3">メイン画像（１枚のみ）</p>
-    <div class="inline_block"><%= form.file_field :img_main %></div><br>
+    <div class="inline_block"><%= form.file_field :img_main, required: true %></div><br>
+
     <p class="mt_3">サブ画像（複数可能）* 1~3枚推奨<br class="sp">（最大6枚可能。画像が少し縦長になります。）</p>
     <div class="inline_block"><%= form.file_field :images_sub, multiple: 6, accept: "image/*"%></div><br>
-    <%= submit_tag("保存", class: "mt_3 mb_5") %>
+    <%= submit_tag("保存", class: "mt_3 mb_5", id: "save_button") %>
   <% end %>
 </div>

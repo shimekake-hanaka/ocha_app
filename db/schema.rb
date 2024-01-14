@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_15_160138) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_09_071817) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,11 +54,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_15_160138) do
   create_table "daily_posts", force: :cascade do |t|
     t.string "title", default: "", null: false, comment: "タイトル"
     t.text "content", default: "", null: false, comment: "本文"
-    t.string "img_main", comment: "メイン画像"
-    t.string "images_sub", comment: "サブ画像"
     t.datetime "deleted_at", comment: "論理削除"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_open", default: false, null: false
   end
 
   create_table "reserves", force: :cascade do |t|
