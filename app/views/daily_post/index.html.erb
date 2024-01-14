@@ -20,7 +20,7 @@
         <% @daily_posts.each do |daily_post| %>
           <tr>
             <td class="align-middle"><%= daily_post.created_at.strftime("%Y") %><br><%= daily_post.created_at.strftime("%m/%d") %></td>
-            <td class="align-middle" style= "width:25%; height:100px;">
+            <td class="align-middle" style= "width:25%; height:200px;">
               <% if daily_post.img_main.attached? %>
                 <%= image_tag daily_post.img_main, style: "width:90%; height:90%;" %>
               <% else %>
@@ -28,7 +28,7 @@
               <% end %>
             </td>
             </td>
-            <td class="align-middle"><%= daily_post.title.truncate(4, omission: '~~') %></td>
+            <td class="align-middle"><%= daily_post.title.truncate(7, omission: '~~') %></td>
             <%# <td class="align-middle"><%= daily_post.content.truncate(10, omission: '~~') %></td>
             <td class="align-middle"><%= link_to "詳細", daily_post_show_path(daily_post.id) %></td>
             <td class="align-middle">
