@@ -20,7 +20,7 @@
         <% @daily_posts.each do |daily_post| %>
           <tr>
             <td class="align-middle"><%= daily_post.created_at.strftime("%Y") %><br><%= daily_post.created_at.strftime("%m/%d") %></td>
-            <td class="align-middle" style= "width:25%; height:25%;">
+            <td class="align-middle" style= "width:25%; height:100px;">
               <% if daily_post.img_main.attached? %>
                 <%= image_tag daily_post.img_main, style: "width:90%; height:90%;" %>
               <% else %>
