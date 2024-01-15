@@ -1,0 +1,99 @@
+<div class="text-center">
+    <div class="flex flex_column_sp">
+        <div class="text-center display_none" id="kidslImg">
+            <%= ix_image_tag("kidsClassImg.jpg", tag_options: { class: "bg_img relative mt_15" })%>
+            <%= ix_image_tag("kids_img.png", tag_options: { class: "kids_img_text absolute z_1" })%>
+        </div>
+        <div class="mb_5 mt_15 mg_0_sp">
+            <h3 class="line_height_sm pd_l_10 text_left letter_spacing_md letter_spacing_sm_sp text_center_sp pd_sm_sp mg_0_sp">こどもクラスの目的</h3>
+            <div class="vw_50 pd_t_5 font_lg text_left line_height_md pd_l_10 pd_sm_sp">
+                <p>
+                日本の行事を通して、<br>
+                文化を学び、五感で感じる
+                </p>
+            </div>
+            <h3 class="vw_50 pd_t_5 pd_l_10 text_left letter_spacing_md letter_spacing_sm_sp text_center_sp pd_sm_sp w_100sp mg_0_sp">どんなことをしているの？</h3>
+            <p class="vw_50 pd_t_5 pd_l_10 text_left line_height_md pd_sm_sp">
+                小学生のクラスです。<br>
+                数人での団体稽古になります。<br>
+                クラブ活動のように活動しています。<br>
+                互いに教え合いながら、<br>
+                間違えているときは先生に教えてもらい、<br class="sp">お稽古が進みます。<br>
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3 class="letter_spacing_md mt_10">～お稽古の時間～</h3>
+        <div class="pd_5 pd_0_sp">
+            <table class="table mg_0">
+                <tr>
+                <th>曜日</th>
+                <th>時間</th>
+                </tr>
+                <tr>
+                <td>水曜日</td>
+                <td>16:00-19:00</td>
+                </tr>
+                <tr>
+                <td>土曜日</td>
+                <td>14:00-17:00</td>
+                </tr>
+            </table>
+        </div>
+        <h3 class="letter_spacing_md mt_10">～お稽古の流れ～</h3>
+        <div class="pd_5 pd_0_sp">
+            <table class="table mg_0">
+                <tr>
+                <th style="border-top: none;">ある日のお稽古内容</th>
+                </tr>
+                <tr>
+                <td>1.　始まりの挨拶<br></td>
+                </tr>
+                <tr>
+                <td>2.　先生の前でお点前＆客の稽古</td>
+                </tr>
+                <tr>
+                <td>3.　別室で仲間と自主練(お点前＆客)</td>
+                </tr>
+                <tr>
+                <td>4.　お稽古ノートを書く</td>
+                </tr>
+                <tr>
+                <td>5.　利休百首を読む</td>
+                </tr>
+                <tr>
+                <td>6.　終礼</td>
+                </tr>
+            </table>
+        </div>
+        <h3 class="letter_spacing_md mt_10">～子どもクラス/料金～</h3>
+        <div class="pd_5 pd_0_sp">
+            <table class="table mg_0">
+                <tr>
+                <th>月2回</th>
+                </tr>
+                <tr>
+                <td>3000円</td>
+                </tr>
+            </table>
+        </div>
+        <p class="pd_5 line_height_md line_height_sm_sp">
+            お稽古のキャンセルは出来ませんが、<br class="sp">当月・翌月への振替は可能です。<br>
+            お稽古日の振り替え連絡は前々日までに<br class="sp">お願いいたします。<br>
+            <a href="general">大人クラスはこちら</a>・<a href="personal">個別稽古はこちら</a>をご覧ください。
+        </p>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#kidslImg').fadeIn(2000);
+        },);
+    });
+
+    $(function() {
+        $('header').show();
+        $('header').toggleClass("header_fixed");
+    });
+</script>

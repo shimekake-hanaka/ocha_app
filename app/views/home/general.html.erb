@@ -1,0 +1,73 @@
+<div class="text-center">
+    <div class="flex flex_column_sp">
+        <div class="text-center display_none" id="generalImg">
+            <%= ix_image_tag("main_img.jpg", tag_options: { class: "bg_img mt_5" })%>
+        </div>
+        <div class="mb_5 mt_2_sp">
+            <h3 class="line_height_sm pd_l_10 text_left letter_spacing_md letter_spacing_sm_sp text_center_sp pd_sm_sp">大人クラス</h3>
+            <p class="vw_50 pd_t_5 pd_l_10 text_left line_height_md pd_sm_sp">
+                中学生～高齢の方のためのクラスです。<br>
+                大人クラスは一人二度点前＆客の<br class="sp">お稽古をおこないます。<br>
+                その日ご一緒する人数にもよりますが<br class="sp">１回のお稽古は<br class="pc">約２時間程度です。<br>
+                また、本格的にお稽古をなさりたい方には<br>資格（許状）習得に向けた指導をしております。
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3 class="letter_spacing_md mt_10">～お稽古の時間～</h3>
+        <div class="pd_5 pd_0_sp">
+            <table class="table mg_0">
+                <tr>
+                    <th>曜日</th>
+                    <th>時間</th>
+                </tr>
+                <tr>
+                    <td>水曜日</td>
+                    <td>9:00-17:00</td>
+                </tr>
+                <tr>
+                    <td>土曜日</td>
+                    <td>9:00-13:00</td>
+                </tr>
+            </table>
+        </div>
+        <h3 class="letter_spacing_md mt_10">～大人クラス/料金～</h3>
+        <div class="pd_5 pd_0_sp">
+            <table class="table mg_0">
+                <tr>
+                <th>回数</th>
+                <th>金額</th>
+                </tr>
+                <tr>
+                    <td>1回/月</td>
+                    <td>3000円</td>
+                </tr>
+                <tr>
+                    <td>2回/月</td>
+                    <td>4000円</td>
+                </tr>
+                <tr>
+                    <td>3回/月</td>
+                    <td>6000円</td>
+                </tr>
+            </table>
+        </div>
+        <p class="pd_5 line_height_md line_height_sm_sp">
+            お稽古のキャンセルは出来ませんが、<br class="sp">当月・翌月への振替は可能です。<br>
+            お稽古日の振り替え連絡は前々日までに<br class="sp">お願いいたします。<br>
+            <a href="kids">子どもクラスはこちら</a>・<a href="personal">個別稽古はこちら</a>をご覧ください。
+        </p>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#generalImg').fadeIn(2000);
+        },);
+    });
+
+    $(function() {
+        $('header').show();
+    });
+</script>

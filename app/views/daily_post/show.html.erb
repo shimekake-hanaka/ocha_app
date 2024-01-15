@@ -1,0 +1,33 @@
+<%= render partial: 'layouts/admin_header' %>
+<%= button_to '編集する', daily_post_edit_path(@daily_post.id), method: :get, class: 'edit-button' %>
+<%= button_to '画像を削除する', daily_post_image_edit_path(@daily_post.id), method: :get, class: 'edit-button' %>
+<%= link_to '戻る', 'javascript:history.back ()', class: 'edit-button' %>
+
+
+<div class="center-block text-center height_auto daily_post_width daily_post_width_pc" style="height: auto;">
+  <% if !@daily_post.nil? %>
+    <h1><%= @daily_post.title %></h1>
+    <%# メイン画像 %>
+    <div class="align-middle inline_block mt_3 mb_5 img_center" style= "width: 100%; height:40%;">
+      <% if @daily_post.img_main.attached? %>
+        <div><%= image_tag @daily_post.img_main , class: "daily_post_mainimg" %></div>
+      <% else %>
+        <div style ="width:90%; height:90%;"><%= ix_image_tag('no-image.png') %></div>
+      <% end %>
+    </div>
+    <%# 内容テキスト %>
+    <div class ="mt_3 line_height_md line_height_sm_sp w_100sp pd_2 text_left" style= "margin: auto;">
+      <%= simple_format(@daily_post.content) %>
+    </div>
+    <%# サブ画像 6枚まで %>
+    <div class="mt_3 mb_10 daily_post_flex" style= "height: auto; width: 100%;">
+      <% if @daily_post.images_sub.attached? %>
+        <% @daily_post.images_sub.each do |image_sub| %>
+          <div class= "daily_post_subimg"><%= image_tag image_sub, style: "width: 100%; height: 100%;" %></div>
+        <% end %>
+      <% end %>
+    </div>
+  <% else %>
+    <h2>レコードが見つかりません</h2>
+  <% end %>
+</div>

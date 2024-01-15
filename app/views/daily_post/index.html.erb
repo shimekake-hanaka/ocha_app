@@ -1,0 +1,66 @@
+<%= render partial: 'layouts/admin_header' %>
+<div class="center-block text-center" style="height: auto; width: 100%; ">
+  <div>
+  日記一覧
+  </div>
+  <p>TOP画面表示数は<%= @is_open_count %>です</p>
+  <div>
+    <table class="post_table">
+      <thead>
+        <tr>
+          <th class="align-middle text-center" scope="col">日付</th>
+          <th class="align-middle text-center" scope="col">メイン画像</th>
+          <th class="align-middle text-center" scope="col" style= "width:25%;">タイトル</th>
+          <%# <th class="align-middle text-center" scope="col">内容</th> %>
+          <th class="align-middle text-center" scope="col">詳細<br>ボタン</th>
+          <th class="align-middle text-center" scope="col">top<br>画面<br>表示</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <% @daily_posts.each do |daily_post| %>
+          <tr>
+            <td class="align-middle"><%= daily_post.created_at.strftime("%Y") %><br><%= daily_post.created_at.strftime("%m/%d") %></td>
+            <td class="align-middle" style= "width:25%; height:200px;">
+              <% if daily_post.img_main.attached? %>
+                <%= image_tag daily_post.img_main, style: "width:90%; height:90%;" %>
+              <% else %>
+                <%= ix_image_tag('no-image.png', tag_options: { style: "width:90%; height:90%;" }) %>
+              <% end %>
+            </td>
+            </td>
+            <td class="align-middle"><%= daily_post.title.truncate(7, omission: '~~') %></td>
+            <%# <td class="align-middle"><%= daily_post.content.truncate(10, omission: '~~') %></td>
+            <td class="align-middle"><%= link_to "詳細", daily_post_show_path(daily_post.id) %></td>
+            <td class="align-middle">
+              <% if daily_post.is_open %>
+                <%= form_for daily_post, url: daily_post_is_open_path(daily_post.id), method: :put do |form| %>
+                <input type="hidden" id="is_open" value="<%= daily_post.is_open %>">
+                <%= submit_tag("非表示", class: "mt_3 mb_5") %>
+                <% end %>
+              <% else %>
+                <%= form_for daily_post, url: daily_post_is_open_path(daily_post.id), method: :put do |form| %>
+                <input type="hidden" id="is_open" value="<% daily_post.is_open %>">
+                <%= submit_tag("表示", class: "mt_3 mb_5", id: "save_button") %>
+                <% end %>
+              <% end %>
+              </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="pagination large">
+      <%= paginate @daily_posts %>
+    </div>
+  </div>
+</div>
+
+<script>
+var is_open_count = <%= @is_open_count %>;
+document.getElementById("save_button").addEventListener("click", function() {
+  if (is_open_count === 3) {
+    alert("表示出来る投稿は最大３つまでです");
+    event.preventDefault();
+  }
+});
+</script>
+

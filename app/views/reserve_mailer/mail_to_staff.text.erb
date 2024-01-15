@@ -8,19 +8,19 @@
  <%= @reserve.email %>
  [<%= t("activerecord.attributes.reserve.telephone")%>]
  <%= @reserve.telephone %>
-   [<%= t("activerecord.attributes.reserve.date1")%>]
- <%= l @reserve.date1 %>
-   [<%= t("activerecord.attributes.reserve.date2")%>]
- <% if @reserve.date2 != nil %>
-  <%= l @reserve.date2 %>
+   [<%= t("activerecord.attributes.reserve.reserve_date1")%>]
+ <%= l @reserve.reserve_date1 %>
+   [<%= t("activerecord.attributes.reserve.reserve_date2")%>]
+ <% if @reserve.reserve_date2 != nil %>
+  <%= l @reserve.reserve_date2 %>
  <% else %>
-  <%= @reserve.date2 %>
+  <%= @reserve.reserve_date2 %>
  <% end %>
-   [<%= t("activerecord.attributes.reserve.date3")%>]
- <% if @reserve.date3 != nil %>
-  <%= l @reserve.date3 %>
+   [<%= t("activerecord.attributes.reserve.reserve_date3")%>]
+ <% if @reserve.reserve_date3 != nil %>
+  <%= l @reserve.reserve_date3 %>
  <% else %>
-  <%= @reserve.date3 %>
+  <%= @reserve.reserve_date3 %>
  <% end %>
  [<%= t("activerecord.attributes.reserve.content_inquiry")%>]
  <%= @reserve.content_inquiry %>

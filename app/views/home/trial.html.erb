@@ -1,0 +1,48 @@
+<div class="text-center">
+    <div class="flex flex_column_sp">
+        <div class="text-center display_none mt_3_sp" id="triallImg">
+            <%= ix_image_tag("experience.jpg", tag_options: { class: "bg_img" })%>
+        </div>
+        <div class="">
+            <h3 class="line_height_sm mb_3 pd_l_10 text_left letter_spacing_md text_center_sp pd_sm_sp">体験教室</h3>
+            <p class="vw_50 pd_l_10 text_left line_height_md text_center_sp pd_sm_sp line_height_sm_sp">
+                予約フォームよりご予約下さい。<br>
+                お電話やメールでも受け付けております。<br>
+                詳細等、お気軽にお問合せください。<br>
+                個々のご事情に合わせて対応させていただきます。<br>
+            </p>
+            <div class="trial_btn">
+                <%= link_to "体験予約はこちらから", new_reserf_path %>
+            </div>
+            <div class="trial_btn">
+                <%= link_to "お問い合わせはこちらから", new_contact_path %>
+            </div>
+        </div>
+    </div>
+    <div class="mb_5">
+        <h3 class="letter_spacing_md mt_10">～体験稽古/料金～</h3>
+            <div class="pd_5 pd_0_sp">
+                <table class="table mg_0">
+                    <tr>
+                    <th>1回　(約90分)</th>
+                    </tr>
+                    <tr>
+                    <td>2000円 / 1人</td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#triallImg').fadeIn(2000);
+        },);
+    });
+
+    $(function() {
+        $('header').show();
+    });
+
+</script>

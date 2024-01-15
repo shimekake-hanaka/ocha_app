@@ -1,57 +1,70 @@
-<%= stylesheet_link_tag "class", media: 'all', "data-turbo-track": "reload" %>
-    
-<div class="main-height">
-    <h1>クラス</h1>
-    <div class="class-main">
-        
-        <div class="class">
-            <div class="classes">
-                <%# 子供クラス %>
-                <div class="class-menu">
-                    <a href="children-class">
-                        <div class="class-icon">
-                            <%= ix_image_tag("children.jpg", tag_options: { class: "class-icon-img" })%>
-                            <p>こどもクラス</p>
-                        </div>
-                    </a>
-                    <p>
-                    小学生のクラスです。<br>
-                    現在小2～小6の児童がお稽古にいらしています。<br>
-                    数人での団体稽古になります。<br>
-                    </p>
+<div class="text-center">
+    <h3 class="letter_spacing_md mt_3 mt_25vh_sp">クラス</h3>
+    <div class="flex my_10 vw_100 flex_center_up flex_column_sp">
+        <%# 子供クラス %>
+        <div class="vw_30 w_100sp">
+            <a href="kids" class="link">
+                <div>
+                    <%= ix_image_tag("children.jpg", tag_options: { class: "w_100 pd_x_5 mb_3 hov_big mg_0_sp" })%>
                 </div>
-                <%# 大人クラス %>
-                <div class="class-menu">
-                    <a href="/adult-class">
-                        <div class="class-icon">
-                            <%= ix_image_tag("adult.jpg", tag_options: { class: "class-icon-img" })%>
-                            <p>大人クラス</p>
-                        </div>
-                    </a>
-                    <p>
-                    中学生～高齢の方のためのクラスです。<br>
-                    大人クラスは一人二度点前＆客のお稽古をおこないます。
-                    </p>
+                <table class="table pd_x_5 w_80 mg_0">
+                    <tr>
+                    <th style="border-top: none; font-weight: normal;">こどもクラス</th>
+                    </tr>
+                    <tr>
+                    <td class="text_left">
+                        小学生のクラスです。<br>
+                        現在小2～小6の児童がお稽古にいらしています。<br>
+                        数人での団体稽古になります。<br>
+                    </td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+        <%# 大人クラス %>
+        <div class="vw_30 w_100sp mt_7vh_sp">
+            <a href="general" class="link">
+                <div>
+                    <%= ix_image_tag("adult.jpg", tag_options: { class: "w_100 pd_x_5 mb_3 hov_big mg_0_sp" })%>
                 </div>
-                <%# 個別稽古 %>
-                <div class="class-menu">
-                    <a href="/personal-class">
-                        <div class="class-icon">
-                            <%= ix_image_tag("personal.jpg", tag_options: { class: "class-icon-img" })%>
-                            <p>個別稽古</p>
-                        </div>
-                    </a>
-                    <p>
-                    おひとりで集中してゆっくりお稽古なさりたい方は<br>
-                    個別にお稽古いたします。<br>
-                    お稽古の内容は大人クラスと同様です。
-                    <%# お稽古をしながらチャイルドカウンセラーと<br>
-                    家族療法カウンセラーの資格を持っている講師が<br>
-                    寄り添ってお話を聞きます。<br> %>
-                    </p>
+                <table class="table pd_x_5 w_80 mg_0">
+                    <tr>
+                    <th style="border-top: none; font-weight: normal;">大人クラス</th>
+                    </tr>
+                    <tr>
+                    <td class="text_left">
+                        中学生～高齢の方のためのクラスです。<br>
+                        大人クラスは一人二度点前＆客のお稽古をおこないます。
+                    </td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+        <%# 個別稽古 %>
+        <div class="vw_30 w_100sp mt_7vh_sp">
+            <a href="personal" class="link">
+                <div>
+                    <%= ix_image_tag("personal.jpg", tag_options: { class: "w_100 pd_x_5 mb_3 hov_big mg_0_sp" })%>
                 </div>
-
-            </div>
+                <table class="table pd_x_5 w_80 mg_0">
+                    <tr>
+                    <th style="border-top: none; font-weight: normal;">個別稽古</th>
+                    </tr>
+                    <tr>
+                    <td class="text_left">
+                        おひとりで集中して<br class="sp">ゆっくりお稽古なさりたい方は<br>
+                        個別にお稽古いたします。<br>
+                        お稽古の内容は大人クラスと同様です。
+                    </td>
+                    </tr>
+                </table>
+            </a>
         </div>
     </div>
 </div>
+
+<script>
+    $(function() {
+        $('header').show();
+    });
+</script>

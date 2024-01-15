@@ -1,0 +1,72 @@
+<div class="text-center">
+    <div class="flex flex_column_sp">
+        <div class="text-center display_none" id="counselinglImg">
+            <%= ix_image_tag("S_personal.jpg", tag_options: { class: "bg_img mt_15" })%>
+        </div>
+        <div class="mb_5 mt_15 mg_0_sp">
+            <h3 class="line_height_sm letter_spacing_md">カウンセリング<br>×<br>個別稽古</h3>
+            <div class="vw_50 text_left line_height_md pd_l_10 letter_spacing_sm_sp text_center_sp pd_sm_sp line_height_sm_sp">
+                <p>
+                ちょっと聞いてほしい悩み<br>
+                ちょっと背中を押してほしいな<br>
+                ちょっと・・・・・<br>
+                いろんなことがありますよね<br>
+                一緒に考えて一緒に悩んで前に進みましょう
+                </p>
+            </div>
+            <h3 class="vw_50 pd_t_5 pd_l_10 text_left letter_spacing_md letter_spacing_sm_sp text_center_sp pd_sm_sp">どんなことをしているの？</h3>
+            <p class="vw_50 pd_t_5 pd_l_10 text_left line_height_md letter_spacing_sm_sp text_center_sp pd_sm_sp line_height_sm_sp">
+                お稽古をしながらチャイルドカウンセラー、<br class="sp">家族療法カウンセラーの<br class="pc">資格を持つ講師が、<br class="sp">寄り添ってお話を聞きます。<br>
+                お点前の時はお稽古に集中して、<br class="pc">客の時は美味しいお菓子と抹茶をいただきながら<br class="pc">講師がお話を聞きます。<br>
+                子育てにお悩みの保護者の方や不登校などでお悩みのお子様、<br class="pc">どうぞお気軽にお問合せください。
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3 class="letter_spacing_md mt_10">～お稽古の時間～</h3>
+        <div class="pd_5 pd_0_sp">
+            <table class="table mg_0">
+                <tr>
+                <th>曜日</th>
+                <th>時間</th>
+                </tr>
+                <tr>
+                <td>木曜日</td>
+                <td>9:00-20:00</td>
+                </tr>
+                <tr>
+                <td>日曜日</td>
+                <td>13:00-20:00</td>
+                </tr>
+            </table>
+        </div>
+        <h3 class="letter_spacing_md mt_10">～個別稽古/料金～</h3>
+        <div class="pd_5 pd_0_sp">
+            <table class="table mg_0">
+                <tr>
+                <th>1回　(約90分)</th>
+                </tr>
+                <tr>
+                <td>3000円</td>
+                </tr>
+            </table>
+        </div>
+        <p class="pd_5 line_height_md line_height_sm_sp">
+            他のクラスもございます。気になる方は
+            <a href="class">こちら</a>をご覧ください。
+        </p>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('#counselinglImg').fadeIn(2000);
+        },);
+    });
+
+    $(function() {
+        $('header').show();
+        $('header').toggleClass("header_fixed");
+    });
+</script>

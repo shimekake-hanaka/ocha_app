@@ -1,0 +1,27 @@
+// お稽古日記用のcss
+
+.daily_post_width {
+  width: 100%;
+  height: auto;
+  margin: 20vh 0 10vh 0;
+}
+@media (min-width:670px ){
+  .daily_post_width_pc {
+    width: 40%;
+  }
+
+}
+.daily_post_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.daily_post_subimg {
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  margin: 10px;
+}
+.daily_post_mainimg {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+}
