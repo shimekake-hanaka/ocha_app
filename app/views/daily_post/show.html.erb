@@ -1,6 +1,8 @@
 <%= render partial: 'layouts/admin_header' %>
 <%= button_to '編集する', daily_post_edit_path(@daily_post.id), method: :get, class: 'edit-button' %>
 <%= button_to '画像を削除する', daily_post_image_edit_path(@daily_post.id), method: :get, class: 'edit-button' %>
+<%= link_to '戻る', 'javascript:history.back ()', class: 'edit-button' %>
+
 
 <div class="center-block text-center height_auto daily_post_width daily_post_width_pc" style="height: auto;">
   <% if !@daily_post.nil? %>
