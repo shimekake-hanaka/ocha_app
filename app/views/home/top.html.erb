@@ -46,7 +46,7 @@
             <% else %>
               <%= ix_image_tag('no-image.png', tag_options: { class: "cover article_img", loading: "lazy" }) %>
             <% end %>
-            <p class="color_black w_100sp"><%= daily_post_home.title.truncate(15, omission: '~~') %></p>
+            <p class="color_black w_100sp"><%= daily_post_home.title %></p>
             <p class="color_black w_100sp">投稿日時：<%= daily_post_home.updated_at.strftime("%Y年%m月%d日") %></p>
           </a>
         <% end %>
